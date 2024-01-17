@@ -117,11 +117,13 @@ function zadaniejeden(){
     }
 }
 
-function zadanietdwa(){
+function zadaniedwa(){
     dane();
-    new Array = tekstwspak[tekst.length];
+    
     for(var i=tekst.length-1; i>=0; i--){
         tekstwspak[i]+=tekst[i];
         console.log(tekst[i]+", "+tekstwspak);
     }
 }
+
+
