@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona zmieniajaca wyglad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main>
+        <center>
+        <div class="div">
+            <h2>Malowanie pokoju</h2>
+                    Ściana 1
+                    <input id="szerokosc1" required placeholder="Szerokość">
+                    <input id="wysokosc1" required placeholder="Wysokość">
+                </p>
+                <p>
+                    Ściana 2
+                    <input id="szerokosc2" required placeholder="Szerokość">
+                    <input id="wysokosc2" required placeholder="Wysokość">
+                </p>
+                <p>
+                    Ściana 3
+                    <input id="szerokosc3" required placeholder="Szerokość">
+                    <input id="wysokosc3" required placeholder="Wysokość">
+                </p>
+                <p>
+                    sufit
+                    <input id="sufit" required placeholder="Szerokość">
+                    <input id="sufit2" required placeholder="Długość">
+                </p>
+            <input type="submit" value="OBLICZ ILE FARBY" onclick="malowanie()">
+            <div id="info"></div>
+            <div id="powierzchnia"></div>
+            <div id="farba"></div>
+        </div>
+        </center>
+    </main>
+</body>
+</html>

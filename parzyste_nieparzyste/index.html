@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona zmieniajaca wyglad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main>
+        <center>
+        <div class="div">
+            <h2>Liczby z przedzialu</h2>
+                <p>
+                    Ściana 1
+                    <input id="a" type="number" min="0" required placeholder="A">
+                    <input id="b" type="number" min="0" required placeholder="B">
+                </p>
+            <input type="submit" value="Oblicz" onclick="licz()">
+            <input type="submit" value="Oblicz parzyste" onclick="liczparzyste()">
+            <input type="submit" value="Oblicz nieparzyste" onclick="licznieparzyste()">
+            <input type="submit" value="Dzielniki" onclick="dzielniki()">
+            <div id="info"></div>
+            <div id="wynik"></div>
+        </div>
+        </center>
+    </main>
+</body>
+</html>

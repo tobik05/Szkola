@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona zmieniajaca wyglad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main>
+        <div class="przedmioty lewo">
+            <div class="przedmiot">Chemia</div>
+            <div class="przedmiot">Geografia</div>
+            <div class="przedmiot">Informatyka</div>
+            <div class="przedmiot">Matematyka</div>
+            <div class="przedmiot">Biologia</div>
+            <div class="przedmiot">Język angielski</div>
+            <div class="przedmiot">Język niemiecki</div>
+            <div class="przedmiot">Język obcy zawodowy</div>
+            <div class="przedmiot">Język polski</div>
+            <div class="przedmiot">Historia</div>
+            <div class="przedmiot">Praktyka zawodowa</div>
+            <div class="przedmiot">Programowanie aplikacji internetowych</div>
+            <div class="przedmiot">Projektowanie i administrowanie bazami danych</div>
+            <div class="przedmiot">Projektowanie stron internetowych</div>
+            <div class="przedmiot">Wiedza o społeczeńswo</div>
+            <div class="przedmiot">Religia</div>
+            <div class="przedmiot">Wychowanie fizyczne</div>
+        </div>
+        <div class="inputy srodek">
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o0" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o1" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o2" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o3" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o4" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o5" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o6" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o7" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o8" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o9" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o10" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o11" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o12" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o13" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o14" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o15" required></div>
+            <div class="input"><input type="number" min="0" max="6" maxlength="1" id="o16" required></div>
+        </div>
+        <div class="przyciski prawo">
+            <div class="przycisk">
+                <input type="submit" onclick="srednia()" value="Pokaż średnią">
+                <div class="wynik" id="wyniksrednia">Twoja średnia wynosi: </div>
+            </div>
+            <div class="przycisk">
+                <input type="submit" onclick="iloscocen()" value="Pokaż ilość ocen">
+                <div class="wynik" id="wynikiloscocen">Ilośc ocen: NDST: 0, DOP: 0, DOST: 0, DOB: 0, BDB: 0, CEL; 0</div>
+            </div>
+            <div class="przycisk">
+                <input type="submit" onclick="prymus()" value="Pokaż czy prymus">
+                <div class="wynik" id="wynikprymus">Czy jesteś prymuem?</div>
+            </div>
+            <div class="przycisk">
+                <input type="submit" onclick="zawodowe()" value="Pokaż średnią zawodowych">
+                <div class="wynik" id="wynikzawodowe">Średnia twoich ocen z przedmiotów zawodowych wynosi: </div>
+            </div>
+            <div class="przycisk">
+                <input type="submit" onclick="scisle()" value="Pokaż średnią ścisłych">
+                <div class="wynik" id="wynikscisle">Średnia twoich ocen z przedmiotów ścisłych wynosi: </div>
+            </div>
+            <div class="przycisk">
+                <input type="submit" onclick="humanistyczne()" value="Pokaż średnią humanistycznych">
+                <div class="wynik" id="wynikhumanistyczne">Średnia twoich ocen z przedmiotów humanistycznych wynosi: </div>
+            </div>
+            <div class="przycisk">
+                <input type="submit" onclick="najlepsza()" value="Pokaż najlepszą ocenę">
+                <div class="wynik" id="wyniknajlepsza">Najlepsza twoja ocena to: </div>
+            </div>
+            <div class="przycisk">
+                <input type="submit" onclick="najgorsza()" value="Pokaż najgorszą ocenę">
+                <div class="wynik" id="wyniknajgorsza">Najgorsza twoja ocena to: </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

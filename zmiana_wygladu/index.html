@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona zmieniajaca wyglad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main>
+        <div class="container">
+            <div class="div">
+                <h2>Malowanie boxa</h2>
+                    <p>
+                        R
+                        <input id="r" type="number" min="0" max="255" placeholder="R">
+                    </p>
+                    <p>
+                        G
+                        <input id="g" type="number" min="0" max="255" required placeholder="G">
+                    </p>
+                    <p>
+                        B
+                        <input id="b" type="number" min="0" max="255" required placeholder="B">
+                    </p>
+                <input type="submit" value="ZMIEN KOLOR" onclick="zmianakoloru()">
+                <input type="submit" value="ZMIEN KOLOR 2" onclick="kolor2()">
+                <input type="submit" value="Czerwony" onclick="kolor('red')">
+                <input type="submit" value="Zielony" onclick="kolor('green')">
+                <input type="submit" value="Niebiski" onclick="kolor('blue')">
+                <div id="info"></div>
+            </div>
+            <div class="box" id="box"></div>
+        </div>
+        <center>
+            <input type="text">
+        </center>
+    </main>
+</body>
+</html>

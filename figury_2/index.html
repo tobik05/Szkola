@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona zmieniajaca wyglad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main>
+        <div>
+            <h2>Zadanie 1</h2>
+            <p>
+                <label for="obrazek">Wybierz figurę</label>
+                <select id="obrazek">
+                <option value="TROJKAT">Trojkąt</option>
+                <option value="KWADRAT">Kwadrat</option>
+                <option value="KOLO">Koło</option>
+                </select> 
+            </p>
+            <p>Liczba obrazków
+                <input id="ilosc" type="number">
+            </p>
+            <p>Wysokosc obrazka
+                <input id="wysokosc" type="number">
+            </p>
+            <p>Szerokość obrazka
+                <input id="szerokosc" type="number">
+            </p>
+            <input type="submit" value="POKAZ OBRAZKI" onclick="obrazki()">
+            <p id="info">
+            </p>
+        </div>
+        <div>
+            <h2>Zadanie 2</h2>
+            <p>Podaj liczbę
+                <input id="liczba" type="number">
+            </p>
+            <input type="submit" value="POKAZ LICZBY" onclick="liczby()">
+            <p id="infoliczby">
+            </p>
+        </div>
+        <div>
+            <h2>Zadanie 3</h2>
+            <p>Podaj ilość wierszy
+                <input id="wiersze" type="number">
+            </p>
+            <p>Podaj ilość kolumn
+                <input id="kolumny" type="number">
+            </p>
+            <input type="submit" value="POKAZ TABELE" onclick="tabele()">
+            <p id="infotabela">
+            </p>
+        </div>
+    </main>
+    <div id="zdjecia"></div>
+    <div id="liczby"></div>
+    <table id="tabele"></table>
+</body>
+</html>

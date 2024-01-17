@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strona zmieniajaca wyglad</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main>
+        <center>
+        <div class="div">
+            <h2>Zadanie 1</h2>
+                <p>
+                    Wybierz figure z ktorej stworzysz piramide
+                    <label for="obrazek">Wybierz figurę</label>
+                    <select id="obrazek">
+                        <option value="TROJKAT">Trojkąt</option>
+                        <option value="KWADRAT">Kwadrat</option>
+                        <option value="kolo2">Koło</option>
+                    </select> 
+                </p>
+                </p>
+                    Rozmiar piramidy
+                    <input id="wysokosc2" type="number" min="0" required>
+                </p>
+            <input type="submit" value="POKAZ PIRAMIDE" onclick="piramida2()">
+            <p id="infopiramida2"></p>
+        </div>
+        <div class="div">
+            <h2>Zadanie 2</h2>
+            <p>
+                Wysokosc kostki z kulami w srodku
+                <input id="wysokosc" type="number" min="0" required>
+            </p>
+            <p>
+                Szerokość kostki z kulami w srodku
+                <input id="szerokosc" type="number" min="0" required>
+            </p>
+            <input type="submit" value="POKAZ KOSTKE" onclick="kostka()">
+            <p id="infokostka2"></p>
+        </div>
+        <div class="div">
+            <h2>Zadanie 3</h2>
+                <p>
+                    Wybierz kolor gornej czesci
+                    <label for="klepsydragora"></label>
+                    <select id="klepsydragora">
+                        <option value="trojkatcz">Czerwony</option>
+                        <option value="trojkatziel">Zielony</option>
+                        <option value="trojkatnie">Niebieski</option>
+                    </select> 
+                </p>
+                <p>
+                    Wybierz kolor dolnej czesci
+                    <label for="klepsydradol"></label>
+                    <select id="klepsydradol">
+                        <option value="trojkatcz">Czerwony</option>
+                        <option value="trojkatziel">Zielony</option>
+                        <option value="trojkatnie">Niebieski</option>
+                    </select> 
+                    </p>
+            <p>
+                Wysokosc klepsydry
+                <input id="wysokosc" type="number" min="0" required>
+            </p>
+            <input type="submit" value="POKAZ PIRAMIDE" onclick="piramida()">
+            <p id="info"></p>
+        </div>
+        </center>
+    </main>
+    <center><div id="piramida2" class="wynik"></div></center>
+    <center><div id="kostka" class="wynik"></div></center>
+    <center><div id="piramida" class="wynik"></div></center>
+</body>
+</html>
