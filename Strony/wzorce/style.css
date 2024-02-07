@@ -1,8 +1,5 @@
 *{
     margin: 0;
-    padding: 0;
-    height: 100hv;
-    width: 100hw;
     --blad: #d90429;
     --glowny: #0d1b2a;
     --drugi: #778da9;
@@ -14,8 +11,8 @@
     font-weight: 400;
 }
 body{
-    height: 100hv;
-    width: 100hw;
+    height: 100vh;
+    width: 100vw;
     background-color: var(--glowny);
     display: flex;
     flex-direction: column;
@@ -24,7 +21,6 @@ body{
 main{
     height: 100%;
     width: 100%;
-    margin: 50px 0px 0px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -39,6 +35,9 @@ main{
     text-align: center;
     margin: 20px 0px 0px 0px;
 }
+.container-1{
+    height: 10%;
+}
 .col{
     margin: 20px 0px 0px 0px;
     width: 50%;
@@ -47,10 +46,6 @@ main{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-}
-.container-5{
-    display: flex;
-    flex-direction: column;
 }
 .col input{
     width: 100px;
@@ -73,7 +68,6 @@ input:invalid{
 }
 input[type=submit]{
     cursor:pointer;
-    scale: 1.5;
     color: black;
     background-color: #3a86ff;
     border: 1px solid #3a86ff;
@@ -83,30 +77,21 @@ h4{
     margin: 20px 0px;
     font-weight: 600;
 }
-.przycisk{
-    color: black;
-    background-color: #3a86ff;
-    border: 1px solid #3a86ff;
-    box-shadow: 0px 0px 20px #3a86ff;
-}
-.kolko{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 800;
-    aspect-ratio: 1/1;
-    width: 30px;
-    margin: 8px;
-    background-color: #ffb703;
-    padding: 8px;
-    color: #000;
-    border-radius: 100%;
-}
 .container-4{
     display: flex;
     flex-direction: column;
 }
-.wynik-1{
+.wynik-maly{
     color: #3a86ff;
     font-weight: 600;
+}
+.przycisk{
+    background-color: #3a86ff;
+    box-shadow: #3a86ff 0px 0px 30px;
+}
+.error{
+    color: #d90429;
+}
+.dobre{
+    color: #3aff7c;
 }
