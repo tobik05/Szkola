@@ -85,3 +85,8 @@ h4{
     color: #3a86ff;
     font-weight: 600;
 }
+.przycisk{
+    background-color: #3a86ff;
+    box-shadow: #3a86ff 0px 0px 30px;
+    border: none;
+}

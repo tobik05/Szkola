@@ -13,8 +13,19 @@
             <h1>Ćwiczenia</h1>
         </div>
         <div class="container container-2">
+            <div class="col-1">
+                Wydarzenie - data<input type="date" id="wydarzenie">
+                <input type="button" class="przycisk" value="Oblicz ile zostało do wydarzenia" onclick="oblicz()">
+            </div>
+            <div class="col-2">
+                Koniec lekcji - godzina<input type="time" id="czas">
+                <input type="button" class="przycisk" value="Ile do końca lekcji" onclick="konieclekcji()">
+            </div>
         </div>
         <div class="container container-3">
+            <input type="button" class="przycisk" value="Pokaż dzisiejszą datę" onclick="zadanie1()">
+            <input type="button" class="przycisk" value="Stoper" onclick="stoper()">
+            <input type="button" class="przycisk" value="Ile do końca roku szkolnego" onclick="koniecroku()">
         </div>
         <div class="container container-4">
             <div class="wynik-maly" id="wynik"></div>
