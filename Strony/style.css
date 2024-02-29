@@ -1,11 +1,14 @@
 *{
     margin: 0;
-    --blad: #d90429;
-    --glowny: #0d1b2a;
-    --drugi: #778da9;
-    --bialy: #edf2f4;
-    --czarny: #000;
-    --trzeci: #ffb703;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #303841;
+    --tlo: #0b253c;
+    --drugi: #3A4750;
+    --trzeci: #F6C90E;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --niebieski: #0693e3;
     color: var(--bialy);
     font-family: 'Rethink Sans', sans-serif;
     font-weight: 400;
@@ -13,10 +16,12 @@
 body{
     height: 100vh;
     width: 100vw;
-    background-color: var(--glowny);
+    background-color: var(--tlo);
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
 }
 main{
     height: 100%;
@@ -24,6 +29,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 .container{
     width: 100%;

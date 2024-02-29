@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #303841;
+    --tlo: #0b253c;
+    --drugi: #3A4750;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --niebieski: #0693e3;
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--tlo);
+    color: var(--bialy);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+section{
+    aspect-ratio: 3/6;
+    height: 75vh;
+    border-radius: 25px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    text-align: center;
+    width: 100%;
+}
+#dzien{
+    font-size: 140px;
+    margin: 20px;
+}
+#miesiac, #rok, #dzien-tyg{
+    font-size: 50px;
+}
+#godzina{
+    margin-top: 30px;
+    font-size: 50px;
+}
