@@ -1,0 +1,116 @@
+:root {
+    --main:#F7F7F7;
+    --main-wa:#f7f7f700;
+    --main2: #EEEEEE;
+    --background: #343a40;
+    --background-2: #929AAB;
+    --zolty: #ffd60a;
+    --zolty2: #ffc300;
+    --zolty-wa: #ffc40000;
+}
+html,body{
+    overflow-x: hidden;
+    font-size: 16px;
+    overflow-y:auto;
+    scrollbar-color: var(--main); 
+    scrollbar-width: 7px;
+    scrollbar-track-color: #161627;
+}
+*{
+    font-family: "Raleway", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--background);
+    color: white;
+    width: 100vw;
+    height: 100vh;
+}
+main{
+    margin: 50px 0px 0px 0px;
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+    height: 130vh;
+}
+li{
+    list-style: none;
+    height: 100%;
+    margin: 20px;
+    text-align: left;
+}
+.input, .input-radio{
+    width: 300px;
+}
+.input-text{
+    width: 100%;
+    outline-style: none;
+    background-color: var(--zolty-wa);
+    border: 2px solid var(--zolty);
+    color: var(--main);
+    border-radius: 25px;
+    padding: 5px 10px;
+    box-shadow: 0px 0px 0px var(--zolty);
+    transition: all 350ms;
+}
+.input-radio, .input-checkbox, .button{
+    padding: 5px;
+    width: 100%;
+    outline-style: none;
+    background-color: var(--zolty-wa);
+    border: 2px solid var(--zolty);
+    color: var(--main);
+    border-radius: 25px;
+    box-shadow: 0px 0px 0px var(--zolty);
+    transition: all 350ms;
+}
+.input-checkbox:hover, .input-radio:hover, .button:hover{
+    width: 100%;
+    background-color: var(--zolty2);
+    color: var(--background);
+    border: 2px solid var(--zolty2);
+    box-shadow: 0px 0px 35px var(--zolty2);
+    transition: all 350ms;
+}
+input[type="radio"], input[type="checkbox"]{
+    display: none;
+}
+input[type="radio"]:checked + .input-radio, input[type="checkbox"]:checked + .input-checkbox{
+    width: 100%;
+    background-color: var(--zolty2);
+    color: var(--background);
+    border: 2px solid var(--zolty2);
+    box-shadow: 0px 0px 35px var(--zolty2);
+    transition: all 350ms;
+}
+.zdj{
+    aspect-ratio: 1/1;
+    width: 300px;
+    border-radius: 20px;
+}
+.hamburgery{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.input-checkbox, .input-checkbox:hover, input[type="checkbox"]:checked + .input-checkbox{
+    padding: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: none;
+}
+.zamowienie{
+    height: 50%;
+}
+.zamowienie li{
+    height: 5%;
+}
+h3{
+    width: 70px;
+    margin: -10px 30px;
+}
