@@ -10,20 +10,21 @@
     <script src="script.js"></script>
     <main>
         <section id="sekcja" class="box">
-            <input type="date" id="start_data">
-            <input type="date" id="koniec_data">
-            <input type="submit" onclick="roznica()" value="Oblicz różnicę">
+            <input type="date" id="data_urodzenia" required>
+            <input type="submit" onclick="roznica()" value="Ile żyje i ile do 20 urodzin">
             <br>
-            <input type="time" id="start_godzina">
-            <input type="time" id="koniec_godzina">
-            <input type="submit" onclick="roznica2()" value="Oblicz różnicę">
+            <input type="submit" onclick="odliczaniewieku()" value="Oblicz ile od wieku">
             <br>
-            <input type="time" id="koniec_odliczanie">
-            <input type="submit" onclick="odliczanie()" value="Odlicz do konca">
+            <input type="submit" onclick="odliczaniekoniecrokuszkolnego()" value="Odlicz do konca roku szkolnegoi">
+            <br>
+            <br>
+            <input type="number" id="lekcje" required min="6" max="9">
+            <input type="submit" onclick="odliczaniekonieclekcji()" value="Odlicz do konca lekcji" >
             <br>
             <div id="wynik"></div>
             <div id="wynik2"></div>
             <div id="wynik3"></div>
+            <div id="wynik4"></div>
         </section>
     </main>
 </body>

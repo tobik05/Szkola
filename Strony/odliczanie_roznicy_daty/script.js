@@ -1,46 +1,73 @@
 function roznica(){
     var wynik = document.getElementById("wynik");
-    var start = new Date(document.getElementById("start_data").value);
-    var koniec = new Date(document.getElementById("koniec_data").value);
-    var roznica = koniec-start;
-    wynik.innerHTML = "Liczba dni: "+Math.floor(roznica/(1000*60*60*24));
+    var data_urodzenia = new Date(document.getElementById("data_urodzenia").value);
+    var dzis = new Date();
+
+    var wiek_w_milisekundach = dzis-data_urodzenia;
+    var wiek_w_sekundach = wiek_w_milisekundach/1000;
+    var wiek_w_minutach = wiek_w_sekundach/60;
+    var wiek_w_godzinach = wiek_w_minutach/60;
+    var wiek_w_dniach = wiek_w_godzinach/24;
+    var lata = Math.floor(wiek_w_dniach/365);
+    var miesiace = Math.floor((wiek_w_dniach%365)/30);
+    var dni = Math.floor(wiek_w_dniach %365 %30);
+
+    wynik.innerHTML = "Lat:"+lata+" Miesięcy: "+miesiace+" Dni: "+dni;
 }
-function roznica2(){
+function odliczaniewieku(){
     var wynik2 = document.getElementById("wynik2");
-    var start = new Date();
-    var koniec = new Date();
-    
-    var start_godzina=document.getElementById("start_godzina").value;
-    start.setHours(start_godzina[0]+start_godzina[1]);
-    start.setMinutes(start_godzina[3]+start_godzina[4]);
+    var dzis = new Date();
+    var wiek = new Date('January 1, 2000, 00:00:00 GMT');
 
-    var koniec_godzina=document.getElementById("koniec_godzina").value;
-    koniec.setHours(koniec_godzina[0]+koniec_godzina[1]);
-    koniec.setMinutes(koniec_godzina[3]+koniec_godzina[4]);
-
-    var roznica = koniec-start;
-    roznica = roznica/1000;
-    var godzin = Math.floor(roznica/(3600));
-    roznica = roznica-godzin*3600;
-    var minut = Math.floor(roznica/(60));
-    wynik2.innerHTML = "Liczba godzin: "+godzin+" Liczba minut: "+minut;
+    var roznica = dzis-wiek;
+    var dni = Math.floor(roznica / (1000*60*60*24));
+    var godzin = Math.floor((roznica % (1000*60*60*24)) / (1000*60*60));
+    var minut = Math.floor((roznica % (1000*60*60)) / (1000*60));
+    var sekund = Math.floor((roznica % (1000*60)) / 1000);
+    wynik2.innerHTML = "Liczba dni: "+dni+" Liczba godzin: "+godzin+" Liczba minut: "+minut+" Liczba sekund: "+sekund;
+    setTimeout("odliczaniewieku()",1000);
 }
 
-function odliczanie(){
+function odliczaniekoniecrokuszkolnego(){
     var wynik3 = document.getElementById("wynik3");
-    var koniec=new Date();
-    var odliczanie_koniec = document.getElementById("koniec_odliczanie").value;
-    koniec.setHours(odliczanie_koniec[0]+odliczanie_koniec[1]);  
-    koniec.setMinutes(odliczanie_koniec[3]+odliczanie_koniec[4]);
-    var start = new Date(); 
+    var dzis = new Date();
+    var wiek = new Date('June 21, 2024, 09:00:00 GMT');
 
-    var roznica=koniec-start;
-    
-    var godzin=Math.floor(roznica/(3600*1000));
-    roznica=roznica-godzin*3600*1000;
-    var minut=Math.floor(roznica/(60*1000));
-    roznica=roznica-minut*60*1000;
-    sekund=roznica/1000; 	  
-    wynik3.innerHTML="Godzin: "+godzin+"  Minut: "+minut+" Sekundy: "+sekund;
-    setTimeout("odliczanie()",1000);
+    var roznica = wiek-dzis;
+    var dni = Math.floor(roznica / (1000*60*60*24));
+    var godzin = Math.floor((roznica % (1000*60*60*24)) / (1000*60*60));
+    var minut = Math.floor((roznica % (1000*60*60)) / (1000*60));
+    var sekund = Math.floor((roznica % (1000*60)) / 1000);
+    wynik3.innerHTML = "Liczba dni: "+dni+" Liczba godzin: "+godzin+" Liczba minut: "+minut+" Liczba sekund: "+sekund;
+    setTimeout("odliczaniekoniecrokuszkolnego()",1000);
+}
+function odliczaniekonieclekcji(){
+    var wynik4 = document.getElementById("wynik4");
+    var lekcje = document.getElementById("lekcje").value;
+
+    var dzis = new Date();
+    var wiek = new Date();
+    if(lekcje == 6){
+        wiek.setHours("13");
+        wiek.setMinutes("20");
+    } else if(lekcje == 7){
+        wiek.setHours("14");
+        wiek.setMinutes("15");
+    } else if(lekcje == 8){
+        wiek.setHours("15");
+        wiek.setMinutes("10");
+    } else if(lekcje == 9){
+        wiek.setHours("16");
+        wiek.setMinutes("00");
+    } else{
+        wiek.setHours("00");
+        wiek.setMinutes("00");
+    }
+
+    var roznica = wiek-dzis;
+    var godzin = Math.floor((roznica % (1000*60*60*24)) / (1000*60*60));
+    var minut = Math.floor((roznica % (1000*60*60)) / (1000*60));
+    var sekund = Math.floor((roznica % (1000*60)) / 1000);
+    wynik4.innerHTML = "Liczba godzin: "+godzin+" Liczba minut: "+minut+" Liczba sekund: "+sekund;
+    setTimeout("odliczaniekonieclekcji()",1000);
 }
