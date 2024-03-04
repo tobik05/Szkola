@@ -10,9 +10,11 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="logo.png">
         <title>Tobiasz Bielawski - Zadanie</title>
+        <script src="https://kit.fontawesome.com/f7f7ff1cd7.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <main>
+            <a href="index.php"><i class="fa-solid fa-arrow-left"></i> Wróć na stronę główną.</a>
             <section>
                 <h2>Objetość graniastosłupa</h2>
                 <p>
