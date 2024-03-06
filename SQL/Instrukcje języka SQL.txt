@@ -1,0 +1,2 @@
+DDL ( Data Definition Language) - Język definicji dancyh, ktory umożliwia tworzenie, modyfikowanie i usuwanie struktur danych, takich jak tabele, widoki, indeksy, sekwencje, tpy danych itp. Przykłady polceń DDL to CREATE, ALTER, DROP. Modyfikowanie i usuwanie obiektów bazy danych, takich jak tabele, indeksy i widoki.
+DML 

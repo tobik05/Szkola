@@ -26,11 +26,10 @@ body{
 main{
     margin-top: 50px;
     height: 300vh;
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
 }
 section{
     padding-bottom: 150px;
@@ -71,4 +70,35 @@ input[type=submit]:hover{
     border: 1px solid var(--niebieski);
     box-shadow: 0px 0px 20px var(--niebieski);
     transition: all 350ms;
+}
+tbody{ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+table{
+    width: 50%;
+}
+.pierwszy-wiersz{
+    border-bottom: 2px solid white;
+}
+tr{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+td{
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+    border-left: 2px solid white;
+}
+.pierwsza-kolumna{
+    border-left: 0px solid white;
+}
+.tytul{
+    margin: 50px 0px;
 }
