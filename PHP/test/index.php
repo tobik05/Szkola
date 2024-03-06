@@ -14,14 +14,31 @@
         <main>
             <h1 class="tytul">Połączenie z bazą danych</h1>
             <?php
+                    echo "<form action='dodaj.php' method='POST'>";
+                            echo "<input name='imie' placeholder='Imię' include>";
+                            echo "<input name='nazwisko' placeholder='Nazwisko'>";
+                            echo "<input name='miasto' placeholder='Miasto'>";
+                            echo "<input name='ulica' placeholder='Ulica'>";
+                            echo "<input type='submit' class='przycisk' value='Dodaj'>";
+                    echo "</form>";
                 session_start();
+                if(isset($_SESSION['delete']))
+                {
+                    echo $_SESSION['delete'];
+                    unset($_SESSION['delete']);
+                }
+                if(isset($_SESSION['dodaj']))
+                {
+                    echo $_SESSION['dodaj'];
+                    unset($_SESSION['dodaj']);
+                }
                 $conn = mysqli_connect("localhost", "root", "", ) or die(mysqli_error($conn));
                 $db_select = mysqli_select_db($conn, "test") or die(mysqli_error($conn));
                 $sql = "SELECT * FROM mieszkancy";
                 $result = $conn->query($sql);
                 $row = mysqli_num_rows($result);
                 if ($result == true ) {
-                    echo "<table>";
+                    echo "<table class='druga-tabela'>";
                         echo "<tr class='pierwszy-wiersz'>";
                             echo "<td class='pierwsza-kolumna'>LP</td>";
                             echo "<td>Imię</td>";
