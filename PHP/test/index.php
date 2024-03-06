@@ -22,26 +22,32 @@
                 $row = mysqli_num_rows($result);
                 if ($result == true ) {
                     echo "<table>";
-                    echo "<tr class='pierwszy-wiersz'>";
-                    echo "<td class='pierwsza-kolumna'>Imie</td>";
-                    echo "<td>Nazwisko</td>";
-                    echo "<td>Miasto</td>";
-                    echo "<td>Ulica</td>";
-                    while($row=mysqli_fetch_assoc($result))
-                    {
-                        $id = $row["id"];
-                        $imie = $row["imie"];
-                        $nazwisko = $row["nazwisko"];
-                        $miasto = $row["miasto"];
-                        $ulica = $row["ulica"];
-                        echo "<tr>";
-                        echo "<td class='pierwsza-kolumna'>$imie</td>";
-                        echo "<td>$nazwisko</td>";
-                        echo "<td>$miasto</td>";
-                        echo "<td>$ulica</td>";
+                        echo "<tr class='pierwszy-wiersz'>";
+                            echo "<td class='pierwsza-kolumna'>LP</td>";
+                            echo "<td>Imię</td>";
+                            echo "<td>Nazwisko</td>";
+                            echo "<td>Miasto</td>";
+                            echo "<td>Ulica</td>";
+                            echo "<td>Działanie</td>";
                         echo "</tr>";
-                    }
-                    echo "</tr>";
+                        while($row=mysqli_fetch_assoc($result))
+                        {
+                            $id = $row["id"];
+                            $imie = $row["imie"];
+                            $nazwisko = $row["nazwisko"];
+                            $miasto = $row["miasto"];
+                            $ulica = $row["ulica"];
+                            echo "<tr>";
+                                echo "<td class='pierwsza-kolumna'>$id</td>";
+                                echo "<td>$imie</td>";
+                                echo "<td>$nazwisko</td>";
+                                echo "<td>$miasto</td>";
+                                echo "<td>$ulica</td>";
+                                echo "<td><a href='usun.php?id=$id' class='czerwony-przycisk'>Usuń</a></td>";
+                            echo "</tr>";
+                        }
+                        
+                    echo "</table>";
                 } else {
                     echo "Brak informacji.";
                 }
