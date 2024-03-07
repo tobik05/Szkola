@@ -2,6 +2,7 @@ function roznica(){
     var wynik = document.getElementById("wynik");
     var data_urodzenia = new Date(document.getElementById("data_urodzenia").value);
     var dzis = new Date();
+    var dwalat = new Date(data_urodzenia);
 
     var wiek_w_milisekundach = dzis-data_urodzenia;
     var wiek_w_sekundach = wiek_w_milisekundach/1000;
@@ -11,8 +12,19 @@ function roznica(){
     var lata = Math.floor(wiek_w_dniach/365);
     var miesiace = Math.floor((wiek_w_dniach%365)/30);
     var dni = Math.floor(wiek_w_dniach %365 %30);
+    
+    dwalat.setFullYear(dwalat.getFullYear()+20);
+    var do_20_w_milisekundach = dwalat-dzis;
+    var do_20_w_sekundach = do_20_w_milisekundach/1000;
+    var do_20_w_minutach = do_20_w_sekundach/60;
+    var do_20_w_godzinach = do_20_w_minutach/60;
+    var do_20_w_dniach = do_20_w_godzinach/24;
+    var lata_do_20 = Math.floor(do_20_w_dniach/365);
+    var miesiace_do_20 = Math.floor((do_20_w_dniach%365)/30);
+    var dni_do_20 = Math.floor(do_20_w_dniach %365 %30);
 
-    wynik.innerHTML = "Lat:"+lata+" Miesięcy: "+miesiace+" Dni: "+dni;
+
+    wynik.innerHTML = "Lat:"+lata+" Miesięcy: "+miesiace+" Dni: "+dni+"<br>Do 20: "+lata_do_20+" lat, "+miesiace_do_20+" miesięcy, "+dni_do_20+" dni";
 }
 function odliczaniewieku(){
     var wynik2 = document.getElementById("wynik2");

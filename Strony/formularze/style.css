@@ -1,0 +1,111 @@
+*{
+    margin: 0;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #303841;
+    --tlo: #0b253c;
+    --drugi: #3A4750;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --niebieski: #0693e3;
+    color: var(--bialy);
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--tlo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-wrap: wrap;
+    margin: 20px 0px 0px 0px;
+}
+input{
+    color: var(--czarny);
+    margin: 10px 0px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--drugi);
+    transition: all 350ms;
+}
+input:invalid{
+    border: 3px solid var(--blad);
+    box-shadow: 0px 0px 15px var(--blad);
+    transition: all 350ms;
+}
+input[type=submit], input[type=button]{
+    cursor:pointer;
+    color: black;
+    background-color: #3a86ff;
+    border: 1px solid #3a86ff;
+    box-shadow: 0px 0px 20px #3a86ff;
+}
+h4{
+    margin: 20px 0px;
+    font-weight: 600;
+}
+.wynik-maly{
+    color: #3a86ff;
+    font-weight: 600;
+}
+select, option{
+    color: var(--czarny);
+    width: 100px;
+    height: 25px;
+    border-radius: 5px;
+    
+}
+h3{
+    text-align: center;
+}
+.roboto label{font-family: 'Roboto', sans-serif;}
+.madimi label{font-family: 'Madimi One', sans-serif;}
+.ubuntu label{font-family: 'Ubuntu', sans-serif;}
+.inter label{font-family: 'Inter', sans-serif;}
+.open label{font-family: 'Open Sans', sans-serif}
+.lato label{font-family: 'Lato', sans-serif;}
+.czternascie{font-size: 14px;}
+.osiemnascie{font-size: 18px;}
+.dwadziescia{font-size: 20px;}
+.trzydziesci{font-size: 30px;}
+.czterdziesci{font-size: 40px;}
+.piecdziesiat{font-size: 50px;}
+.pochylona label{font-style: oblique;}
+.przekreslona label{text-decoration: line-through;}
+.podkreslona label{text-decoration: underline;}
+.pogrubiona label{font-weight:600;}
+h4{
+    font-family: Arial, sans-serif;
+}
+.col{
+    display: flex;
+    flex-direction: row;
+}
+#wynik{
+    margin: 50px 0px 0px 0px;
+}
+fieldset{
+    margin: 10px;
+}
