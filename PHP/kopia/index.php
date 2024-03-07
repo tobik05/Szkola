@@ -9,7 +9,7 @@
         <meta name="author" content="Tobiasz Bielawski">
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="logo.png">
-        <title>Tobiasz Bielawski - Zadanie</title>
+        <title>Tobiasz Bielawski</title>
     </head>
     <body>
         <main>
