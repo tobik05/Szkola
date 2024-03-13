@@ -35,21 +35,43 @@
                     <div class="czterdziesci"><input type="radio" id="czterdziesci" name="rozmiar" value="40px"><label for="czterdziesci"> 40</label></div>
                     <div class="piecdziesiat"><input type="radio" id="piecdziesiat" name="rozmiar" value="50px"><label for="piecdziesiat"> 50</label></div>
                 </fieldset><br>
+                <fieldset>
+                    <legend>Dekoracja czcionki</legend>
+                    <div class="pochylona"><input type="checkbox" id="pochylona" name="dekoracja" value="oblique"><label for="pochylona"> Pochylona</label></div>
+                    <div class="przekreslona"><input type="checkbox" id="przekreslona" name="dekoracja" value="line-through"><label for="przekreslona"> Przekreślona</label></div>
+                    <div class="podkreslona"><input type="checkbox" id="podkreslona" name="dekoracja" value="under-line"><label for="podkreslona"> Podkreślona</label></div>
+                    <div class="pogrubiona"><input type="checkbox" id="pogrubiona" name="dekoracja" value="bold"><label for="pogrubiona"> Pogrubiona</label></div>
+                </fieldset><br>
             </div>
+            <div class="col">
+                <div class="cso">Wybierz kolor obramowania
+                    <select name="kolor">
+                        <option value="var(--czarny)">Czarny</option>
+                        <option value="var(--bialy)">Biały</option>
+                        <option value="var(--czerwony)">Czerwony</option>
+                        <option value="var(--zielony)">Zielony</option>
+                        <option value="var(--niebieski)">Niebieski</option>
+                    </select><br>
+                </div>
             <fieldset>
-                <legend>Dekoracja czcionki</legend>
-                <div class="pochylona"><input type="checkbox" id="pochylona" name="dekoracja" value="oblique"><label for="pochylona"> Pochylona</label></div>
-                <div class="przekreslona"><input type="checkbox" id="przekreslona" name="dekoracja" value="line-through"><label for="przekreslona"> Przekreślona</label></div>
-                <div class="podkreslona"><input type="checkbox" id="podkreslona" name="dekoracja" value="under-line"><label for="podkreslona"> Podkreślona</label></div>
-                <div class="pogrubiona"><input type="checkbox" id="pogrubiona" name="dekoracja" value="bold"><label for="pogrubiona"> Pogrubiona</label></div>
+                <legend>Wybierz rozmiar obramowania</legend>
+                <div class="linia"><input type="radio" id="brak" name="grubosc" value="0px"><label for="brak"> Brak</label></div>
+                <div class="linia"><input type="radio" id="jeden" name="grubosc" value="1px"><label for="jeden"> 1px</label><hr class="jeden"></div>
+                <div class="linia"><input type="radio" id="dwa" name="grubosc" value="2px"><label for="dwa"> 2px</label><hr class="dwa"></div>
+                <div class="linia"><input type="radio" id="trzy" name="grubosc" value="3px"><label for="trzy"> 3px</label><hr class="trzy"></div>
+                <div class="linia"><input type="radio" id="cztery" name="grubosc" value="4px"><label for="cztery"> 4px</label><hr class="cztery"></div>
+                <div class="linia"><input type="radio" id="piec" name="grubosc" value="5px"><label for="piec"> 5px</label><hr class="piec"></div>
             </fieldset><br>
-            <select name="kolor">
-                <option value="var(--czarny)">Czarny</option>
-                <option value="var(--bialy)">Biały</option>
-                <option value="var(--czerwony)">Czerwony</option>
-                <option value="var(--zielony)">Zielony</option>
-                <option value="var(--niebieski)">Niebieski</option>
-            </select><br>
+            <fieldset>
+                <legend>Wybierz rodzaj obramowania</legend>
+                <div class="linia"><input type="radio" id="solid" name="grubosc" value="0px"><label for="brak"> Brak</label></div>
+                <div class="linia"><input type="radio" id="kropki" name="grubosc" value="1px"><label for="jeden"> 1px</label><hr class="jeden"></div>
+                <div class="linia"><input type="radio" id="     " name="grubosc" value="2px"><label for="dwa"> 2px</label><hr class="dwa"></div>
+                <div class="linia"><input type="radio" id="trzy" name="grubosc" value="3px"><label for="trzy"> 3px</label><hr class="trzy"></div>
+                <div class="linia"><input type="radio" id="cztery" name="grubosc" value="4px"><label for="cztery"> 4px</label><hr class="cztery"></div>
+                <div class="linia"><input type="radio" id="piec" name="grubosc" value="5px"><label for="piec"> 5px</label><hr class="piec"></div>
+            </fieldset><br>
+            </div>
             <input type="button" onclick="zadanie1()" value="POKAŻ">
         </form>
     </main>

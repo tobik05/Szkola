@@ -8,18 +8,19 @@
     --bialy: #EEEEEE;
     --czarny: #212121;
     --niebieski: #0693e3;
+    --alfa: #0692e300;
     color: var(--bialy);
     font-family: 'Rethink Sans', sans-serif;
     font-weight: 400;
 }
 body{
-    height: 100vh;
+    height: 150vh;
     width: 100vw;
     background-color: var(--tlo);
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: hidden;
+    overflow-y: scroll;
     overflow-x: hidden;
 }
 main{
@@ -96,6 +97,11 @@ h3{
 .przekreslona label{text-decoration: line-through;}
 .podkreslona label{text-decoration: underline;}
 .pogrubiona label{font-weight:600;}
+.jeden{border-top: 1px solid;}
+.dwa{border-top: 2px solid;}
+.trzy{border-top: 3px solid;}
+.cztery{border-top: 4px solid;}
+.piec{border-top: 5px solid;}
 h4{
     font-family: Arial, sans-serif;
 }
@@ -108,4 +114,15 @@ h4{
 }
 fieldset{
     margin: 10px;
+}
+#wynik{
+    border: 2px solid var(--alfa);
+    padding: 20px;
+    border-radius: 15px;
+}
+.cso{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
