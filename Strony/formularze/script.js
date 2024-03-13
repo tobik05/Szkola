@@ -33,7 +33,7 @@ function zadanie1(){
     document.getElementById("wynik").style.borderRight=gruboscprawo+" "+stylprawo+" "+kolorprawo;
     document.getElementById("wynik").style.backgroundColor=wypelnienie;
     document.getElementById("wynik").style.color=kolorczcionki;
-
+    document.getElementById("wynik").style.textDecoration="none";
     if(pochylona.checked==true){
         document.getElementById("wynik").style.fontStyle="oblique";
     } 
