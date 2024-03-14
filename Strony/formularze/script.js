@@ -45,6 +45,5 @@ function zadanie1(){
     } 
     if(pogrubiona.checked==true){
         document.getElementById("wynik").style.fontWeight="600";
-    } else document.getElementById("wynik").style.fontWeight="400";
-
+    } else document.getElementBy
 }

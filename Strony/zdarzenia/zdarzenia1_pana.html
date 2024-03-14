@@ -1,0 +1,119 @@
+<html>
+<head>
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<script type="text/javascript">
+ function f1(id_obraz)
+ {
+  w.innerHTML="KLIKNIĘTO OBRAZEK ";
+ }
+ function f2(id_obraz)
+ {
+   id_obraz.style.border="solid red 10px";
+ }
+ function f3(id_obraz)
+  {
+    id_obraz.style.width="300px";
+	id_obraz.style.height="300px";
+  }
+  function f4(id_obraz)
+  {
+   id_obraz.style.width="400px";
+   id_obraz.style.height="400px";
+  }
+   function f5()
+   {
+     w.innerHTML="WCIŚNIĘTO KLAWISZ MYSZY ";
+	document.getElementById("blok").style.fontSize="100%";
+   
+   }
+     function f6()
+   {
+     w.innerHTML="PUSZCZONO KLAWISZ MYSZY ";
+	 document.getElementById("blok").style.fontSize="200%";
+   }
+   
+     function f7()
+     {
+	   
+	  document.getElementById("tekst").style.backgroundColor="gray";
+	  
+	 }
+	    
+     function f8()
+     {
+	   
+	  document.getElementById("tekst").style.backgroundColor="white";
+	  
+	 }
+	     
+     function f9()
+     {
+	   document.getElementById("tekst").style.color="red";
+	  }
+	 function f10()
+     {
+	   document.getElementById("tekst").style.color="blue";
+	  }
+
+	 function f11()
+     {
+	   document.getElementById("tekst2").style.color="pink";
+	 }
+	  
+	  function f12()
+	  {
+	    opis.innerHTML=" ODTWARZANIE ROZPOCZETE ";
+	  }
+	  
+	  function f13()
+	  {
+	    opis.innerHTML=" WSTRZYMANO ODTWARZANIE ";
+	  }
+	  function f14()
+	  {
+	    opis.innerHTML=" CAŁY FILM ZOSTAŁ ODTWORZONY  ";
+	  }
+	  function f15()
+	  {
+	    
+	   opis2.innerHTML=" NIE WOLNO PRZESKAKIWAĆ !!! OBEJRZYJ CAŁY FILM !!! ";
+	  }
+	   function f16()
+	   {
+	     document.getElementById("t1").style.color="red";
+	   
+	   }
+	  function f17()
+	   {
+	     t2.innerHTML="WKLEJONO TEKST ";
+	}
+	  
+</script>
+
+<body>
+  <p id="t1" oncopy="f16()"> Powiatowy Zespół Szkół w Świebodzinie </p> 
+   <textarea rows="10" cols="40" onpaste="f17()"> 
+   </textarea>
+   <br><br>
+  <p id="t2"> </p>
+  <video src="video.mp4" controls  onplay="f12()" onpause="f13()" onended="f14()" onseeked="f15()">
+  </video>
+  <p id="opis"> </p>  <p id="opis2"> </p>
+  <br><br>
+ <img src="obraz1.jpg" id="obraz1" onclick="f1(this)" ondblclick="f2(this)" onmouseover="f3(this)" onmouseout="f4(this)" onmousedown="f5()" onmouseup="f6()">
+ <img src="obraz1.jpg" id="obraz2" onclick="f1(this)" ondblclick="f2(this)" onmouseover="f3(this)" onmouseout="f4(this)" onmousedown="f5()" onmouseup="f6()">
+ <img src="obraz1.jpg" id="obraz3" onclick="f1(this)" ondblclick="f2(this)" onmouseover="f3(this)" onmouseout="f4(this)" onmousedown="f5()" onmouseup="f6()">
+ <br>
+ <div class="blok" id="blok"> Powiatowy Zespół Szkół </div>
+ <p id="w"></p>
+ <br><br><hr>
+ Wpisz cokolwiek: <input type="text" id="tekst" onfocus="f7()" onblur="f8()" onkeydown="f9()" onkeyup="f10()">
+ Wpisz cokolwiek: <input type="text" id="tekst2" onkeypress="f11()">
+ 
+ 
+</body>
+
+</html>
