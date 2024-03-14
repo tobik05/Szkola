@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobiasz Bielawski</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script src="script.js"></script>
+    <main>
+        <div class="przyciski">
+            <input type="button" value="CZERWONY" id="czerwony" ondblclick="dblklik()" onmousedown="klik()" onmouseup="nieklik()" onmouseover="nad(this)" onmouseout="poza(this)">
+            <input type="button" value="ZIELONY" id="zielony" ondblclick="dblklik()" onmousedown="klik()" onmouseup="nieklik()" onmouseover="nad(this)" onmouseout="poza(this)">
+            <input type="button" value="NIEBIESKI" id="niebieski" ondblclick="dblklik()" onmousedown="klik()" onmouseup="nieklik()" onmouseover="nad(this)" onmouseout="poza(this)">
+        </div>
+        <div class="autor">
+            Autor strony:<h2 id="autor">Tobiasz Bielawski</h2>
+        </div>
+        <div class="zdjecia">
+            <img src="lew.png" alt="Lew" id="lew" value="Lew" ondblclick="dblklik()" onmousedown="klik()" onmouseup="nieklik()" onmouseover="nadramka(this)" onmouseout="pozaramka(this)">
+            <img src="pantera.png" alt="Panter" id="pantera" value="Pantera">
+            <img src="tygrys.png" alt="Tygrys" id="tygrys" value="Lew">
+            <p id="lew_tekst"></p>
+            <p id="pantera_tekst"></p>
+            <p id="tygrys_tekst"></p>
+        </div>
+        <div class="imie">
+            Podaj swoje imię <input type="text" id="imie">
+        </div>
+    </main>
+</body>
+</html>

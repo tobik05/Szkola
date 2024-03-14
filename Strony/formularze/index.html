@@ -12,7 +12,6 @@
 <body>
     <script src="script.js"></script>
     <main>
-        <div id="wynik"></div>
         <form name="DANE">
             <h3>Wpisz tekst</h3>
             <input type="text" id="tekst" required placeholder="Wpisz tekst"><br>
@@ -42,38 +41,141 @@
                     <div class="podkreslona"><input type="checkbox" id="podkreslona" name="dekoracja" value="under-line"><label for="podkreslona"> Podkreślona</label></div>
                     <div class="pogrubiona"><input type="checkbox" id="pogrubiona" name="dekoracja" value="bold"><label for="pogrubiona"> Pogrubiona</label></div>
                 </fieldset><br>
-            </div>
-            <div class="col">
-                <div class="cso">Wybierz kolor obramowania
-                    <select name="kolor">
+                <div class="cso">Wybierz kolor wypełniania
+                    <select name="wypelnienie">
                         <option value="var(--czarny)">Czarny</option>
                         <option value="var(--bialy)">Biały</option>
                         <option value="var(--czerwony)">Czerwony</option>
                         <option value="var(--zielony)">Zielony</option>
                         <option value="var(--niebieski)">Niebieski</option>
                     </select><br>
+                    Wybierz kolor czcionki
+                    <select name="kolorczcionki">
+                        <option value="var(--bialy)">Biały</option>
+                        <option value="var(--czarny)">Czarny</option>
+                        <option value="var(--czerwony)">Czerwony</option>
+                        <option value="var(--zielony)">Zielony</option>
+                        <option value="var(--niebieski)">Niebieski</option>
+                    </select><br>
                 </div>
-            <fieldset>
-                <legend>Wybierz rozmiar obramowania</legend>
-                <div class="linia"><input type="radio" id="brak" name="grubosc" value="0px"><label for="brak"> Brak</label></div>
-                <div class="linia"><input type="radio" id="jeden" name="grubosc" value="1px"><label for="jeden"> 1px</label><hr class="jeden"></div>
-                <div class="linia"><input type="radio" id="dwa" name="grubosc" value="2px"><label for="dwa"> 2px</label><hr class="dwa"></div>
-                <div class="linia"><input type="radio" id="trzy" name="grubosc" value="3px"><label for="trzy"> 3px</label><hr class="trzy"></div>
-                <div class="linia"><input type="radio" id="cztery" name="grubosc" value="4px"><label for="cztery"> 4px</label><hr class="cztery"></div>
-                <div class="linia"><input type="radio" id="piec" name="grubosc" value="5px"><label for="piec"> 5px</label><hr class="piec"></div>
-            </fieldset><br>
-            <fieldset>
-                <legend>Wybierz rodzaj obramowania</legend>
-                <div class="linia"><input type="radio" id="solid" name="grubosc" value="0px"><label for="brak"> Brak</label></div>
-                <div class="linia"><input type="radio" id="kropki" name="grubosc" value="1px"><label for="jeden"> 1px</label><hr class="jeden"></div>
-                <div class="linia"><input type="radio" id="     " name="grubosc" value="2px"><label for="dwa"> 2px</label><hr class="dwa"></div>
-                <div class="linia"><input type="radio" id="trzy" name="grubosc" value="3px"><label for="trzy"> 3px</label><hr class="trzy"></div>
-                <div class="linia"><input type="radio" id="cztery" name="grubosc" value="4px"><label for="cztery"> 4px</label><hr class="cztery"></div>
-                <div class="linia"><input type="radio" id="piec" name="grubosc" value="5px"><label for="piec"> 5px</label><hr class="piec"></div>
-            </fieldset><br>
+            </div>
+            <div class="cos">
+                <div class="jeden">
+                    <div class="cso">
+                        <h2>Obramowanie góra</h2>
+                        Wybierz kolor obramowania
+                        <select name="kolorgora">
+                            <option value="var(--czerwony)">Czerwony</option>
+                            <option value="var(--czarny)">Czarny</option>
+                            <option value="var(--bialy)">Biały</option>
+                            <option value="var(--zielony)">Zielony</option>
+                            <option value="var(--niebieski)">Niebieski</option>
+                        </select><br>
+                        Wybierz rozmiar obramowania
+                        <select name="gruboscgora">
+                            <option value="1px">1 px</option>
+                            <option value="0px">Brak</option>
+                            <option value="2px">2 px</option>
+                            <option value="3px">3 px</option>
+                            <option value="4px">4 px</option>
+                            <option value="5px">5 px</option>
+                        </select><br>
+                        Wybierz styl obramowania
+                        <select name="stylgora">
+                            <option value="solid">Linia</option>
+                            <option value="dotted">Kropkowane</option>
+                            <option value="inset">Wewnętrzne</option>
+                            <option value="groove">Coś</option>
+                        </select><br>
+                    </div>
+                    <div class="cso">
+                        <h2>Obramowanie Dół</h2>
+                        Wybierz kolor obramowania
+                        <select name="kolordol">
+                            <option value="var(--czerwony)">Czerwony</option>
+                            <option value="var(--czarny)">Czarny</option>
+                            <option value="var(--bialy)">Biały</option>
+                            <option value="var(--zielony)">Zielony</option>
+                            <option value="var(--niebieski)">Niebieski</option>
+                        </select><br>
+                        Wybierz rozmiar obramowania
+                        <select name="gruboscdol">
+                            <option value="1px">1 px</option>
+                            <option value="0px">Brak</option>
+                            <option value="2px">2 px</option>
+                            <option value="3px">3 px</option>
+                            <option value="4px">4 px</option>
+                            <option value="5px">5 px</option>
+                        </select><br>
+                        Wybierz styl obramowania
+                        <select name="styldol">
+                            <option value="solid">Linia</option>
+                            <option value="dotted">Kropkowane</option>
+                            <option value="inset">Wewnętrzne</option>
+                            <option value="groove">Coś</option>
+                        </select><br>
+                    </div>
+                </div>
+                <div class="dwa">
+                    <div class="cso">
+                        <h2>Obramowanie Lewo</h2>
+                        Wybierz kolor obramowania
+                        <select name="kolorlewo">
+                            <option value="var(--czerwony)">Czerwony</option>
+                            <option value="var(--czarny)">Czarny</option>
+                            <option value="var(--bialy)">Biały</option>
+                            <option value="var(--zielony)">Zielony</option>
+                            <option value="var(--niebieski)">Niebieski</option>
+                        </select><br>
+                        Wybierz rozmiar obramowania
+                        <select name="grubosclewo">
+                            <option value="1px">1 px</option>
+                            <option value="0px">Brak</option>
+                            <option value="2px">2 px</option>
+                            <option value="3px">3 px</option>
+                            <option value="4px">4 px</option>
+                            <option value="5px">5 px</option>
+                        </select><br>
+                        Wybierz styl obramowania
+                        <select name="styllewo">
+                            <option value="solid">Linia</option>
+                            <option value="dotted">Kropkowane</option>
+                            <option value="inset">Wewnętrzne</option>
+                            <option value="groove">Coś</option>
+                        </select><br>
+                    </div>
+                    <div class="cso">
+                        <h2>Obramowanie Prawo</h2>
+                        Wybierz kolor obramowania
+                        <select name="kolorprawo">
+                            <option value="var(--czerwony)">Czerwony</option>
+                            <option value="var(--czarny)">Czarny</option>
+                            <option value="var(--bialy)">Biały</option>
+                            <option value="var(--zielony)">Zielony</option>
+                            <option value="var(--niebieski)">Niebieski</option>
+                        </select><br>
+                        Wybierz rozmiar obramowania
+                        <select name="gruboscprawo">
+                            <option value="1px">1 px</option>
+                            <option value="0px">Brak</option>
+                            <option value="2px">2 px</option>
+                            <option value="3px">3 px</option>
+                            <option value="4px">4 px</option>
+                            <option value="5px">5 px</option>
+                        </select><br>
+                        Wybierz styl obramowania
+                        <select name="stylprawo">
+                            <option value="solid">Linia</option>
+                            <option value="dotted">Kropkowane</option>
+                            <option value="inset">Wewnętrzne</option>
+                            <option value="groove">Coś</option>
+                        </select><br>
+                    </div>
+                </div>
             </div>
             <input type="button" onclick="zadanie1()" value="POKAŻ">
         </form>
+        <div id="wynik"></div>
     </main>
 </body>
 </html>
