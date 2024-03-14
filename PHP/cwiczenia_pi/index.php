@@ -31,7 +31,8 @@
                 //zadanie 2
                 echo "<br><div class='fibo'>Zadanie 2<br>";
                 $fibo=0;
-                for($i=0; $i<=20; $i++){
+                $n = 20;
+                for($i=0; $i<=$n; $i++){
                     echo $fibo . "<br>";
                     $fibo = $i+($i+1);
                 }
@@ -40,7 +41,8 @@
                 */
                 //zadanie 3
                 echo "<br><div class='piramida'>Zadanie 3<br>";
-                for($i=1; $i<=15; $i++){
+                $wysokosc = 15;
+                for($i=1; $i<=$wysokosc; $i++){
                     for($k=1; $k<=$i; $k++){ 
                         echo " * "; //$k;
                     }
