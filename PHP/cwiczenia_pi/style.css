@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #303841;
+    --tlo: #0b253c;
+    --drugi: #3A4750;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --niebieski: #0693e3;
+    --alfa: #0692e300;
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    min-height: 100vh;
+    width: 100vw;
+    background-color: var(--tlo);
+    color: var(--bialy);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+main{
+    margin-top: 50px;
+    height: 100%;
+    width: 100%;
+    word-wrap: break-word;
+    flex-direction: column;
+    align-items: center;
+    display: flex;
+}
+div{
+    text-align: center;
+}
