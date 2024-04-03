@@ -25,11 +25,11 @@ function nadramka(element){
 function pozaramka(element){
     element.style.border="4px solid var(--alfa)";
 }
-function klikobraz(element){
-    var autor = document.getElementById("autor");
-    autor.style.scale="1.3";
+function zwierze_klik(element){
+    zwierze = element.alt;
+    document.getElementById(zwierze + "_tekst").innerHTML = zwierze;
 }
-function dblkliktekst(){
-    var autor = document.getElementById("autor");
-    autor.style.scale="1.3";
+function dblkliktekst(element){
+    zwierze = element.alt;
+    document.getElementById(zwierze + "_tekst").style.color="#868686";
 }
