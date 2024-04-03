@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #303841;
+    --tlo: #0b253c;
+    --drugi: #3A4750;
+    --trzeci: #F6C90E;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --niebieski: #0693e3;
+    color: var(--bialy);
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--tlo);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+main{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 20px 0px 0px 0px;
+}
+.container-1{
+    height: 10%;
+}
+.col{
+    margin: 20px 0px 0px 0px;
+    width: 50%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.col input{
+    width: 100px;
+    padding: 5px;
+    border-radius: 5px;
+}
+input{
+    color: var(--czarny);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid var(--drugi);
+    transition: all 350ms;
+}
+input:invalid{
+    border: 3px solid var(--blad);
+    box-shadow: 0px 0px 15px var(--blad);
+    transition: all 350ms;
+}
+input[type=submit]{
+    cursor:pointer;
+    color: black;
+    background-color: #3a86ff;
+    border: 1px solid #3a86ff;
+    box-shadow: 0px 0px 20px #3a86ff;
+}
+h4{
+    margin: 20px 0px;
+    font-weight: 600;
+}
+.container-4{
+    display: flex;
+    flex-direction: column;
+}
+.wynik-maly{
+    color: #3a86ff;
+    font-weight: 600;
+}
