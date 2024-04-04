@@ -13,6 +13,7 @@
     color: var(--bialy);
     font-family: 'Rethink Sans', sans-serif;
     font-weight: 400;
+    outline: none;
 }
 body{
     height: 150vh;
@@ -28,7 +29,40 @@ main{
     margin-top: 100px;
     height: 100%;
     width: 100%;
+    text-align: center;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
+}
+input{
+    color: var(--czarny);
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+}
+.przyciski, .dsds{
+    margin: 20px;
+    z-index: 8888;
+}
+.box{
+    width: 500px;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#start{
+    background-color: var(--zielony);
+}
+#stop{
+    background-color: var(--czerwony);
+    color: var(--bialy);
+}
+#obrazek{
+    position: relative;
+}
+input[type=button]{
+    text-align: center;
+    width: 100px;
+    margin: 5px;
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+   <meta charset="UTF-8">
+ </head>
+
+ <script>
+  function zmienkolor()
+  {
+   document.getElementById("nr_rej").style.backgroundColor="black";
+   document.getElementById("nr_rej").style.color="white";
+  }
+  
+  function walidacja()
+  {
+    var wzorzec_numeru=/^[A-Z]{2,3} [A-Z0-9]{4}$/;
+	var numer=document.getElementById("nr_rej").value;
+	if(wzorzec_numeru.test(numer)) document.getElementById("nr_rej").style.backgroundColor="green";
+	else document.getElementById("nr_rej").style.backgroundColor="red";
+  }
+  
+  function oblicz()
+   { 
+      var dzisiaj=new Date();
+	  var data_zakupu=new Date(document.getElementById("data_zakupu").value);
+	  var ile_kilometrow=document.getElementById("ile").value;
+	  ile_kilometrow=parseInt(ile_kilometrow);
+	  var dni=Math.floor((dzisiaj-data_zakupu)/(1000*60*60*24));
+	  var srednia=ile_kilometrow/dni;
+	  wynik.innerHTML=" ŚREDNIA DZIANNA LICZBA KILOMETRÓW WYNOSI: "+srednia;
+   }  
+ 
+   function policz()
+   {
+     var cena;
+     cena=parseInt(kalkulacja.usluga.value);
+   
+     if(kalkulacja.realizacja[0].checked) cena=cena+0.25*cena;
+	 if(kalkulacja.realizacja[2].checked) cena=cena-0.2*cena;
+	 
+	 if(kalkulacja.dodatkowe[0].checked) cena+=50;
+	 if(kalkulacja.dodatkowe[1].checked) cena+=40;
+	 if(kalkulacja.dodatkowe[2].checked) cena+=30;
+	 if(kalkulacja.dodatkowe[3].checked) cena+=20;
+     
+     k.innerHTML=cena;
+   
+   }
+   function zmienprzycisk()
+   {
+   document.getElementById("przycisk").style.backgroundColor="green";
+   }
+   
+   function z1()
+   {
+   document.getElementById("napis").style.fontSize="200%";
+   }
+    function z2()
+   {
+   document.getElementById("napis").style.fontSize="100%";
+   }
+ </script>
+ 
+ 
+   
+ <body>
+    Podaj numer rejestracyjny samochodu: <input type="text" id="nr_rej" onfocus="zmienkolor()" onblur="walidacja()"><br>
+	<br><hr><br>
+	Podaj datę zakupu samochodu: <input type="date" id="data_zakupu"> <br>
+	Podaj ile kilometrów przejechałeś <input type="number" id="ile"><input type="button" value=" OBLICZ ŚREDNIĄ DZIENNĄ LICZBĘ KILOMETRÓW" onclick="oblicz()"> <br>
+	<p id="wynik"> </p> <br><br>
+	
+	<form name="kalkulacja">
+	<b>
+	<p id="napis" onmouseover="z1()" onmouseout="z2()" > KOSZTORYS: </b> </p><br><br>
+	
+	WYBIERZ USŁUGĘ: <select name="usluga">
+	                  <option value="150"> WYMIANA TARCZ </option> 
+					  <option value="200"> WYMIANA OLEJU </option> 
+					  <option value="250"> WYMIANA KLOCKÓW </option> 
+					  <option value="100"> WYMIANA PŁYNU HAMULCOWEGO </option> 
+	                </select>
+	
+	<br>Sposób realizacji:<br>
+	<input type="radio" name="realizacja" onclick="zmienprzycisk()"> EXPRESS<br>
+	<input type="radio" name="realizacja" onclick="zmienprzycisk()"> STANDARD<br>
+	<input type="radio" name="realizacja" onclick="zmienprzycisk()"> PROMO<br>
+	<br>
+	<u> USUGI DODATKOWE:</u><br>
+    <input type="checkbox" name="dodatkowe"	> MYCIE SAMOCHODU <br>
+	<input type="checkbox" name="dodatkowe"	> WOSKOWANIE <br>
+	<input type="checkbox" name="dodatkowe"	> ODKURZANIE <br>
+	<input type="checkbox" name="dodatkowe"	> MYCIE FELG <br><br>
+	
+	 <input type="button" value="OBLICZ" onclick="policz()" id="przycisk">
+	 <p id="k"> </p>
+	
+	</form>
+ 
+ </body>
+ 
+</html>
+ 

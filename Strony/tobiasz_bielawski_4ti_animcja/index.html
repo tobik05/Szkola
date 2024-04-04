@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tobiasz Bielawski</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body onload="animacja=true;pulsacja()">
+    <script src="script.js"></script>
+    <main>
+        <div class="przyciski">
+            <div class="gora cos">
+                <input type="button" id="kierunek" value="Lewo góra" onclick="animacja=true;lewogora()">
+                <input type="button" id="kierunek" value="Góra" onclick="animacja=true;gora()">
+                <input type="button" id="kierunek" value="Prawo góra" onclick="animacja=true;prawogora()">
+            </div>
+            <div class="srodek cos">
+                <input type="button" id="kierunek" value="Lewo" onclick="animacja=true;lewo()">
+                <input type="button" id="stop" value="Stop" onclick="animacja=false;pulsacja()">
+                <input type="button" id="kierunek" value="Prawo" onclick="animacja=true;prawo()">
+                <div class="dol cos">
+                    <input type="button" id="kierunek" value="Lewo dół" onclick="animacja=true;lewodol()">
+                    <input type="button" id="kierunek" value="Doł" onclick="animacja=true;dol()">
+                    <input type="button" id="kierunek" value="Prawo dół" onclick="animacja=true;prawodol()">
+                </div>
+            </div>
+        </div>
+        <div class="dsds">
+            <input type="button" id="kierunek" value="+" onclick="x+=1;px+=1;p+=1;pd+=1;ld+=1;d+=1;pd+=1;g+=1">
+            <input type="button" id="kierunek" value="-" onclick="x-=0.2;px-=0.2;p-=0.2;pd-=0.2;ld-=0.2;d-=0.2;pd-=0.2;g-=0.2">
+        </div>
+        <div class="box">
+            <img src="gwiazdka.jpg" alt="Gwiazda" id="obrazek" width="50px" height="50px">
+        </div>
+    </main>
+</body>
+</html>
