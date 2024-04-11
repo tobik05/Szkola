@@ -32,54 +32,50 @@ main{
     flex-direction: column;
     align-items: center;
 }
-button{
+button, input{ 
+    outline: none;
     color: var(--bialy);
-    padding: 5px 10px;
+    padding: 10px;
     margin: 5px;
     border: 1px solid var(--czerwony);
     border-radius: 5px;
     background-color: var(--alfa);
     transition: all 300ms;
 }
-button:hover{
+button:hover, input:focus{
     color: var(--bialy);
     border: 1px solid var(--czerwony);
     background-color: var(--czerwony);
     transition: all 300ms;
     box-shadow: 0px 0px 15px var(--czerwony);
 }
-navbar{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 30px var(--czerwony);
+input{
+    width: 50px;
 }
-.menu{
-    width: 50%;
-    height: 100%;
+form{
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-evenly;
     flex-wrap: wrap;
 }
-.content{
-    margin: 50px 0px;
+input[type=submit]{ 
+    width: 100%;
+    outline: none;
+    color: var(--bialy);
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid var(--zielony);
+    border-radius: 5px;
+    background-color: var(--alfa);
+    transition: all 300ms;
 }
-.bolid{
-    width: 50%;
+input[type=submit]:hover{
+    color: var(--bialy);
+    border: 1px solid var(--zielony);
+    background-color: var(--zielony);
+    transition: all 300ms;
 }
-.team{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.team p {
-    width: 50%;
-}
-.team *{
-    margin: 10px;
+.wynik{
+    margin: 50px 0px 5px 0px;
+    font-size: 22px;
 }
