@@ -1,0 +1,40 @@
+*{
+    font-family: Georgia;
+}
+.lewy{
+    float: left;
+    background-color: Maroon;
+    color: white;
+    height: 600px;
+    width: 30%;
+}
+.prawy{
+    float: right;
+    background-color: Maroon;
+    color: white;
+    height: 600px;
+    width: 70%;
+    overflow: auto;
+}
+footer{
+    background-color: DimGray;
+    color: white;
+}
+p{
+    padding: 10px;
+}
+img{
+    float: left;
+    width: 300px;
+    padding: 10px;
+    border: 1px solid white;
+}
+.Indigo{
+    background-color: Indigo;
+}
+.SteelBlue{
+    background-color: SteelBlue;
+}
+.Olive{
+    background-color: Olive;
+}

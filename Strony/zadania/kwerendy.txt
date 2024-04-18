@@ -1,0 +1,3 @@
+SELECT nazwa,pasmo from szczyty where wysokosc>=1500 
+SELECT nazwa from szczyty ORDER by wysokosc desc limit 1 
+create user "leon@localhost" identified by "LEON%Zawodowiec" 
