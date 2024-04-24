@@ -20,6 +20,18 @@
                 Prostopadłościan to graniastosłup, którego wszystkie ściany są prostokątami, oraz wszystkie ściany boczne są prostopadłe do podstaw.
                 </p>
                 <img src="wzor_prostopadloscian.png" id="wzor_objetosc">
+                <p>Wzór na pole powierzchni całkowitej prostopadłościanu.</p>
+                <img src="wzor_prostopadloscian2.png" id="wzor_objetosc">
+                <p>Objętość prostopadłościanu</p>
+                <img src="wzor_prostopadloscian3.png" id="wzor_objetosc">
+                <img src="wzor_prostopadloscian4.png" id="wzor_objetosc">
+                <p>Dany jest prostopadłościan o wymiarach 3x4x5. Oblicz:
+                    <p>a) pole powierzchni bocznej</p>
+                    <p>b) objętość</p>
+                    <p>c) długość przekątnej</p>
+                </p>
+                <p>Rysunek pomocniczy do zadania:</p>
+                <img src="wzor_prostopadloscian5.png" id="wzor_objetosc">
             </section>
         </main>
     </body>

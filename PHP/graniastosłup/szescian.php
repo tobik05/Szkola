@@ -15,32 +15,18 @@
         <main>
             <a href="index.php" id="max-width"><i class="fa-solid fa-arrow-left"></i> Wróć na stronę główną.</a>
             <section>
-                <h2>Pole podstawy graniastosłupa</h2>
+                <h2>Sześcian i jego własności.</h2>
                 <p>
-                Pole graniastosłupa to suma pola podstaw tego graniastosłupa i pola ścian bocznych. 
+                Sześcianem nazywamy graniastosłup, którego wszystkie ściany są kwadratami.
                 </p>
-                <img src="wzor_pole.png" id="wzor_objetosc">
-                <img src="wzor_pole2.png" id="wzor_objetosc">
-                <p>
-                Pole podstawy graniastosłupa liczymy z różnych wzorów w zależności od tego jaka figura jest jego podstawą. Może to być trójkąt, kwadrat, prostokąt, romb, trapez, deltoid, pięciokąt foremny lub dowolna inna figura. 
-                </p>
-                <h2>Pole powierzchni bocznej graniastosłupa</h2>
-                <hr>
-                <p>
-                Nie ma jednego wzoru na pole ścian bocznych graniastosłupa. Wszystko zależy od tego jaka figura znajduje się w podstawie. 
-                </p>
-                <img src="wzor_pole3.png" id="wzor_objetosc">
-                <p>
-                W niektórych przypadkach pole graniastosłupa możemy obliczyć dużo prościej. Rozważmy przypadek ganiastosłupa prawidłowego czworokątnego (w podstawie jest kwadrat o boku a).
-                </p>
-                <img src="wzor_pole4.png" id="wzor_objetosc">
-                <p>
-                W tym przypadku wszystkie ściany boczne są jednakowymi prostokątami o bokach długości a i H. 
-                </p>
-                <p>
-                Wzór na pole powierzchni bocznej takiego graniastosłupa to: 
-                </p>
-                <img src="wzor_pole5.png" id="wzor_objetosc">
+                <img src="wzor_prosty3.png" id="wzor_objetosc">
+                <p>Pole powierzchni całkowitej sześcianu</p>
+                <img src="wzor_szescian.png" id="wzor_objetosc">
+                <p>Objętość sześcianu</p>
+                <img src="wzor_szescian2.png" id="wzor_objetosc">
+                <p>Długość przekątnej sześcianu</p>
+                <img src="wzor_szescian3.png" id="wzor_objetosc">
+                <img src="wzor_szescian4.png" id="wzor_objetosc">
             </section>
         </main>
     </body>

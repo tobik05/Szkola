@@ -20,10 +20,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
     overflow-x: hidden;
 }
 main{
+    padding-bottom: 150px;
     margin-top: 50px;
     height: 100%;
     width: 100%;
@@ -34,4 +34,33 @@ main{
 }
 div{
     text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+input{
+    color: var(--bialy);
+    background-color: var(--alfa);
+    border: 1px solid var(--niebieski);
+    box-shadow: 0px 0px 20px var(--alfa);
+    border-radius:  5px;
+    padding: 5px;
+    transition: all 350ms;
+    margin: 15px;
+}
+input[type=submit]:hover{
+    color: var(--czarny);
+    background-color: var(--niebieski);
+    border: 1px solid var(--niebieski);
+    box-shadow: 0px 0px 20px var(--niebieski);
+    transition: all 350ms;
+}
+input:focus{
+    outline: none;
+    color: var(--czarny);
+    background-color: var(--niebieski);
+    border: 1px solid var(--niebieski);
+    box-shadow: 0px 0px 20px var(--niebieski);
+    transition: all 350ms;
 }

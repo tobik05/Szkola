@@ -13,12 +13,23 @@
     </head>
     <body>
         <main>
+            <form action="" method="post">
+                2. Wprowadź n elementów Fibonacciego
+                <input type="number" placeholder="Wprowadź liczbę" name="liczba_fibo"><br>
+                3. Wprowadź wysokość piramidy
+                <input type="number" placeholder="Wprowadź liczbę" name="liczba_wysokosc"><br>
+                4. Wprowadź liczbę do obliczenia silni
+                <input type="number" placeholder="Wprowadź liczbę" name="liczba_silnia"><br>
+                5. Wprowadź liczbę do obliczenia dzielników
+                <input type="number" placeholder="Wprowadź liczbę" name="liczba_dzielnik"><br>
+                <input type="submit" value="Oblicz">
+            </form>
             <?php
-                /*
+                
                 //zadanie 1
                 echo "<br><div class='pi'>Zadanie 1<br>";
-                $n =  10000000;
-                $dokladnosc = 1000;
+                $n =  1000000;
+                $dokladnosc = 100;
                 bcscale($dokladnosc);
                 $suma = 0;
                 for ($i=0; $i < $n; $i++) {
@@ -30,18 +41,36 @@
                 
                 //zadanie 2
                 echo "<br><div class='fibo'>Zadanie 2<br>";
-                $fibo=0;
-                $n = 20;
-                for($i=0; $i<=$n; $i++){
-                    echo $fibo . "<br>";
-                    $fibo = $i+($i+1);
+                $x=0;
+                $y=1;
+                if(isset($_POST["liczba_fibo"])){
+                    if($_POST["liczba_fibo"]!=""){
+                        $fibo=$_POST["liczba_fibo"];
+                    }  else{
+                        $fibo = 5;
+                    }
+                } else{
+                    $fibo = 5;
+                }
+                for($i=0; $i<$fibo; $i++){
+                    echo $y . " ";
+                    $y+=$x;
+                    $x=$y-$x;
                 }
                 echo $fibo;
                 echo "</div>";
-                */
+                
                 //zadanie 3
                 echo "<br><div class='piramida'>Zadanie 3<br>";
-                $wysokosc = 15;
+                if(isset($_POST["liczba_wysokosc"])){
+                    if($_POST["liczba_wysokosc"]!=""){
+                        $wysokosc = $_POST["liczba_wysokosc"];
+                    }  else{
+                        $wysokosc = 5;
+                    }
+                } else{
+                    $wysokosc = 5;
+                }
                 for($i=1; $i<=$wysokosc; $i++){
                     for($k=1; $k<=$i; $k++){ 
                         echo " * "; //$k;
@@ -52,7 +81,15 @@
 
                 //zadanie 4
                 echo "<br><div class='silnia'>Zadanie 4<br>";
-                $liczba_silnia=5;
+                if(isset($_POST["liczba_silnia"])){
+                    if($_POST["liczba_silnia"]!=""){
+                        $liczba_silnia=$_POST["liczba_silnia"];
+                    }  else{
+                        $liczba_silnia = 5;
+                    }
+                } else{
+                    $liczba_silnia = 5;
+                }
                 $silnia=1;
                 for($i=$liczba_silnia; $i>1; $i--){
                     $silnia=$silnia*$i;
@@ -62,7 +99,15 @@
 
                 //zadanie 5
                 echo "<br><div class='dzielnik'>Zadanie 5<br>";
-                $liczba_dzielnik=28;
+                if(isset($_POST["liczba_dzielnik"])){
+                    if($_POST["liczba_dzielnik"]!=""){
+                        $liczba_dzielnik=$_POST["liczba_dzielnik"];
+                    }  else{
+                        $liczba_dzielnik = 28;
+                    }
+                } else{
+                    $liczba_dzielnik = 28;
+                }
                 for($i=1; $i<=$liczba_dzielnik; $i++){
                     if($liczba_dzielnik%$i==0){
                         echo $i . " ";
@@ -70,6 +115,7 @@
                 }
                 echo "</div>";
                 ?>
+                
         </main>
     </body>
 </html>
