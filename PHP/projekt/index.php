@@ -10,8 +10,10 @@
         <link rel="stylesheet" href="style.css">
         <link rel="icon" type="image/x-icon" href="logo.png">
         <title>Tobiasz Bielawski</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
     <body>
+        <script src="script.js"></script>
         <main>
             <form action="gotowe.php"  method="post" name="relacje">
                 <h2>Relacje z rówieśnikami.</h2>
@@ -43,30 +45,30 @@
                 </div>
                 <h2>Samodzielność i koncentracja.</h2>
                 <div class="col col-4">
-                    <label for="4o1"><input type="radio" value="6" id="o1" name="o4">Samodzielnie pracuje w czasie zajęć. Jest wytrwały/a w czasie wykonywania zadań.</label>
-                    <label for="4o2"><input type="radio" value="5" id="o2" name="o4">Czesto pracuje samodzielnie. Potrafi skupić swoja wagę na wykonywanym zadaniu.</label>
-                    <label for="4o3"><input type="radio" value="2" id="o3" name="o4">Czesto potrzebuje pomocy ze strony nauczyciela. Jest nieuważny/a i rozkojarzony/a w czasie zajęć. Szybko zniechęca sie do pracy. Ma problem z koncentracja uwagi.</label>
-                    <label for="4o4"><input type="radio" value="4" id="o4" name="o4">Czasami pracuje samodzielnie. Wymaga zachęty do pracy. Wykonuje zadania szybko i niezbyt starannie.</label>
-                    <label for="4o5"><input type="radio" value="1" id="o5" name="o4">Pracuje tylko z pomocą nauczyciela. Przeszkadza innym w pracy.</label>
-                    <label for="4o6"><input type="radio" value="3" id="o6" name="o4">Oczekuje pomocy nauczyciela przy wykonywaniu zadań. Nie potrafi skupic sie na wykonywanym zadaniu. Wymaga zachety do pracy.</label>
+                    <label for="4o1"><input type="radio" value="6" id="4o1" name="o4">Samodzielnie pracuje w czasie zajęć. Jest wytrwały/a w czasie wykonywania zadań.</label>
+                    <label for="4o2"><input type="radio" value="5" id="4o2" name="o4">Czesto pracuje samodzielnie. Potrafi skupić swoja wagę na wykonywanym zadaniu.</label>
+                    <label for="4o3"><input type="radio" value="2" id="4o3" name="o4">Czesto potrzebuje pomocy ze strony nauczyciela. Jest nieuważny/a i rozkojarzony/a w czasie zajęć. Szybko zniechęca sie do pracy. Ma problem z koncentracja uwagi.</label>
+                    <label for="4o4"><input type="radio" value="4" id="4o4" name="o4">Czasami pracuje samodzielnie. Wymaga zachęty do pracy. Wykonuje zadania szybko i niezbyt starannie.</label>
+                    <label for="4o5"><input type="radio" value="1" id="4o5" name="o4">Pracuje tylko z pomocą nauczyciela. Przeszkadza innym w pracy.</label>
+                    <label for="4o6"><input type="radio" value="3" id="4o6" name="o4">Oczekuje pomocy nauczyciela przy wykonywaniu zadań. Nie potrafi skupic sie na wykonywanym zadaniu. Wymaga zachety do pracy.</label>
                 </div>
                 <h2>Zachowanie w różnych sytuacjach</h2>
                 <div class="col col-5">
-                    <label for="5o1"><input type="radio" value="1" id="o1" name="o5">Sprawia poważne kłopoty wychowawcze. Przeszkadza podczas zajęć.</label>
-                    <label for="5o2"><input type="radio" value="4" id="o2" name="o5">Niedokładnie wykonuje polecenia nauczyciela. Nie sprawia klopotów wychowawczych. Czasami nie potrafi zachowa sie stosownie do róznych sytuacji.</label>
-                    <label for="5o3"><input type="radio" value="3" id="o3" name="o5">Czesto nie potrafi zachowa sie stosownie do róznych sytuacji. Jest niezdyscyplinowany.</label>
-                    <label for="5o4"><input type="radio" value="2" id="o4" name="o5">Nie potrafi zachowa sie stosownie do róznych sytuacji. Cechuje sie niska kultura osobista.</label>
-                    <label for="5o5"><input type="radio" value="5" id="o5" name="o5">Potrafi zachowa sie stosownie do róznych sytuacji. Jest zdyscyplinowany/a.</label>
-                    <label for="5o6"><input type="radio" value="6" id="o6" name="o5">Słucha uwaznie polecen nauczyciela i stosuje sie do nich. Wyróznia sie wysoka kultura osobista.</label>
+                    <label for="5o1"><input type="radio" value="1" id="5o1" name="o5">Sprawia poważne kłopoty wychowawcze. Przeszkadza podczas zajęć.</label>
+                    <label for="5o2"><input type="radio" value="4" id="5o2" name="o5">Niedokładnie wykonuje polecenia nauczyciela. Nie sprawia klopotów wychowawczych. Czasami nie potrafi zachowa sie stosownie do róznych sytuacji.</label>
+                    <label for="5o3"><input type="radio" value="3" id="5o3" name="o5">Czesto nie potrafi zachowa sie stosownie do róznych sytuacji. Jest niezdyscyplinowany.</label>
+                    <label for="5o4"><input type="radio" value="2" id="5o4" name="o5">Nie potrafi zachowa sie stosownie do róznych sytuacji. Cechuje sie niska kultura osobista.</label>
+                    <label for="5o5"><input type="radio" value="5" id="5o5" name="o5">Potrafi zachowa sie stosownie do róznych sytuacji. Jest zdyscyplinowany/a.</label>
+                    <label for="5o6"><input type="radio" value="6" id="5o6" name="o5">Słucha uwaznie polecen nauczyciela i stosuje sie do nich. Wyróznia sie wysoka kultura osobista.</label>
                 </div>
                 <h2>Dbałość o honor i tradycje szkoły</h2>
                 <div class="col col-6">
-                    <label for="6o1"><input type="radio" value="1" id="o1" name="o6">Niewlasciwie zachowuje sie podczas zajec i uroczystosci szkolnych. Niszczy sprzet szkolny.</label>
-                    <label for="6o2"><input type="radio" value="4" id="o2" name="o6">Właściwie wywiązuje sie z powierzonych mu/jej zadań. Zachowuje wasciwa postawe podczas uroczystosci szkolnych.</label>
-                    <label for="6o3"><input type="radio" value="3" id="o3" name="o6">Szanuje sprzet szkolny oraz cudza i swoja wlasnos. Stara sie zachowac wasciwa postawe podczas uroczystosci szkolnych.</label>
-                    <label for="6o4"><input type="radio" value="2" id="o4" name="o6">Nie wywiazuje sie z zadan powierzonych przez nauczyciela. Nie przejawia troski o mienie szkoly.</label>
-                    <label for="6o5"><input type="radio" value="5" id="o5" name="o6">Czynnie uczestniczy w zyciu klasy i szkoty. Bierze aktywny udzial w konkursach i uroczystosciach szkolnych.</label>
-                    <label for="6o6"><input type="radio" value="6" id="o6" name="o6">Zawsze chetnie bierze czynny udziat w zyciu szkoly. Godnie reprezentuje szkote w konkursach pozaszkolnych.</label>
+                    <label for="6o1"><input type="radio" value="1" id="6o1" name="o6">Niewlasciwie zachowuje sie podczas zajec i uroczystosci szkolnych. Niszczy sprzet szkolny.</label>
+                    <label for="6o2"><input type="radio" value="4" id="6o2" name="o6">Właściwie wywiązuje sie z powierzonych mu/jej zadań. Zachowuje wasciwa postawe podczas uroczystosci szkolnych.</label>
+                    <label for="6o3"><input type="radio" value="3" id="6o3" name="o6">Szanuje sprzet szkolny oraz cudza i swoja wlasnos. Stara sie zachowac wasciwa postawe podczas uroczystosci szkolnych.</label>
+                    <label for="6o4"><input type="radio" value="2" id="6o4" name="o6">Nie wywiazuje sie z zadan powierzonych przez nauczyciela. Nie przejawia troski o mienie szkoly.</label>
+                    <label for="6o5"><input type="radio" value="5" id="6o5" name="o6">Czynnie uczestniczy w zyciu klasy i szkoty. Bierze aktywny udzial w konkursach i uroczystosciach szkolnych.</label>
+                    <label for="6o6"><input type="radio" value="6" id="6o6" name="o6">Zawsze chetnie bierze czynny udziat w zyciu szkoly. Godnie reprezentuje szkote w konkursach pozaszkolnych.</label>
                 </div>
                 <input type="submit" value="Zakończ">
             </form>
