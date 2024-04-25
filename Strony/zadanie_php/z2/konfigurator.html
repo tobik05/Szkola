@@ -7,39 +7,67 @@
     <link href="styl6.css" rel="stylesheet">
 </head>
 <body>
+    <script>
+        function tlo(kolor){
+            document.getElementById("prawy").style.backgroundColor=kolor;
+        }
+        function kolor(ustawienie){
+            var kolor = ustawienie.value;
+            document.getElementById("prawy").style.color = kolor;
+            console.log("dsadsadas");
+            
+        }
+        function rozmiar(input){
+            var wartosc=input.value;
+            document.getElementById("prawy").style.fontSize=wartosc+"%";
+            console.log(input);
+        }
+        function ramka(input){
+            if(input.checked){
+                document.getElementById("img").style.border="1px solid white";
+            } else{
+                document.getElementById("img").style.border="none";
+            }
+        }
+        function lista(wartosc){
+            document.getElementById("lista").style.listStyle=wartosc.value;
+            document.getElementById("lista2").style.listStyle=wartosc.value;
+            document.getElementById("lista3").style.listStyle=wartosc.value;
+        }
+    </script>
     <div class="lewy">
         <h1>Konfigurator stylu</h1>
         <p>Podaj kolor tła<br>
-            <button class="Indigo">Indigo</button>
-            <button class="SteelBlue">SteelBlue</button>
-            <button class="Olive">Olive</button>
+            <button class="Indigo" onclick="tlo('Indigo')">Indigo</button>
+            <button class="SteelBlue" onclick="tlo('SteelBlue')">SteelBlue</button>
+            <button class="Olive" onclick="tlo('Olive')">Olive</button>
         </p>
-        <p>Podaj kolor czcionki
-            <select name="" id="">
-                <option value="">White</option>
-                <option value="">Tan</option>
-                <option value="">Bisque</option>
-                <option value="">Plum</option>
+        <p>Podaj kolor czcionki<br>
+            <select name="kolor" onchange="kolor(this)">
+                <option value="White">White</option>
+                <option value="Tan">Tan</option>
+                <option value="Bisque">Bisque</option>
+                <option value="Plum">Plum</option>
             </select>
         </p>
         <p>Podaj rozmiar czcionki w procentach, np. 200%
-            <input type="text" name="" id="">
+            <input type="text" onchange="rozmiar(this)">
         </p>
         <p>Czy  rysunek  ma  mieć  ramkę?
-            <br><input type="checkbox" name="" id="" checked> Rysuj ramkę
+            <br><input type="checkbox" onchange="ramka(this)" checked> Rysuj ramkę
         </p>
-        <p>Jaki  jest  typ  punktora  listy?”<br>
-            <input type="radio" name="" id="" checked>dysk<br>
-            <input type="radio" name="" id="">kwadrat<br>
-            <input type="radio" name="" id="">okrąg
+        <p>Jaki  jest  typ  punktora  listy?<br>
+            <input type="radio" name="lista" value="disc" onclick="lista(this)" checked>dysk<br>
+            <input type="radio" name="lista" value="square" onclick="lista(this)">kwadrat<br>
+            <input type="radio" name="lista" value="circle" onclick="lista(this)">okrąg
         </p>
     </div>
-    <div class="prawy">
-        <div class="cos"><img src="gibraltar.jpg" alt="półwysep Gibraltar">
+    <div class="prawy" id="prawy">
+        <div class="cos"><img src="gibraltar.jpg" alt="półwysep Gibraltar" id="img">
             <ul>
-                <li>element 1</li>
-                <li>element 2</li>
-                <li>element 3</li>
+                <li id="lista">element 1</li>
+                <li id="lista2">element 2</li>
+                <li id="lista3">element 3</li>
             </ul></div>
         
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>

@@ -21,6 +21,7 @@ footer{
     color: white;
 }
 p{
+    clear: both;
     padding: 10px;
 }
 img{
@@ -28,6 +29,7 @@ img{
     width: 300px;
     padding: 10px;
     border: 1px solid white;
+    margin-right: 30px;
 }
 .Indigo{
     background-color: Indigo;
