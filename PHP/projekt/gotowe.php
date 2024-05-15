@@ -14,6 +14,9 @@
     <body>
         <main>
         <?php 
+            if(isset($_POST["p"])){
+                $plec = $_POST["p"];
+            }
             if(isset($_POST["o1"])){
                 $o1 = $_POST["o1"];
             }
@@ -33,7 +36,7 @@
                 $o6 = $_POST["o6"];
             }
             $suma = ($o1 + $o2 + $o3 + $o4 + $o5 + $o6);
-        ?>
+            echo $plec;        ?>
         </main>
     </body>
 </html
