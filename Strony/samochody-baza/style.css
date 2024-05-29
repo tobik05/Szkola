@@ -45,13 +45,19 @@ input{
 }
 input:focus{
     color: var(--bialy);
-    border: 1px solid var(--zielony);
+    border: 1px solid var(--niebieski);
     background-color: var(--alfa);
     transition: all 300ms;
 }
 input:invalid{
     color: var(--bialy);
     border: 1px solid var(--czerwony);
+    background-color: var(--alfa);
+    transition: all 300ms;
+}
+input:valid{
+    color: var(--bialy);
+    border: 1px solid var(--zielony);
     background-color: var(--alfa);
     transition: all 300ms;
 }

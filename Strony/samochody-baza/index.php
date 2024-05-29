@@ -32,11 +32,11 @@
                 ?>
 
                 <form name="dodaj" method="post" action="dodaj.php">
-                    <input type="text" name="marka" placeholder="Marka" required><br>
-                    <input type="text" name="model" placeholder="Model" required><br>
+                    <input type="text" name="marka" placeholder="Marka" pattern="([A-zĄ-ż\s]){2,}" required><br>
+                    <input type="text" name="model" placeholder="Model" pattern="([A-z0-9Ą-ż\s]){2,}" required><br>
                     <input type="number" name="rok" placeholder="Rok" min="1885" max="<?php echo date("Y");?>" required><br>
                     <input type="number" name="przebieg" placeholder="Przebieg" min="0" required><br>
-                    <input type="text" name="kolor" placeholder="Kolor" required><br>
+                    <input type="text" name="kolor" placeholder="Kolor" pattern="([A-zĄ-ż\s]){2,}" required><br>
                     <input type="submit" name="dodaj" value="Dodaj samochód">
                 </form>
                 <section>
@@ -58,7 +58,8 @@
                             <td><?php echo $wiersz['rok'];?></td>
                             <td><?php echo $wiersz['przebieg'];?></td>
                             <td><?php echo $wiersz['kolor'];?></td>
-                            <!--<td><?php echo "<button class='error'>Usuń</button>" ?></td>-->
+                            <td><?php $id=$wiersz['id'];
+                            echo "<button class='error'><a href='usun.php?id=$id>Usuń</a></button>" ?></td>
                         </tr>
                     <?php
                 }
