@@ -12,10 +12,17 @@
         <title>Tobiasz Bielawski</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     </head>
-    <body>
+    <body class="body2">
         <script src="script.js"></script>
-        <main>
+        <main class="main2">
             <form action="gotowe.php"  method="post" name="relacje">
+                <h2>Uczeń/Uczennica:</h2>
+                <div class="col col-1">
+                    <label for="imie">Imię i nazwisko: <input type="text" id="imie" name="imie"></label>
+                    <label for="klasa">Klasa: <input type="text"  id="klasa" name="klasa"></label>
+                    <label for="urodzona">Urodzona: <input type="text"  id="urodzona" name="urodzona"></label>
+                    <label for="zam">Zamieszkanie: <input type="text"  id="zam" name="zam"></label>
+                </div>
                 <h2>Pleć</h2>
                 <div class="col col-1">
                     <label for="p1"><input type="radio" value="Kobieta" id="p1" name="p">Kobieta</label>
@@ -42,11 +49,10 @@
                 <div class="col col-4">
                     <label for="3o1"><input type="radio" value="6" id="3o1" name="o3">Wykazuje dużą aktywność na zajęciach. Jest zawsze przygotowany/a do zajęć.</label>
                     <label for="3o2"><input type="radio" value="1" id="3o2" name="o3">Pracuje w bardzo wolnym tempie. Nie odrabia zadan domowych. Lekceważy obowiązki ucznia, nie uczy się, nie wypełnia poleceń nauczyciela.</label>
-                    <label for="3o3"><input type="radio" value="5" id="3o3" name="o3">Zachowuje szybkie tempo pracy. Jest pracowity/a, sumienny/a, wykazuje swoje zdolności w pracy szkolnej.</label>
-                    <label for="3o4"><input type="radio" value="5" id="3o4" name="o3">Jest aktywny/a na zajeciach. Pracuje w dobrym tempie. Uczy się pilnie i systematycznie, przezwycięża napotkane trudności.</label>
-                    <label for="3o5"><input type="radio" value="2" id="3o5" name="o3">Jest bierny/a podczas zajec. Pracuje w wolnym tempie. Rzadko odrabia zadania domowe. Jest niesystematyczny/a i niesumienny/a w nauce.</label>
-                    <label for="3o6"><input type="radio" value="3" id="3o6" name="o3">Czesto nie odrabia zadan domowych. Jest mato aktywny/a na zajeciach.</label>
-                    <label for="3o7"><input type="radio" value="4" id="3o7" name="o3">Jest dość aktywny/a na zajęciach. Nie zawsze jest przygotowany do zajęć. Pracuje w umiarkowanym tempie. Uczęszcza systematycznie i punktualnie do szkoty. </label>
+                    <label for="3o3"><input type="radio" value="5" id="3o3" name="o3">Jest aktywny/a na zajeciach. Pracuje w dobrym tempie. Uczy się pilnie i systematycznie, przezwycięża napotkane trudności.</label>
+                    <label for="3o4"><input type="radio" value="2" id="3o4" name="o3">Jest bierny/a podczas zajec. Pracuje w wolnym tempie. Rzadko odrabia zadania domowe. Jest niesystematyczny/a i niesumienny/a w nauce.</label>
+                    <label for="3o5"><input type="radio" value="3" id="3o5" name="o3">Czesto nie odrabia zadan domowych. Jest mato aktywny/a na zajeciach.</label>
+                    <label for="3o6"><input type="radio" value="4" id="3o6" name="o3">Jest dość aktywny/a na zajęciach. Nie zawsze jest przygotowany do zajęć. Pracuje w umiarkowanym tempie. Uczęszcza systematycznie i punktualnie do szkoty.</label>
                 </div>
                 <h2>Samodzielność i koncentracja.</h2>
                 <div class="col col-5">

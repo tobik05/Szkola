@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #303841;
+    --tlo: #0b253c;
+    --drugi: #3A4750;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --niebieski: #0693e3;
+    --alfa: #0692e300;
+    --zolty: #ffb703;
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+}
+main{
+    margin: 50px 0px;
+    height: 100%;
+    width: 100%;
+}
+h3{
+    margin: 30px 0px;
+    color: #a40a3b;
+}
+h2{
+    position: absolute;
+    right: 0%;
+    margin-right: 15px; 
+}
