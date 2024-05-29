@@ -48,7 +48,7 @@
                             <th>Rok</th>
                             <th>Przebieg</th>
                             <th>Kolor</th>
-                            <!--<td><th id="klasa">Działanie</th>-->
+                            <th id="klasa">Działanie</th>
                         </tr>
                 <?php while ($wiersz=mysqli_fetch_array($wynik)) { ?>
                         <tr>
@@ -58,8 +58,7 @@
                             <td><?php echo $wiersz['rok'];?></td>
                             <td><?php echo $wiersz['przebieg'];?></td>
                             <td><?php echo $wiersz['kolor'];?></td>
-                            <td><?php $id=$wiersz['id'];
-                            echo "<button class='error'><a href='usun.php?id=$id>Usuń</a></button>" ?></td>
+                            <td><?php $id=$wiersz['id']; echo "<a class='usun' href='usun.php?id=$id'>Usuń</a>" ?></td>
                         </tr>
                     <?php
                 }
