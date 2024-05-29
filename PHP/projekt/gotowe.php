@@ -49,7 +49,6 @@
             $ocena6[3]="Szanuje sprzet szkolny oraz cudza i swoja wlasnos. Stara sie zachowac wasciwa postawe podczas uroczystosci szkolnych.";
             $ocena6[2]="Nie wywiazuje sie z zadan powierzonych przez nauczyciela. Nie przejawia troski o mienie szkoly.";
             $ocena6[1]="Niewlasciwie zachowuje sie podczas zajec i uroczystosci szkolnych. Niszczy sprzet szkolny.";
-
             if(isset($_POST["imie"])){
                 $imie = $_POST["imie"];
             }else{
@@ -108,7 +107,7 @@
             $suma = ($o1 + $o2 + $o3 + $o4 + $o5 + $o6);
             
             ?>
-            <h2>LOGO</h2>
+            <img src="logo.png">
             <p>Powiatowy Zespoł Szkół w Świebodzinie<br>
                 ul. Zachodnia 76a<br>
                 66-200 Świebodzin
@@ -124,7 +123,7 @@
                 } else if($plec="Mężczyzna"){
                     echo "uczeń: $imie<br>";
                     echo "klasa: $klasa<br>";
-                    echo "urodzony w dniu $urodzona<br>";
+                    echo "urodzony w dniu $urodzona r.<br>";
                     echo "zamieszkały: $zam<br>";
                 }
                 if($suma>=34.56){
@@ -141,9 +140,10 @@
                     $ocena="naganne";
                 }
                 echo "<br>ocena z zachowania: $ocena";
-                echo "<br>Uczeń $imie $ocena1[$o1] $ocena2[$o2] $ocena3[$o3] $ocena4[$o4] $ocena5[$o5] $ocena6[$o6]";
+                echo "<br><br>Uczeń $imie $ocena1[$o1] $ocena2[$o2] $ocena3[$o3] $ocena4[$o4] $ocena5[$o5] $ocena6[$o6]";
                 ?>
             </p>
+            <div class="niewidoczny"><button onClick="window.print()">Wydrukuj</button></div>
         </main>
     </body>
 </html

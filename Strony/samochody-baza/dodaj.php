@@ -5,6 +5,7 @@ if(mysqli_connect_errno()){
     printf("Połączenie nie udane: %s\n", mysqli_connect_error());
     exit();
 }
+
 if(isset($_POST["dodaj"])){
     $marka = $_POST["marka"];
     $model = $_POST["model"];

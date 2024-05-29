@@ -16,12 +16,12 @@
         <script src="script.js"></script>
         <main class="main2">
             <form action="gotowe.php"  method="post" name="relacje">
-                <h2>Uczeń/Uczennica:</h2>
+                <h2>Dane:</h2>
                 <div class="col col-1">
-                    <label for="imie">Imię i nazwisko: <input type="text" id="imie" name="imie"></label>
-                    <label for="klasa">Klasa: <input type="text"  id="klasa" name="klasa"></label>
-                    <label for="urodzona">Urodzona: <input type="text"  id="urodzona" name="urodzona"></label>
-                    <label for="zam">Zamieszkanie: <input type="text"  id="zam" name="zam"></label>
+                    <label for="imie">Imię i nazwisko: <input type="text" id="imie" name="imie" pattern="([A-zĄ-ż\s]){2,}" required></label>
+                    <label for="klasa">Klasa: <input type="text"  id="klasa" name="klasa" pattern="([A-z0-9]){2,}" required></label>
+                    <label for="urodzona">Urodzona: <input type="text"  id="urodzona" name="urodzona" required></label>
+                    <label for="zam">Zamieszkanie: <input type="text"  id="zam" name="zam" required></label>
                 </div>
                 <h2>Pleć</h2>
                 <div class="col col-1">

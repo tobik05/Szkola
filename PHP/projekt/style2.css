@@ -16,20 +16,44 @@
     overflow-x: hidden;
 }
 body{
-    height: 100vh;
-    width: 100vw;
+    height: 99vh;
+    width: 99vw;
 }
 main{
     margin: 50px 0px;
     height: 100%;
     width: 100%;
+    padding: 15px;
 }
 h3{
     margin: 30px 0px;
     color: #a40a3b;
 }
-h2{
+img{
+    aspect-ratio: 1/1;
+    width: 200px;
     position: absolute;
     right: 0%;
     margin-right: 15px; 
+}
+@media print {
+    .niewidoczny{
+        display: none;
+    }
+}
+button{
+    color: var(--czarny);
+    padding: 5px 10px;
+    margin: 5px;
+    border: 1px solid var(--zielony);
+    border-radius: 5px;
+    background-color: var(--alfa);
+    transition: all 300ms;
+}
+button:hover{
+    color: var(--czarny);
+    border: 1px solid var(--zielony);
+    background-color: var(--zielony);
+    transition: all 300ms;
+    box-shadow: 0px 0px 15px var(--zielony);
 }
