@@ -1,0 +1,7 @@
+select haslo from uzytkownicy where login = "Justyna";
+
+SELECT COUNT(*) from dane
+
+SELECT dane.id, dane.rok_urodz, dane.przyjaciol, dane.hobby, dane.zdjecie FROM dane INNER JOIN uzytkownicy on dane.id=uzytkownicy.id WHERE uzytkownicy.login = "Justyna"
+
+ALTER TABLE dane add COLUMN stanowisko varchar(50)
