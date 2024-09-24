@@ -1,0 +1,56 @@
+*{
+    font-family: Cambria;
+}
+body{
+    background-color: Linen;
+}
+#sidebard, header, footer{
+    background-color: steelblue;
+    color: white;
+    text-align: center;
+}
+#sidebar{
+    width: 25%;
+    height: 510px;
+    margin: 0 1%;
+    box-shadow: 4px 4px 5px dimgray;
+}
+header{
+    width: 73%;
+    height: 80px;
+}
+main{
+    width: 73%;
+    height: 400px;
+}
+button{
+    background-color: steelblue;
+    color: white;
+    width: 20%;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 130%;
+    border: none;
+}
+button:hover{
+    background-color: navy;
+}
+main section{
+    background-color: lightblue;
+    margin-right: 80px;
+    padding: 10px;
+}
+#progressbar{
+    background-color: lightgrey;
+    width: 73%;
+    margin-bottom: 10px;
+}
+#progressbar{
+    background-color: navy;
+    width: 4%;
+    height: 30px;
+}
+table{
+    width: 100%;
+    border: dotted 1px navy;
+}
