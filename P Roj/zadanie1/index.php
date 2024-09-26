@@ -16,12 +16,17 @@
         <aside>
             <h3>Menu</h3>
             <section class="menu-buttons">
-                <button>Login</button>
-                <button >Strona główna</button>
-                <button >Kontakt</button>
+                <button onclick="pokaz('#login')">Login</button>
+                <button onclick="pokaz('#zakupy')">Strona główna</button>
+                <button onclick="pokaz('#kontakt')">Kontakt</button>
             </section>
         </aside>
-        <section id="login"></section>
+        <section id="login">
+            <h2>Logowanie</h2>
+            <input type="text" id="nazwa_uzytkownika" placeholder="Nick">
+            <input type="password" id="haslo" placeholder="Hasło">
+            <input type="submit" value="Zaloguj">
+        </section>
         <section id="zakupy">
         <?php
             $baza=mysqli_connect("localhost","root","",database: "produkty");

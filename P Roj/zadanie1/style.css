@@ -53,6 +53,7 @@ aside{
     padding: 10px;
 }
 main section{
+    visibility: hidden;
     background-color: var(--tlo2);
     width: 70%;
     height: 100%;
@@ -102,4 +103,16 @@ footer{
     border-radius: 5px;
     padding: 10px;
     cursor:pointer;
+}
+#login{
+    display: flex;
+    flex-direction: column;
+}
+#login input{
+    padding: 7px;
+    margin: 15px;
+    
+}
+.menu-buttons{
+    display: flex;
 }
