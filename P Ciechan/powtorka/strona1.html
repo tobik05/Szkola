@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+ <head>
+   <title> POWIATOWY ZESPÓŁ SZKÓŁ  </title>
+   
+ </head>   
+ <script>
+    function zmienobrazek()
+    {
+	 document.getElementById("obraz1").src="osoba1cz.jpg";
+	}
+    function przywrocobrazek()
+    {
+	 document.getElementById("obraz1").src="osoba1.jpg";
+	}
+	function ramka()
+	{
+	 document.getElementById("obraz1").style.border="30px double red";
+	}
+	function ramkaout()
+	{
+	  document.getElementById("obraz1").style.border="none";
+	}
+	function zmienrozmiar()
+	{
+	  var wysokosc=document.getElementById("h").value;
+	  var szerokosc=document.getElementById("w").value;
+	  document.getElementById("obraz1").style.width=szerokosc+"px";
+	  document.getElementById("obraz1").style.height=wysokosc+"px";
+	}
+	</script>
+	<style>
+	 .blok1
+	 {
+	   width:200px;
+	   height:100px;
+	   background-color:red;
+	   color:white;
+	   float:left;
+	   text-align:center;
+	   padding:50px;
+	 }
+	.blok2
+	 {
+	   width:200px;
+	   height:100px;
+	   background-color:blue;
+	   color:yellow;
+	   float:left;
+	   text-align:center;
+	   padding:50px;
+	 }
+	</style>
+	<script>
+	 function ukryj1()
+	 {
+	   document.getElementById("b1").style.display="none";
+	 }
+	 function ukryj2()
+	 {
+	   document.getElementById("b2").style.visibility="hidden";
+	 }
+	 function pokaz1()
+	 {
+	  document.getElementById("b1").style.display="block";
+	 }
+	  function pokaz2()
+	 {
+	  document.getElementById("b2").style.visibility="visible";
+	 }
+	</script>
+ <body>
+   <img src="osoba1.jpg" id="obraz1" width="400px" height="400px" onmouseover="zmienobrazek()" onmouseout="przywrocobrazek()" onclick="ramka()" ondblclick="ramkaout()"><br><hr><br>
+   
+   Podaj rozmiar obrazka: WYSOKOŚĆ<input type="text" id="h"> SZEROKOŚĆ <input type="text" id="w"> 
+   <button onclick="zmienrozmiar()">ZMIEŃ ROZMIAR</button><br><hr><br>
+   
+   <section class="blok1" id="b1">  ŚWIEBODZIN </section>
+   <section class="blok2" id="b2">  POZNAŃ </section>
+	 <br><hr><br>
+	 <button onclick="ukryj1()"> UKRYJ 1 </button> <button onclick="ukryj2()"> UKRYJ 2 </button>
+	 <button onclick="pokaz1()"> POKZAŻ 1 </button> <button onclick="pokaz2()"> POKAŻ 2 </button>
+   
+   
+ </body>
+</html>
+

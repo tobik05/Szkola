@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="PL">
+<head>
+    <meta charset="UTF-8">
+    <title>Sklep - rejestracja</title>
+    <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+    <section id="sidebar">
+        <img src="obraz.png" alt="promocje">
+        <h2>Sprawdź promocje</h2>
+        <table>
+            <tr>
+                <th>co?</th>
+                <th>ile taniej?</th>
+            </tr>
+            <tr>
+                <td>ubrania</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>buty</td>
+                <td>25%</td>
+            </tr>
+        </table>
+    </section>
+    <header><h1>Zarejestruj się w sklepie</h1></header>
+    <main>
+        <button id="button_klient">Klient</button>
+        <button id="button_adres">Adres</button>
+        <button id="button_kontakt">Kontakt</button>
+        <section id="blok1_main">
+            <p>Imie</p>
+            <input type="text" placeholder="Wpisz dane..." id="input_imie">
+            <p>Nazwisko</p>
+            <input type="text" id="input_nazwisko">
+            <p>Data urodzenia</p>
+            <input type="date" id="input_data_urodzenia">
+        </section>
+        <section id="blok2_main">
+            <p>Ulica</p>
+            <input type="text" id="input_ulica">
+            <p>Numer</p>
+            <input type="number" id="input_numer_domu">
+            <p>Miasto</p>
+            <input type="text" id="input_miasto">
+        </section>
+        <section id="blok3_main">
+            <p>Numer komórkowy</p>
+            <input type="tel" id="input_numer_komorkowy">
+            <input type="checkbox" id="input_numer_domu" value="Akceptuje rodo">
+            <p>Miasto</p>
+            <button id="button_zatwierdz">Zatwwierdź</button>
+        </section>
+    </main>
+    <section id="progressbar">
+        <section></section>
+    </section>
+    <footer><h4>Rejestrację  do  sklepu  wykonał:</h4></footer>
+</body>
+</html>
