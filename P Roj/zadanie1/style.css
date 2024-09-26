@@ -53,7 +53,6 @@ aside{
     padding: 10px;
 }
 main section{
-    visibility: hidden;
     background-color: var(--tlo2);
     width: 70%;
     height: 100%;
