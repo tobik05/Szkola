@@ -41,7 +41,7 @@
                 $tytul=$_POST["tytul"];
                 $rok=$_POST["rok"];
                 $isbn=$_POST["isbn"];
-                $zapytanie = mysqli_query($con, "update ksiazki set autor = $autor, tytul=$tytul, rok_wydania = $rok, isbn=$isbn where id=$id");
+                $zapytanie3 = mysqli_query($con, "update ksiazki set autor = $autor, tytul=$tytul, rok_wydania = $rok, isbn=$isbn where id=$id");
                 header("Location: index.php");
                 $_SESSION['aktualizacja']="Zaktualizowano książkę";
             }
