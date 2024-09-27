@@ -2,14 +2,13 @@
     margin: 0;
     --czerwony: #d90429;
     --zielony: #8ac926;
-    --glowny: #303841;
-    --tlo: #0b253c;
-    --drugi: #3A4750;
+    --glowny: #f9b17a;
+    --tlo: #2d3250;
+    --drugi: #424769;
+    --trzeci: #578f9d;
     --bialy: #EEEEEE;
     --czarny: #212121;
-    --niebieski: #0693e3;
     --alfa: #0692e300;
-    --zolty: #ffb703;
     color: var(--bialy);
     font-family: 'Rethink Sans', sans-serif;
     font-weight: 400;
@@ -21,7 +20,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow-y: scroll;
+    overflow-y: auto;
     overflow-x: hidden;
 }
 main{
@@ -31,55 +30,4 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-button{
-    color: var(--bialy);
-    padding: 5px 10px;
-    margin: 5px;
-    border: 1px solid var(--czerwony);
-    border-radius: 5px;
-    background-color: var(--alfa);
-    transition: all 300ms;
-}
-button:hover{
-    color: var(--bialy);
-    border: 1px solid var(--czerwony);
-    background-color: var(--czerwony);
-    transition: all 300ms;
-    box-shadow: 0px 0px 15px var(--czerwony);
-}
-navbar{
-    width: 100%;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0px 0px 30px var(--czerwony);
-}
-.menu{
-    width: 50%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-}
-.content{
-    margin: 50px 0px;
-}
-.bolid{
-    width: 50%;
-}
-.team{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.team p {
-    width: 50%;
-}
-.team *{
-    margin: 10px;
 }
