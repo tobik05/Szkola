@@ -12,6 +12,7 @@
     color: var(--bialy);
     font-family: 'Rethink Sans', sans-serif;
     font-weight: 400;
+    font-size: 14px;
 }
 body{
     min-height: 100vh;
@@ -38,6 +39,8 @@ main{
     background-color: var(--glowny);
     color: var(--czarny);
     border-radius: 2px;
+    min-width: 40px;
+    text-align: center;
 }
 td{
     margin: 3px;
@@ -59,7 +62,7 @@ th ,tr, td{
 }
 .input{
     border: 2px solid var(--glowny);
-    border-radius: 2px;
+    border-radius: 10px;
     padding: 6px;
     color: var(--bialy);
     outline: none;
@@ -73,6 +76,7 @@ input[type=submit]{
     color: var(--czarny);
     outline: none;
     background-color: var(--glowny);
+    margin: 10px;
 }
 form{
     padding: 20px;
@@ -84,4 +88,14 @@ form{
     background-color: var(--drugi);
     border-radius: 20px;
     box-shadow: 20px 20px 55px var(--czarny);
+}
+::placeholder{
+    color: var(--bialy);
+}
+.input:focus{
+    background-color: var(--glowny);
+    color: var(--czarny);
+}
+.input:valid{
+    border: 2px solid var(--czerwony);
 }

@@ -17,6 +17,7 @@
                 <input type="text" class="input" placeholder="Nazwisko" max="30" min="2" required name="nazwisko">
                 <input type="text" class="input" placeholder="Klasa" min="3" max="3" required name="klasa">
                 <input type="submit" name="submit" value="Dodaj">
+                <a href="index.php" class="button">Wróć</a>
             </form>
         <?php
             $con = mysqli_connect("localhost", "root", "", "szkola");
