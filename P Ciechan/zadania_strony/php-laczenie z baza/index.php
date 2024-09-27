@@ -13,18 +13,22 @@
     </head>
     <body>
         <main>
-            <?php 
+            <?php
                 $con = mysqli_connect("localhost", "root", "", "szkola");
                 $link = "http://localhost/Szkola/P%20Ciechan/zadania_strony/php-laczenie%20z%20baza";
+                echo "<a class='button' href='$link/dodaj.php'>Dodaj</a>";
                 if(mysqli_connect_error()){
                     echo "Błąd połączenia: " . mysqli_connect_error();
                     exit();
                 }else{
+                    if(isset($_SESSION['blad'])){
+                        echo '<div class=error>' .  $_SESSION['blad'] . '</div>';
+                    }
                     $zapytanie = mysqli_query($con, "select * from uczniowie");
                     echo "<table><tr><th>ID</th><th>Imię</th><th>Nazwisko</th><th>Klasa</th><th>Działanie</th></tr>";
                     while($wiersz = mysqli_fetch_array($zapytanie)){
                         echo "<tr>";
-                        echo "<td>" . $wiersz[0] . "</td>" . "<td>" . $wiersz[1] . "</td>" . "<td>" . $wiersz[2] . "</td>" . "<td>" . $wiersz[3] . "</td>" . "<td><a href='$link/usun?id=$wiersz[0]'>Usuń</a></td>";
+                        echo "<td>" . $wiersz[0] . "</td>" . "<td>" . $wiersz[1] . "</td>" . "<td>" . $wiersz[2] . "</td>" . "<td>" . $wiersz[3] . "</td>" . "<td><a class='button' href='$link/usun.php?id=$wiersz[0]'>Usuń</a></td>";
                         echo "</tr>";
                     }
                 }

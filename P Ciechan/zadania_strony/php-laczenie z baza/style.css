@@ -31,3 +31,57 @@ main{
     flex-direction: column;
     align-items: center;
 }
+.button{
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    background-color: var(--glowny);
+    color: var(--czarny);
+    border-radius: 2px;
+}
+td{
+    margin: 3px;
+}
+table{
+    width: 40%;
+    height: 100%;
+}
+th{
+    border-bottom:2px solid var(--drugi) ;
+    padding-bottom: 10px;
+}
+th ,tr, td{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.input{
+    border: 2px solid var(--glowny);
+    border-radius: 2px;
+    padding: 6px;
+    color: var(--bialy);
+    outline: none;
+    background-color: var(--alfa);
+    margin: 10px;
+}
+input[type=submit]{
+    border: 2px solid var(--glowny);
+    border-radius: 2px;
+    padding: 6px;
+    color: var(--czarny);
+    outline: none;
+    background-color: var(--glowny);
+}
+form{
+    padding: 20px;
+    width: 30%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--drugi);
+    border-radius: 20px;
+    box-shadow: 20px 20px 55px var(--czarny);
+}
