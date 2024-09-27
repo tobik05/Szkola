@@ -12,26 +12,29 @@
     </head>
     <body>
         <main>
-            <form action="dodaj.php" method="post">
-                <input type="text" class="input" placeholder="Imię" max="20" min="2" required name="imie">
-                <input type="text" class="input" placeholder="Nazwisko" max="30" min="2" required name="nazwisko">
-                <input type="text" class="input" placeholder="Klasa" min="3" max="3" required name="klasa">
+            <form action="dodaj.php" method="post" class="form">
+                <input type="text" class="input" placeholder="Autor" required name="autor">
+                <input type="text" class="input" placeholder="Tytuł" required name="tytul">
+                <input type="number" class="input" placeholder="Rok wydania" required name="rok">
+                <input type="number" class="input" placeholder="ISBN" required maxlength="13" minlength="13" name="isbn">
                 <input type="submit" name="submit" value="Dodaj">
                 <a href="index.php" class="button">Wróć</a>
             </form>
         <?php
-            $con = mysqli_connect("localhost", "root", "", "szkola");
+            $con = mysqli_connect("localhost", "root", "", "ksiegarnia");
             $link = "http://localhost/Szkola/P%20Ciechan/zadania_strony/php-laczenie%20z%20baza";
             if(mysqli_connect_error()){
                 $_SESSION['blad'] = "Błąd połączenia (usun): " . mysqli_connect_error();
                 exit();
             }else{
                 if(isset($_POST["submit"])){
-                    $imie=$_POST["imie"];
-                    $nazwisko=$_POST["nazwisko"];
-                    $klasa=$_POST["klasa"];
-                    $zapytanie = mysqli_query($con, "insert into uczniowie(imie, nazwisko, klasa) value('$imie', '$nazwisko', '$klasa')");
+                    $autor=$_POST["autor"];
+                    $tytul=$_POST["tytul"];
+                    $rok=$_POST["rok"];
+                    $isbn=$_POST["isbn"];
+                    $zapytanie = mysqli_query($con, "insert into ksiazki(autor, tytul, rok_wydania, isbn) value('$autor', '$tytul', '$rok', '$isbn')");
                     header("Location: index.php");
+                    $_SESSION['dodano']="Dodano książkę";
                 }
             }
             mysqli_close($con)
