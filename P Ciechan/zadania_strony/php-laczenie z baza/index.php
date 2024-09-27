@@ -19,14 +19,14 @@
                 echo "<a class='button' href='$link/dodaj.php'>Dodaj</a>";
                 ?>
                 <form action="index.php" method="post" class="wyszukiwarka-form">
-                    <input type="text" name="dane" placeholder="Wyszukaj" class="input">
+                    <input type="text" name="wyszukanie" placeholder="Wyszukaj" class="input">
                 <select name="metoda" class="input">
                     <option value="autor" />Autora
                     <option value="tytul" />Tytułu
-                    <option value="tytul" />Roku wydania
+                    <option value="rok_wydania" />Roku wydania
                     <option value="isbn" />ISBN
                 </select>
-                <input type="submit" name="submit" value="Wyszukaj">
+                <input type="submit" name="submit_szukanie" value="Wyszukaj">
                 </form>
                 <?php
                 if(mysqli_connect_error()){
@@ -38,12 +38,25 @@
                     } elseif(isset($_SESSION['dodano'])){
                         echo'<div class=success>' .  $_SESSION['dodano'] . '</div>';
                     }
-                    $zapytanie = mysqli_query($con, "select * from ksiazki");
-                    echo "<table><tr><th>ID</th><th>Autor</th><th>Tytuł</th><th>Rok wydania</th><th>ISBN</th><th>Działanie</th></tr>";
-                    while($wiersz = mysqli_fetch_array($zapytanie)){
-                        echo "<tr>";
-                        echo "<td>" . $wiersz[0] . "</td>" . "<td>" . $wiersz[1] . "</td>" . "<td>" . $wiersz[2] . "</td>" . "<td>" . $wiersz[3] . "</td>" .  "<td>" . $wiersz[4] . "</td>" . "<td><a class='button' href='$link/usun.php?id=$wiersz[0]'>Usuń</a></td>";
-                        echo "</tr>";
+                    if(isset($_POST['submit_szukanie'])){
+                        $metoda = $_POST['metoda'];
+                        $wyszukanie = $_POST['wyszukanie'];
+                        $zapytanie = mysqli_query($con, "select * from ksiazki where $metoda = $wyszukanie");
+                        echo "<table><tr><th>ID</th><th>Autor</th><th>Tytuł</th><th>Rok wydania</th><th>ISBN</th><th>Działanie</th></tr>";
+                        while($wiersz = mysqli_fetch_array($zapytanie)){
+                            echo "<tr>";
+                            echo "<td>" . $wiersz[0] . "</td>" . "<td>" . $wiersz[1] . "</td>" . "<td>" . $wiersz[2] . "</td>" . "<td>" . $wiersz[3] . "</td>" .  "<td>" . $wiersz[4] . "</td>" . "<td><a class='button' href='$link/usun.php?id=$wiersz[0]'>Usuń</a><a class='button' href='$link/update.php?id=$wiersz[0]'>Akutalizuj</a></td>";
+                            echo "</tr>";
+                        }
+                            
+                    }else{
+                        $zapytanie2 = mysqli_query($con, "select * from ksiazki");
+                        echo "<table><tr><th>ID</th><th>Autor</th><th>Tytuł</th><th>Rok wydania</th><th>ISBN</th><th>Działanie</th></tr>";
+                        while($wiersz = mysqli_fetch_array($zapytanie2)){
+                            echo "<tr>";
+                            echo "<td>" . $wiersz[0] . "</td>" . "<td>" . $wiersz[1] . "</td>" . "<td>" . $wiersz[2] . "</td>" . "<td>" . $wiersz[3] . "</td>" .  "<td>" . $wiersz[4] . "</td>" . "<td><a class='button' href='$link/usun.php?id=$wiersz[0]'>Usuń</a><a class='button' href='$link/update.php?id=$wiersz[0]'>Akutalizuj</a></td>";
+                            echo "</tr>";
+                        }
                     }
                 }
                 mysqli_close($con)
