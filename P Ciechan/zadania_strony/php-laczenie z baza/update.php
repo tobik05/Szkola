@@ -13,6 +13,7 @@
     <body>
         <main>
             <?php
+
                 $id=$_GET["id"];
                 $con = mysqli_connect("localhost", "root", "", "ksiegarnia");
                 $link = "http://localhost/Szkola/P%20Ciechan/zadania_strony/php-laczenie%20z%20baza";
@@ -41,7 +42,7 @@
                 $tytul=$_POST["tytul"];
                 $rok=$_POST["rok"];
                 $isbn=$_POST["isbn"];
-                $zapytanie3 = mysqli_query($con, "update ksiazki set autor = $autor, tytul=$tytul, rok_wydania = $rok, isbn=$isbn where id=$id");
+                $zapytanie3 = mysqli_query($con, "update ksiazki set autor = '$autor', tytul='$tytul', rok_wydania = '$rok', isbn='$isbn' where id=$id");
                 header("Location: index.php");
                 $_SESSION['aktualizacja']="Zaktualizowano książkę";
             }
