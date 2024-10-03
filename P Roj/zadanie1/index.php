@@ -16,16 +16,16 @@
         <aside>
             <h3>Menu</h3>
             <section class="menu-buttons">
-                <button onclick="pokaz('#login')">Login</button>
-                <button onclick="pokaz('#zakupy')">Strona główna</button>
-                <button onclick="pokaz('#kontakt')">Kontakt</button>
+                <button class="button" onclick="pokaz('#login')">Login</button>
+                <button class="button" onclick="pokaz('#zakupy')">Strona główna</button>
+                <button class="button" onclick="pokaz('#kontakt')">Kontakt</button>
             </section>
         </aside>
         <section id="login">
             <h2>Logowanie</h2>
             <input type="text" id="nazwa_uzytkownika" placeholder="Nick">
             <input type="password" id="haslo" placeholder="Hasło">
-            <input type="submit" value="Zaloguj">
+            <input type="submit" value="Zaloguj" class='button'>
         </section>
         <section id="zakupy">
         <?php
@@ -35,7 +35,7 @@
             }
             $wynik = mysqli_query($baza,"SELECT * FROM Produkty");
             while($row = mysqli_fetch_array($wynik)){
-                echo "<div class='produkt'>" . "<img class='brak_obrazu' src='brak_obrazu.png' alt='Brak obrazu'>" . "<br><p class='nazwa_produktu'>" . $row['nazwa'] . "</p><p class='cena_produktu'>" . $row['cena'] . " "; echo "</p><button>Dodaj</button></div>"; 
+                echo "<div class='produkt'>" . "<img class='brak_obrazu' src='brak_obrazu.png' alt='Brak obrazu'>" . "<br><p class='nazwa_produktu'>" . $row['nazwa'] . "</p><p class='cena_produktu'>" . $row['cena'] . " "; echo "</p><button class='button'>Dodaj</button></div>"; 
             }
             mysqli_close($baza);
         ?> 
