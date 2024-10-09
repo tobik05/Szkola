@@ -11,6 +11,7 @@
         var dane=document.getElementById("text").value;
         czat.innerHTML+="<section class='wpis' id='jolanty'><img src='Jolka.jpg'><p>" + dane + "</p></section>"
     }
+    var i=0;
     function generuj_wpis(){
         var czat=document.getElementById("czat");
         var dane = ["Świetnie!",
@@ -23,7 +24,7 @@
                     "Tydzień temu też byłem w kinie na Diunie",
                     "Ja funduję bilety"];
         var wylosowany_wpis = dane[Math.floor(Math.random() * 9)];
-        czat.innerHTML+="<section class='wpis' id='krzysztofa'><img src='Krzysiek.jpg'><p>" + wylosowany_wpis + "</p></section>"
+        czat.innerHTML+="<section class='wpis' id='krzysztofa'><img src='Krzysiek.jpg'><p id='nrwypowiedzi_"+i+"'>" + wylosowany_wpis + "</p></section>"
     }
 </script>
 <body>

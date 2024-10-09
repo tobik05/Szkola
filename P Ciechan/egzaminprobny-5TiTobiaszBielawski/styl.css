@@ -36,6 +36,7 @@ img{
     margin: 15px;
     height: 470px;
     overflow: scroll;
+    display: block;
 }
 .wpis{
     border-radius: 5px;
