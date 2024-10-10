@@ -1,0 +1,75 @@
+*{
+    font-family: Garamond;
+}
+header{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 80%;
+    height: 80px;
+    float: left;
+}
+main{
+    width: 80%;
+    height: 600px;
+    float:left;
+}
+aside{
+    background-color: Coral;
+    width: 20%;
+    height: 680px;
+    float: right;
+}
+footer{
+    background-color: tomato;
+    color: white;
+    text-align: center;
+    width: 100%;
+    float: left;
+}
+img{
+    border-radius: 50%;
+    padding: 0px 10px;
+}
+#czat{
+    border: 1px solid tomato;
+    margin: 15px;
+    height: 470px;
+    overflow: scroll;
+    display: block;
+}
+.wpis{
+    border-radius: 5px;
+    width: 90%;
+    height: 70px;
+    margin: 2%;
+    padding: 3px;
+}
+#jolanty{
+    background-color: #EEE;
+    border-radius: 5px;
+    
+}
+#krzysztofa{
+    background-color: #CCC;
+    text-align: right;
+    border-radius: 5px;
+}
+button{
+    background-color: tomato;
+    border: 1px solid DarkRed;
+    padding: 5px;
+    text-decoration: solid;
+}
+.tekst{
+    width: 500px;
+}
+ul ul li{
+    list-style:decimal;
+}
+#jolanty img{
+    float: left;
+}
+#krzysztofa img{
+    float: right;
+}
