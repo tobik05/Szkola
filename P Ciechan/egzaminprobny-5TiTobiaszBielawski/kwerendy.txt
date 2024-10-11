@@ -1,5 +1,0 @@
-1. INSERT INTO logowanie (id, nick, haslo) SELECT u.id, 'Jeremi', 'Jer123' FROM uczestnicy u WHERE u.imie='Jeremi' and u.nazwisko='Kowalski';
-2. SELECT Floor(avg(rokUr)) as 'Średni rok urodzenia' FROM uczestnicy;
-3. SELECT imie, nazwisko, logowanie.nick FROM uczestnicy JOIN logowanie on logowanie.id=uczestnicy.logowanie_id;
-4. CREATE USER uczestnik IDENTIFIED BY 'Ucz123&'
-5. GRANT SELECT, UPDATE ON chat.uczestnicy TO uczestnik;
