@@ -111,7 +111,7 @@ article{
     display: flex;
     flex-direction: column;
     align-items: center;
-    max-height: 60vh;
+    max-height: 70vh;
     overflow-y: auto;
 }
 article p{
@@ -127,4 +127,5 @@ img{
 .ulozone{
     display: flex;
     flex-direction: column;
+    text-align: center;
 }
