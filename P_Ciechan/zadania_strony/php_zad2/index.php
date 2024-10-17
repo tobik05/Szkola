@@ -38,38 +38,95 @@
                     }
                     echo "</select>";
                     echo "<input type='submit' name='submit' value='Pokaż samochody'>";
-                    mysqli_close($con);
                 ?>
                 </form>
+                <form action="" method="post">
+                    <input type="number" name="od" min="1801" max="<?php date("R")?>" required>
+                    <input type="number" name="do" min="1801" max="<?php date("R")?>" required>
+                    <input type="submit" name="pokaz_zakres" value="Pokaż w zakresie dat">
+                </form>
+                <?php 
+                    if(isset($_POST['pokaz_zakres'])){
+                        $od=$_POST["od"];
+                        $do =  $_POST['do'];
+                        $sql = "SELECT * FROM samochody";
+                        if (count($warunki) > 0) {
+                            $sql .= " WHERE " . implode(" AND ", $warunki);
+                        }
+                        $zapytanie = mysqli_query($con, $sql);
+                        echo "<article>";
+                        while($wiersz = mysqli_fetch_array($zapytanie)){
+                            echo "<p>" . $wiersz['marka'] . " " . $wiersz['model'] . " " . $wiersz['rok'] . "<img src='" . $wiersz['nazwa_pliku']. "'>" . "</p>";
+                        }
+                        echo "</article>";
+                    }
+                ?>
             </section>
-            <section class="bottom_side"></section>
-        </section>
-        <section class="right_side">
+            <section class="bottom_side">
+            <form method="post" enctype="multipart/form-data" class="ulozone">
+                <input type="text" name="marka" placeholder="Marka" required>
+                <input type="text" name="model" placeholder="Model" required>
+                <input type="number" name="rok" placeholder="Rok" required>
+                <input type="file" name="zdjecie" accept="image/*" required>
+                <input type="submit" name="dodaj" value="Dodaj samochód">
+            </form>
             <?php
-                if(isset($_POST['submit'])){
-                    $marka = $_POST['wybor_marka'];
-                    $model = $_POST['wybor_model'];
-                    $rok =  $_POST['wybor_rok'];
-                    $where[]="";
-                    if ($marka != "Marka") {
-                        $where[] = " AND marka='$marka'";
+                if(isset($_POST['dodaj'])){
+                    $marka = $_POST['marka'];
+                    $model = $_POST['model'];
+                    $rok = $_POST['rok'];
+                    if(isset($_FILES['zdjecie']) && $_FILES['zdjecie']['error'] == 0){
+                        $nazwa_obrazu = $_FILES['zdjecie']['name'];
+                        $folder = "" . basename($nazwa_obrazu);
+                        if(move_uploaded_file($_FILES['zdjecie']['tmp_name'], $sciezka_docelowa)){
+                            $zapytanie = "INSERT INTO samochody (marka, model, rok, nazwa_pliku) VALUES ('$marka', '$model', '$rok', '$nazwa_obrazu')";
+                            if(mysqli_query($con, $zapytanie)){
+                                echo "Samochód został dodany!";
+                            } else {
+                                echo "Błąd przy dodawaniu samochodu: " . mysqli_error($con);
+                            }
+                            
+                            mysqli_close($con);
+                        }else{
+                            echo "Wystąpił błąd przy przesyłaniu pliku.";
+                        }
+                    }else{
+                        echo "Nie wybrano pliku lub wystąpił błąd przy przesyłaniu.";
                     }
-                    if ($model != "Model") {
-                        $where[] = " AND model='$model'";
-                    }
-                    if ($rok != "Rok") {
-                        $where[] = " AND rok='$rok'";
-                    }
-                    $con = mysqli_connect("localhost", "root", "", "technikum");
-                    $zapytanie = mysqli_query($con, "SELECT * from uczen where $where");
-                    echo "<article>";
-                    while($wiersz = mysqli_fetch_array($zapytanie)){
-                        echo "<p>" . $wiersz['marka'] . " " . $wiersz['model'] . " " . $wiersz['rok'] .  "</p>";
-                    }
-                    echo "</article>";
-                    mysqli_close($con);
                 }
             ?>
+            </section>
+        </section>
+        <section class="right_side">
+        <?php
+    if(isset($_POST['submit'])){
+        $marka = $_POST['wybor_marka'];
+        $model = $_POST['wybor_model'];
+        $rok =  $_POST['wybor_rok'];
+        $warunki = [];
+        if ($marka != "Marka") {
+            $warunki[] = "marka = '$marka'";
+        }
+        if ($model != "Model") {
+            $warunki[] = "model = '$model'";
+        }
+        if ($rok != "Rok") {
+            $warunki[] = "rok = '$rok'";
+        }
+        $sql = "SELECT * FROM samochody";
+        if (count($warunki) > 0) {
+            $sql .= " WHERE " . implode(" AND ", $warunki);
+        }
+        $zapytanie = mysqli_query($con, $sql);
+        echo "<article>";
+        while($wiersz = mysqli_fetch_array($zapytanie)){
+            echo "<p>" . $wiersz['marka'] . " " . $wiersz['model'] . " " . $wiersz['rok'] . "<img src='" . $wiersz['nazwa_pliku']. "'>" . "</p>";
+        }
+        echo "</article>";
+        mysqli_close($con);
+    }
+?>
+
         </section>
     </main>
 </body>

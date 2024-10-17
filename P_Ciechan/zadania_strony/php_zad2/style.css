@@ -51,7 +51,7 @@ input[type=submit]{
     background-color: var(--glowny);
     margin: 10px;
 }
-input[type=text]{
+input{
     border: 2px solid var(--bialy);
     border-radius: 2px;
     padding: 6px;
@@ -60,7 +60,7 @@ input[type=text]{
     background-color: var(--tlo);
     margin: 10px;
 }
-input[type=text]::placeholder{
+input::placeholder{
     color: var(--bialy);
 }
 ::placeholder{
@@ -71,12 +71,21 @@ input:focus{
     color: var(--czarny);
     outline: none;
 }
-input[type=text]:focus{
+input:focus{
     color: var(--czarny);
     border: 2px solid var(--glowny);
 }
-input[type=text]:focus::placeholder{
+input:focus::placeholder{
     color: var(--czarny);
+}
+input::file-selector-button{
+    border: 2px solid var(--glowny);
+    border-radius: 2px;
+    padding: 6px;
+    color: var(--czarny);
+    outline: none;
+    background-color: var(--glowny);
+    margin: 10px;
 }
 select{
     background-color: var(--glowny);
@@ -87,4 +96,35 @@ select{
 }
 option{
     color: var(--czarny);
+}
+.left_side .right_side{
+    width: 50%;
+    height: 100%;
+}
+.left_side{
+    float: left;
+}
+.top_side, .bottom_side{
+    height: 35vh;
+}
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 60vh;
+    overflow-y: auto;
+}
+article p{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 20px;
+    font-size: 20px;
+}
+img{
+    max-width: 30vw;
+}
+.ulozone{
+    display: flex;
+    flex-direction: column;
 }
