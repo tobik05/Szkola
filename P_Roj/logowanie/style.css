@@ -146,6 +146,7 @@ main section section{
 }
 .menu-buttons{
     display: flex;
+    min-width: 130px;
 }
 #login{
     display: none;

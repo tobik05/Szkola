@@ -26,32 +26,33 @@
                     <input type="submit" name="loguj" value="Zaloguj" class='button'>
                 </form>
                 <?php
-                if (isset($_POST['submit'])) {
+                if (isset($_POST['loguj'])) { // Zmiana na 'loguj'
                     $login = $_POST['login'];
                     $haslo = $_POST['haslo'];
-                    $sql = "SELECT * FROM users WHERE login";
-                    $stmt = mysqli_prepare($con, $sql);
-                    mysqli_stmt_bind_param($stmt, "ss", $email, $email);
-                    mysqli_stmt_execute($stmt);
-                    $result = mysqli_stmt_get_result($stmt);
-            
-                    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-                    $count = mysqli_num_rows($result);
-            
-                    if ($count == 1) {
-                        if (password_verify($password, $row['haslo'])) {
+
+                    // Przygotowanie zapytania
+                    $stmt = $con->prepare("SELECT * FROM users WHERE login = ?");
+                    $stmt->bind_param("s", $login);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    if ($result->num_rows > 0) {
+                        $row = $result->fetch_assoc();
+                        // Weryfikacja hasła
+                        if (password_verify($haslo, $row['haslo'])) {
                             $_SESSION['login'] = $row['login'];
                             $_SESSION['poziom'] = $row['poziom'];
-                            exit(header("location:index.php?debug=".session_id()));
+                            exit( header("Location: index.php?debug=".session_id()));
                         } else {
-                            $error_message = "Niepoprawne hasło";
+                            echo "Niepoprawne hasło";
                         }
                     } else {
-                        $error_message = "Niepoprawny email lub nick";
+                        echo "Niepoprawny login";
                     }
-                    mysqli_stmt_close($stmt);
+                    $stmt->close();
                 }
-            ?>
+                $con->close();
+                ?>
             </section>
     </main>
     <?php include("partials/footer.php")?>

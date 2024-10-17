@@ -12,7 +12,11 @@
     <main>
         <section>
             <?php
-            $poziom=$_SESSION["poziom"];
+            if(isset($_SESSION['poziom'])){
+                $poziom=$_SESSION['poziom'];
+            }else{
+                $poziom=0;
+            }
             if($poziom==100){
                 include("partials/admin_side_menu.php");
             }else if($poziom==50){
