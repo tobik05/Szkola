@@ -1,0 +1,6 @@
+Baz powinna zaweirac:
+-login
+-haslo (szyfrowane)
+-imie
+-nazwisko
+-poziom

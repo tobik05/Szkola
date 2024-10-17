@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #f9b17a;
+    --tlo: #2d3250;
+    --drugi: #424769;
+    --trzeci: #578f9d;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --alfa: #0692e300;
+    color: var(--bialy);
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    padding: 0px 50px 0px 0px;
+    min-height: 100vh;
+    height: 150vh;
+    width: 100vw;
+    background-color: var(--tlo);
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header{
+    padding: 25px 100px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color:var(--drugi);
+    color: var(--tekst);
+    box-shadow: 0px 0px 15px var(--czarny);
+    z-index: 9999;
+    position:fixed;
+    top: 0px;
+}
+nav{
+    height: 50px;
+    display: flex;
+    justify-content:flex-start;
+    align-items: center;
+}
+i{
+    font-size: 150%;
+}
+
+main{
+    margin-top: 100px;
+    padding: 25px;
+    width: 100%;
+    height: 100%;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+footer{
+    background-color: var(--drugi);
+    color: var(--bialy);
+    width: 100vw;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+}
+aside{
+    background-color: var(--drugi);
+    width: 10%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 0px 20px 20px 0px;
+}
+main section{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+main section section{
+    background-color: var(--drugi);
+    width: 100%;
+    height: 30%;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#logo{
+    height: 95%;
+    margin-right: 15px;
+}
+#zakupy, .zakupy{
+    background-color: var(--tlo);
+    height: 100%;
+    justify-content: center;
+}
+.menu-buttons{
+    display: flex;
+    flex-direction: column;
+    height: 30%;
+}
+.menu-buttons a{
+    width: 100%;
+    text-decoration: none;
+    padding: 5px;
+    border-bottom: 1px solid var(--bialy);
+}
+.menu-buttons h2{
+    text-align: center;
+    font-size: 130%;
+    font-weight: bold;
+}
+.brak_obrazu{
+    max-width: 70%;
+}
+.produkt{
+    width: 20%;
+    max-width: 10vw;
+    height: 100%;
+    min-height: 80px;
+    max-height: 250px;
+    border: 1px solid var(--drugi);
+    border-radius: 25px;
+    background-color: var(--drugi);
+    padding: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#login, #login form{
+    display: flex;
+    flex-direction: column;
+}
+#login input{
+    padding: 7px;
+    margin: 15px;
+}
+.menu-buttons{
+    display: flex;
+}
+#login{
+    display: none;
+}
+.button{
+    text-decoration: none;
+    padding: 5px;
+    border: none;
+    background-color: var(--glowny);
+    color: var(--czarny);
+    border-radius: 2px;
+    min-width: 40px;
+    text-align: center;
+    margin: 5px;
+}
+.input{
+    border: 2px solid var(--glowny);
+    border-radius: 10px;
+    padding: 6px;
+    color: var(--bialy);
+    outline: none;
+    background-color: var(--alfa);
+    margin: 10px;
+}
+input[type=submit]{
+    border: 2px solid var(--glowny);
+    border-radius: 2px;
+    padding: 6px;
+    color: var(--czarny);
+    outline: none;
+    background-color: var(--glowny);
+    margin: 10px;
+}
+input[type=text], input[type=password]{
+    border: 2px solid var(--bialy);
+    border-radius: 2px;
+    padding: 6px;
+    color: var(--bialy);
+    outline: none;
+    background-color: var(--tlo);
+    margin: 10px;
+}
+input[type=text]::placeholder, input[type=password]::placeholder{
+    color: var(--bialy);
+}
+::placeholder{
+    color: var(--czarny);
+}
+input:focus{
+    background-color: var(--glowny);
+    color: var(--czarny);
+    outline: none;
+}
+input[type=text]:focus, input[type=password]:focus{
+    color: var(--czarny);
+    border: 2px solid var(--glowny);
+}
+input[type=text]:focus::placeholder, input[type=password]:focus::placeholder{
+    color: var(--czarny);
+}
+option{
+    color: var(--czarny);
+}
+#koszyk{
+    margin: 0px 50px 0px 0px;
+}
