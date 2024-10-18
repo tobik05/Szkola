@@ -1,0 +1,4 @@
+1. SELECT gatunek, wystepowanie FROM `zwierzeta` where gromady_id=1;
+2. SELECT Z.id, Z.gatunek, G.nazwa FROM Zwierzeta Z JOIN Gromady G ON Z.Gromady_id = G.id;
+3. SELECT COUNT(*) FROM Zwierzeta WHERE gromady_id = 5;
+3. CREATE USER 'KatarzynaNowak'@'localhost' IDENTIFIED BY 'K4tNow';
