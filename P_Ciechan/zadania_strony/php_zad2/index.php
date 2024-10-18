@@ -42,8 +42,8 @@
                 </form>
                 <form action="" method="post" class="ulozone">
                     <h1>Wyświetlanie w zakresie dat</h1>
-                    <input type="number" name="od" min="1801" max="<?php date("R")?>" required>
-                    <input type="number" name="do" min="1801" max="<?php date("R")?>" required>
+                    <input type="number" name="od" placeholder="Od" min="1801" max="<?php date("R")?>" required>
+                    <input type="number" name="do" placeholder="Do" min="1801" max="<?php date("R")?>" required>
                     <input type="submit" name="pokaz_zakres" value="Pokaż w zakresie dat">
                 </form>
             </section>
@@ -59,12 +59,14 @@
             </form>
             <?php
                 if(isset($_POST['dodaj'])){
+                    $con = mysqli_connect("localhost", "root", "", "auta");
                     $marka = $_POST['marka'];
                     $model = $_POST['model'];
                     $rok = $_POST['rok'];
+                    
                     if(isset($_FILES['zdjecie']) && $_FILES['zdjecie']['error'] == 0){
                         $nazwa_obrazu = $_FILES['zdjecie']['name'];
-                        $folder = "" . basename($nazwa_obrazu);
+                        $sciezka_docelowa = basename($nazwa_obrazu);
                         if(move_uploaded_file($_FILES['zdjecie']['tmp_name'], $sciezka_docelowa)){
                             $zapytanie = "INSERT INTO samochody (marka, model, rok, nazwa_pliku) VALUES ('$marka', '$model', '$rok', '$nazwa_obrazu')";
                             if(mysqli_query($con, $zapytanie)){
@@ -72,15 +74,15 @@
                             } else {
                                 echo "Błąd przy dodawaniu samochodu: " . mysqli_error($con);
                             }
-                            
-                            mysqli_close($con);
                         }else{
                             echo "Wystąpił błąd przy przesyłaniu pliku.";
                         }
                     }else{
                         echo "Nie wybrano pliku lub wystąpił błąd przy przesyłaniu.";
                     }
+                    mysqli_close($con);
                 }
+                
             ?>
             </section>
         </section>
@@ -110,11 +112,19 @@
                     echo "<p>" . $wiersz['marka'] . " " . $wiersz['model'] . " " . $wiersz['rok'] . "<img src='" . $wiersz['nazwa_pliku']. "'>" . "</p>";
                 }
                 echo "</article>";
-                mysqli_close($con);
+            }else{
+                $zapytanie = mysqli_query($con,"SELECT * FROM samochody");
+                echo "<article>";
+                while($wiersz = mysqli_fetch_array($zapytanie)){
+                    echo "<p>" . $wiersz['marka'] . " " . $wiersz['model'] . " " . $wiersz['rok'] . "<img src='" . $wiersz['nazwa_pliku']. "'>" . "</p>";
+                }
+                echo "</article>";
             }
+            mysqli_close($con);
         ?>
         <?php 
             if(isset($_POST['pokaz_zakres'])){
+                $con = mysqli_connect("localhost", "root", "", "auta");
                 $od=$_POST["od"];
                 $do =  $_POST['do'];
                 $sql = "SELECT * FROM samochody where rok BETWEEN '$od' and '$do' ORDER BY rok ASC";
@@ -124,6 +134,7 @@
                     echo "<p>" . $wiersz['marka'] . " " . $wiersz['model'] . " " . $wiersz['rok'] . "<img src='" . $wiersz['nazwa_pliku']. "'>" . "</p>";
                 }
                 echo "</article>";
+                mysqli_close($con);
             }
         ?>
         </section>
