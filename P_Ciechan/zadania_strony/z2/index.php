@@ -35,6 +35,7 @@
             $gromady[3]="GADY";
             $gromady[4]="PTAKI";
             $gromady[5]="SSAKI";
+            echo "<h2>".$gromady[$numer_gromady]."</h2>";
             $zapytanie=mysqli_query($con, "SELECT gatunek, wystepowanie FROM `zwierzeta` where gromady_id=$numer_gromady;");
             while($row=mysqli_fetch_array($zapytanie)){
                 echo"<p>".$row['gatunek']." ".$row['wystepowanie']."</p>";
@@ -55,7 +56,7 @@
         ?>
     </section>
     <footer>
-        <a href="atlas-zwierzat.pl" blank>Poznaj inne strony o zwierzętach</a>
+        <a href="//atlas-zwierzat.pl" target="_blank">Poznaj inne strony o zwierzętach</a>
         autor Atlasu zwierząt: Tobiasz Bielawski
     </footer>
 </body>
