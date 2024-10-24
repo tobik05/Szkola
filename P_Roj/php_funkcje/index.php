@@ -11,8 +11,8 @@
         <section>
         <h1>1. Obliczanie długość łańcucha</h1>
         <form method="post">
-            <input type="text" name="imie" placeholder="Podaj swoje imię">
-            <input type="submit" name="strlen" value="Wykonaj">
+            <input type="text" name="imie" placeholder="Podaj swoje imię"required>
+            <input type="submit" name="strlen" value="Wykonaj"required>
         </form>
         <?php
         if(isset($_POST['strlen'] )){
@@ -23,8 +23,8 @@
         <section>
         <h1>2. Wyszukiwanie podciągu</h1>
         <form method="post">
-            <input type="text" name="ciag" placeholder="Podaj ciąg znakow">
-            <input type="text" name="podciag_tekst" placeholder="Podaj podciąg znakow">
+            <input type="text" name="ciag" placeholder="Podaj ciąg znakow"required>
+            <input type="text" name="podciag_tekst" placeholder="Podaj podciąg znakow"required>
             <input type="submit" name="podciag" value="Wykonaj">
         </form>
         <?php
@@ -40,9 +40,9 @@
         <section>
         <h1>3. Fragmentowanie łańcucha</h1>
         <form method="post">
-            <input type="text" name="ciag_fragment" placeholder="Podaj ciąg znaków">
-            <input type="number" name="pozycja_poczatkowa" placeholder="Pozycja początkowa">
-            <input type="number" name="dlugosc" placeholder="Długość fragmentu">
+            <input type="text" name="ciag_fragment" placeholder="Podaj ciąg znaków" required>
+            <input type="number" name="pozycja_poczatkowa" min="1" placeholder="Pozycja początkowa"required>
+            <input type="number" name="dlugosc" min="1" placeholder="Długość fragmentu"required>
             <input type="submit" name="fragment" value="Wykonaj">
         </form>
         <?php
@@ -54,9 +54,9 @@
         <section>
         <h1>4. Zastępowanie podciągu</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj tekst">
-            <input type="text" name="stare" placeholder="Podaj stare slowo">
-            <input type="text" name="nowe" placeholder="Podaj nowe slowo">
+            <input type="text" name="text" placeholder="Podaj tekst"required>
+            <input type="text" name="stare" placeholder="Podaj stare slowo"required>
+            <input type="text" name="nowe" placeholder="Podaj nowe slowo"required>
             <input type="submit" name="replace" value="Wykonaj">
         </form>
         <?php
@@ -68,8 +68,8 @@
         <section>
         <h1>5. Usuwanie białych znaków</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj tekst">
-            <input type="text" name="text_usuniecie" placeholder="Podaj znaki, ktore maja byc skasowane">
+            <input type="text" name="text" placeholder="Podaj tekst"required>
+            <input type="text" name="text_usuniecie" placeholder="Podaj znaki, ktore maja byc skasowane"required>
             <input type="submit" name="trim" value="Wykonaj">
         </form>
         <?php
@@ -81,7 +81,7 @@
         <section>
         <h1>6. Zmiana wielkości liter</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj tekst">
+            <input type="text" name="text" placeholder="Podaj tekst"required>
             <input type="submit" name="wielkosc" value="Wykonaj">
         </form>
         <?php
@@ -94,7 +94,7 @@
         <section>
         <h1>7. Kapitalizacja pierwszej litery</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj tekst">
+            <input type="text" name="text" placeholder="Podaj tekst"required>
             <input type="submit" name="ucfirst" value="Wykonaj">
         </form>
         <?php
@@ -106,7 +106,7 @@
         <section>
         <h1>8. Kapitalizacja każdego słowa</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj zdanie">
+            <input type="text" name="text" placeholder="Podaj zdanie"required>
             <input type="submit" name="ucwords" value="Wykonaj">
         </form>
         <?php
@@ -118,7 +118,7 @@
         <section>
         <h1>9. Dziel i zwyciężaj</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj zdanie">
+            <input type="text" name="text" placeholder="Podaj zdanie"required>
             <input type="submit" name="explode" value="Wykonaj">
         </form>
         <?php
@@ -133,7 +133,7 @@
         <section>
         <h1>10. Łączenie słów</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj słowa (oddzielone przecinkami)">
+            <input type="text" name="text" placeholder="Podaj słowa (oddzielone przecinkami)"required>
             <input type="submit" name="implode" value="Wykonaj">
         </form>
         <?php
@@ -146,7 +146,7 @@
         <section>
         <h1>11. Odwracanie łańcucha</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj tekst do odwrócenia">
+            <input type="text" name="text" placeholder="Podaj tekst do odwrócenia"required>
             <input type="submit" name="reverse" value="Wykonaj">
         </form>
         <?php
@@ -158,8 +158,8 @@
         <section>
         <h1>12. Powtarzanie łańcucha</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj frazę">
-            <input type="number" name="ile" placeholder="Ile razy powtórzyć">
+            <input type="text" name="text" placeholder="Podaj frazę"required>
+            <input type="number" name="ile" min="1" placeholder="Ile razy powtórzyć"required>
             <input type="submit" name="repeat" value="Wykonaj">
         </form>
         <?php
@@ -171,7 +171,7 @@
         <section>
         <h1>13. Zmiana na małe litery</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj tekst">
+            <input type="text" name="text" placeholder="Podaj tekst" required>
             <input type="submit" name="male" value="Wykonaj">
         </form>
         <?php
@@ -183,8 +183,8 @@
         <section>
         <h1>14. Zliczanie wystąpień</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj ciąg znaków">
-            <input type="text" name="ile_liter" placeholder="Podaj literę do zliczenia">
+            <input type="text" name="text" placeholder="Podaj ciąg znaków"required>
+            <input type="text" name="ile_liter" placeholder="Podaj literę do zliczenia"required>
             <input type="submit" name="count" value="Wykonaj">
         </form>
         <?php
@@ -204,7 +204,7 @@
     <section>
         <h1>15. Tworzenie zdania</h1>
         <form method="post">
-            <input type="text" name="text" placeholder="Podaj słowa do złożenia w zdanie (oddzielone przecinkami)">
+            <input type="text" name="text" placeholder="Podaj słowa do złożenia w zdanie (oddzielone przecinkami)"required>
             <input type="submit" name="tworzenie_zdan" value="Wykonaj">
         </form>
         <?php
