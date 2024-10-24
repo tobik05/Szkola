@@ -139,7 +139,7 @@
         <?php
         if (isset($_POST['implode'])) {
             $wordsArray = explode(",", $_POST['text']);
-            echo "<h3>" . implode(", ", $wordsArray) . "</h3>";
+            echo "<h1>" . implode(" ", $wordsArray) . "</h1>";
         }
         ?>
         </section>
@@ -169,6 +169,18 @@
         ?>
         </section>
         <section>
+        <h1>13. Zmiana na małe litery</h1>
+        <form method="post">
+            <input type="text" name="text" placeholder="Podaj tekst">
+            <input type="submit" name="male" value="Wykonaj">
+        </form>
+        <?php
+        if (isset($_POST['male'])) {
+            echo "<h1>" . strtolower($_POST['text']) . "</h1>";
+        }
+        ?>
+        </section>
+        <section>
         <h1>14. Zliczanie wystąpień</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj ciąg znaków">
@@ -180,13 +192,11 @@
             $text = $_POST['text'];
             $liter = $_POST['ile_liter'];
             $ile = 0;
-
             for ($i = 0; $i < strlen($text); $i++) {
                 if (substr($text, $i, 1) === $litery) {
                     $ile++;
                 }
             }
-
             echo "<h1>Litera '" . $liter . "' występuje " . $ile . " razy.</h1>";
         }
         ?>
