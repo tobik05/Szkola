@@ -79,7 +79,7 @@
             echo "<h3>Małe litery: " . strtolower($_POST['text']) . "</h3>";
         }
         ?>
-        <h1>Kapitalizacja każdego słowa</h1>
+        <h1>7. Kapitalizacja pierwszej litery</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj tekst">
             <input type="submit" name="ucwords" value="Wykonaj">
@@ -123,6 +123,39 @@
             echo "<h3>" . implode(", ", $wordsArray) . "</h3>";
         }
         ?>
+        <h1>11. Odwracanie łańcucha</h1>
+        <form method="post">
+            <input type="text" name="text" placeholder="Podaj tekst do odwrócenia">
+            <input type="submit" name="reverse" value="Wykonaj">
+        </form>
+        <?php
+        if (isset($_POST['reverse'])) {
+            echo "<h1>" . strrev($_POST['text']) . "</h1>";
+        }
+        ?>
+        <h1>12. Powtarzanie łańcucha</h1>
+        <form method="post">
+            <input type="text" name="text" placeholder="Podaj frazę">
+            <input type="number" name="ile" placeholder="Ile razy powtórzyć">
+            <input type="submit" name="repeat" value="Wykonaj">
+        </form>
+        <?php
+        if (isset($_POST['repeat'])) {
+            echo "<h1>" . str_repeat($_POST['text'], $_POST['ile']) . "</h1>";
+        }
+        ?>
+        <h1>13. Zliczanie wystąpień</h1>
+        <form method="post">
+            <input type="text" name="text" placeholder="Podaj ciąg znaków">
+            <input type="text" name="ile_liter" placeholder="Podaj literę do zliczenia">
+            <input type="submit" name="count" value="Wykonaj">
+        </form>
+        <?php
+        if (isset($_POST['count'])) {
+            echo "<h1>Litera '" . $_POST['ile_liter'] . "' występuje " . substr_count($_POST['text'], $_POST['ile_liter']) . " razy.</h1>";
+        }
+        ?>
+        <h1>14. </h1>
     </main>
 </body>
 </html>
