@@ -95,10 +95,10 @@
         <h1>7. Kapitalizacja pierwszej litery</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj tekst">
-            <input type="submit" name="ucwords" value="Wykonaj">
+            <input type="submit" name="ucfirst" value="Wykonaj">
         </form>
         <?php
-        if (isset($_POST['ucwords'])) {
+        if (isset($_POST['ucfirst'])) {
             echo "<h3>" . ucfirst($_POST['text']) . "</h3>";
         }
         ?>
@@ -107,10 +107,10 @@
         <h1>8. Kapitalizacja każdego słowa</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj zdanie">
-            <input type="submit" name="ucwords2" value="Wykonaj">
+            <input type="submit" name="ucwords" value="Wykonaj">
         </form>
         <?php
-        if (isset($_POST['ucwords2'])) {
+        if (isset($_POST['ucwords'])) {
             echo "<h3>" . ucwords($_POST['text']) . "</h3>";
         }
         ?>
@@ -133,12 +133,12 @@
         <section>
         <h1>10. Łączenie słów</h1>
         <form method="post">
-            <input type="text" name="implode_words" placeholder="Podaj słowa (oddzielone przecinkami)">
+            <input type="text" name="text" placeholder="Podaj słowa (oddzielone przecinkami)">
             <input type="submit" name="implode" value="Wykonaj">
         </form>
         <?php
         if (isset($_POST['implode'])) {
-            $wordsArray = explode(",", $_POST['implode_words']);
+            $wordsArray = explode(",", $_POST['text']);
             echo "<h3>" . implode(", ", $wordsArray) . "</h3>";
         }
         ?>
@@ -195,10 +195,10 @@
         <h1>15. Tworzenie zdania</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj słowa do złożenia w zdanie (oddzielone przecinkami)">
-            <input type="submit" name="sentence" value="Wykonaj">
+            <input type="submit" name="tworzenie_zdan" value="Wykonaj">
         </form>
         <?php
-        if (isset($_POST['sentence'])) {
+        if (isset($_POST['tworzenie_zdan'])) {
             $slowa = explode(",", $_POST['text']);
             echo "<h1>" . trim(implode(" ", $slowa)) . ".</h1>";
         }
