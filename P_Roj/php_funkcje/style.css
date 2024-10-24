@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    --glowny: #f9b17a;
+    --tlo: #2d3250;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --alfa: #0692e300;
+    color: var(--bialy);
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-color: var(--tlo);
+}

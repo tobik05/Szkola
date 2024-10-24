@@ -8,6 +8,7 @@
 </head>
 <body>
     <main>
+        <section>
         <h1>1. Obliczanie długość łańcucha</h1>
         <form method="post">
             <input type="text" name="imie" placeholder="Podaj swoje imię">
@@ -18,6 +19,8 @@
             echo "<h3>".strlen($_POST['imie'])."</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>2. Wyszukiwanie podciągu</h1>
         <form method="post">
             <input type="text" name="ciag" placeholder="Podaj ciąg znakow">
@@ -33,6 +36,8 @@
             }
         }
         ?>
+        </section>
+        <section>
         <h1>3. Fragmentowanie łańcucha</h1>
         <form method="post">
             <input type="text" name="ciag_fragment" placeholder="Podaj ciąg znaków">
@@ -45,6 +50,8 @@
             echo "<h3>Fragment: " . substr($_POST['ciag_fragment'], ($_POST['pozycja_poczatkowa']-1), $_POST['dlugosc']) . "</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>4. Zastępowanie podciągu</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj tekst">
@@ -57,6 +64,8 @@
             echo "<h3>" . str_replace($_POST['stare'], $_POST['nowe'], $_POST['text']) . "</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>5. Usuwanie białych znaków</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj tekst">
@@ -68,6 +77,8 @@
             echo "<h3>Oczyszczony tekst: '" . trim($_POST['text'], $_POST['text_usuniecie']) . "'</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>6. Zmiana wielkości liter</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj tekst">
@@ -79,6 +90,8 @@
             echo "<h3>Małe litery: " . strtolower($_POST['text']) . "</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>7. Kapitalizacja pierwszej litery</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj tekst">
@@ -89,6 +102,8 @@
             echo "<h3>" . ucfirst($_POST['text']) . "</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>8. Kapitalizacja każdego słowa</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj zdanie">
@@ -99,6 +114,8 @@
             echo "<h3>" . ucwords($_POST['text']) . "</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>9. Dziel i zwyciężaj</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj zdanie">
@@ -112,6 +129,8 @@
             }
         }
         ?>
+        </section>
+        <section>
         <h1>10. Łączenie słów</h1>
         <form method="post">
             <input type="text" name="implode_words" placeholder="Podaj słowa (oddzielone przecinkami)">
@@ -123,6 +142,8 @@
             echo "<h3>" . implode(", ", $wordsArray) . "</h3>";
         }
         ?>
+        </section>
+        <section>
         <h1>11. Odwracanie łańcucha</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj tekst do odwrócenia">
@@ -133,6 +154,8 @@
             echo "<h1>" . strrev($_POST['text']) . "</h1>";
         }
         ?>
+        </section>
+        <section>
         <h1>12. Powtarzanie łańcucha</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj frazę">
@@ -144,6 +167,8 @@
             echo "<h1>" . str_repeat($_POST['text'], $_POST['ile']) . "</h1>";
         }
         ?>
+        </section>
+        <section>
         <h1>14. Zliczanie wystąpień</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj ciąg znaków">
@@ -152,9 +177,21 @@
         </form>
         <?php
         if (isset($_POST['count'])) {
-            echo "<h1>Litera '" . $_POST['ile_liter'] . "' występuje " . substr_count($_POST['text'], $_POST['ile_liter']) . " razy.</h1>";
+            $text = $_POST['text'];
+            $liter = $_POST['ile_liter'];
+            $ile = 0;
+
+            for ($i = 0; $i < strlen($text); $i++) {
+                if (substr($text, $i, 1) === $litery) {
+                    $ile++;
+                }
+            }
+
+            echo "<h1>Litera '" . $liter . "' występuje " . $ile . " razy.</h1>";
         }
         ?>
+    </section>
+    <section>
         <h1>15. Tworzenie zdania</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj słowa do złożenia w zdanie (oddzielone przecinkami)">
@@ -166,6 +203,7 @@
             echo "<h1>" . trim(implode(" ", $slowa)) . ".</h1>";
         }
         ?>
+        </section>
     </main>
 </body>
 </html>
