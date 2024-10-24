@@ -138,8 +138,8 @@
         </form>
         <?php
         if (isset($_POST['implode'])) {
-            $wordsArray = explode(",", $_POST['text']);
-            echo "<h1>" . implode(" ", $wordsArray) . "</h1>";
+            $slowa = explode(",", $_POST['text']);
+            echo "<h1>" . implode(" ", $slowa) . "</h1>";
         }
         ?>
         </section>
