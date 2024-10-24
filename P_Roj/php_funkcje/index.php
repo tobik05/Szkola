@@ -144,7 +144,7 @@
             echo "<h1>" . str_repeat($_POST['text'], $_POST['ile']) . "</h1>";
         }
         ?>
-        <h1>13. Zliczanie wystąpień</h1>
+        <h1>14. Zliczanie wystąpień</h1>
         <form method="post">
             <input type="text" name="text" placeholder="Podaj ciąg znaków">
             <input type="text" name="ile_liter" placeholder="Podaj literę do zliczenia">
@@ -155,7 +155,17 @@
             echo "<h1>Litera '" . $_POST['ile_liter'] . "' występuje " . substr_count($_POST['text'], $_POST['ile_liter']) . " razy.</h1>";
         }
         ?>
-        <h1>14. </h1>
+        <h1>15. Tworzenie zdania</h1>
+        <form method="post">
+            <input type="text" name="text" placeholder="Podaj słowa do złożenia w zdanie (oddzielone przecinkami)">
+            <input type="submit" name="sentence" value="Wykonaj">
+        </form>
+        <?php
+        if (isset($_POST['sentence'])) {
+            $slowa = explode(",", $_POST['text']);
+            echo "<h1>" . trim(implode(" ", $slowa)) . ".</h1>";
+        }
+        ?>
     </main>
 </body>
 </html>
