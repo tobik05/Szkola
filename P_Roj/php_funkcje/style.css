@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    --glowny: #f9b17a;
+    --tlo: #2d3250;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --alfa: #0692e300;
+    color: var(--bialy);
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-color: var(--tlo);
+}
+input[type=submit]{
+    border: 2px solid var(--glowny);
+    color: var(--czarny);
+    background-color: var(--glowny);
+}
+input{
+    border: 2px solid var(--bialy);
+    border-radius: 2px;
+    padding: 6px;
+    color: var(--bialy);
+    outline: none;
+    background-color: var(--tlo);
+    margin: 10px;
+}
+input::placeholder{
+    color: var(--bialy);
+}
+input:focus{
+    background-color: var(--glowny);
+    color: var(--czarny);
+    outline: none;
+    border: 2px solid var(--alfa);
+}
+input[type=text]:focus::placeholder{
+    color: var(--czarny);
+}
+h3{
+    min-width: 100px;
+    text-align: center;
+}
