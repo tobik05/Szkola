@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    --zielony: #00e60f;
+    --czerwony: #d90429;
+    --glowny: #f9b17a;
+    --tlo: #2d3250;
+    --drugi: #424769;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    color: var(--bialy);
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-color: var(--tlo);
+}
+header{
+    clear: both;
+    text-align: center;
+    height: 100px;
+}
+footer{
+    text-align: center;
+}
+.left_side, .center_side, .right_side{
+    background-color: var(--drugi);
+    float: left;
+    width: 33%;
+    height: 500px;
+    text-align: center;
+}
+.left_side_bottom, .right_side_bottom{
+    background-color: var(--drugi);
+    float: left;
+    width: 50%;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pacjenci{
+    max-height: 400px;
+    overflow: auto;
+}
+th{
+    font-weight: 600;
+}
+input{
+    color: var(--czarny);
+    outline: none;
+    padding: 3px;
+    border-radius: 5px;
+    border: 1px solid var(--tlo);
+}
+input[type=text]:invalid,input[type=number]:invalid{
+    border: 2px solid var(--czerwony);
+}
+input[type=text]:valid, input[type=number]:valid{
+    border: 2px solid var(--zielony);
+}
+input[type=submit]{
+    background-color: var(--glowny);
+    color: var(--czarny);
+    padding: 10px;
+}
+.wizyty{
+    width: 50%;
+    max-height: 100px;
+    overflow: auto;
+}
