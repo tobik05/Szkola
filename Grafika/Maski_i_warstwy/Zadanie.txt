@@ -1,0 +1,14 @@
+1. 	
+	-Założenie projektu 1200x1000px, RGB, 100ppi. 
+	-Przezroszczysta warstwa o nazwie "Background" na spodzie, osadzenie pliku jpg tak, żeby zakrywał cały obszar roboczy.
+	-Powielenie grafiki na 15-tu warstwach opisanych nazwą "car(nr warstwy)" umieszczenie obiektów 5tkami w folderach (3 foldery po 5 aut) nazywamy od dołu "foler1/2/3".
+	-Blokujemy i ukrywamy folder 1, blokujemy folder 2 i blokujemy wszystkie warstwy w folderze 3 (nie cały folder). 
+	-Zapis w pliku PSD o nazwie "Warstwy".
+2.
+	-Otwarcie grafiki z samochodem, jako warstwy głównej.
+	-Utworzenie warstwy przezroczystej o nazwie "Background" na spodzie (zablokować).
+	-Prześwit samochodu w napisie na czarnym tle. Prześwit liter "AETIZ" przez grafikę, czcionka "Myriad Pro".
+	-Zapis w pliku PSD oraz PNG o nazwie "Litery".
+3.
+	-Otwarcie grafiki z samochodem, i zrobienie puzzli 5x5
+	-5 plików 2 psd z puzzlami 1 siatka, oraz 2 odwrotna, 3 psd z obiema siatkami. Plik PNG z 1 siatką i 2 odwróconą.
