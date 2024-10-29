@@ -15,7 +15,10 @@
         $con=mysqli_connect("localhost","root","","kupauto");
         $zapytanie=mysqli_query($con, "SELECT model, rocznik, przebieg, paliwo, cena, zdjecie FROM samochody WHERE id=10");
         $row=mysqli_fetch_array($zapytanie);
-        echo "<img src='".$row['zdjecie']."' alt='oferta dnia'><h4>Oferta Dnia: Toyota ".$row['model']."</h4><p>Rocznik: ".$row['rocznik'].", przebieg: ".$row['przebieg'].", rodzaj paliwa: ".$row['paliwo']."</p><h4>Cerna: ".$row['cena']."</h4>";
+        echo "<img src='".$row['zdjecie']."' alt='oferta dnia'>";
+        echo "<h4>Oferta Dnia: Toyota ".$row['model']."</h4>";
+        echo "<p>Rocznik: ".$row['rocznik'].", przebieg: ".$row['przebieg'].", rodzaj paliwa: ".$row['paliwo']."</p>";
+        echo "<h4>Cerna: ".$row['cena']."</h4>";
         ?>
     </section>
     <section class="wyroznione">
@@ -24,7 +27,12 @@
         $con=mysqli_connect("localhost","root","","kupauto");
         $zapytanie=mysqli_query($con, "SELECT samochody.model, samochody.rocznik, samochody.cena, samochody.zdjecie, marki.nazwa FROM samochody INNER JOIN marki on marki.id=samochody.marki_id WHERE samochody.wyrozniony=1 LIMIT 4;");
         while($row=mysqli_fetch_array($zapytanie)){
-            echo"<section class=auta><img src='".$row['zdjecie']."' alt='".$row['model']."'><h4>".$row['nazwa']." ".$row['model']."</h4><p>".$row['rocznik']."</p><h4>".$row['cena']."</h4></section>";
+            echo"<section class=auta>";
+                echo "<img src='".$row['zdjecie']."' alt='".$row['model']."'>";
+                echo "<h4>".$row['nazwa']." ".$row['model']."</h4>";
+                echo "<p>".$row['rocznik']."</p>";
+                echo "<h4>".$row['cena']."</h4>";
+            echo "</section>";
         }
         ?>
     </section>
@@ -48,7 +56,11 @@
             $marka=$_POST['marka'];
             $zapytanie=mysqli_query($con, "SELECT samochody.model, samochody.cena, samochody.zdjecie, marki.nazwa FROM samochody INNER JOIN marki on marki.id=samochody.marki_id WHERE marki.nazwa='$marka'");
             while($row=mysqli_fetch_array($zapytanie)){
-                echo "<section class='auta'><img src='".$row['zdjecie']."' alt='".$row['model']."'><h4>".$row['nazwa']." ".$row['model']."</h4><h4>Cena: ".$row['cena']."</h4></section>";
+                echo "<section class='auta'>";
+                    echo "<img src='".$row['zdjecie']."' alt='".$row['model']."'>";
+                    echo "<h4>".$row['nazwa']." ".$row['model']."</h4>";
+                    echo "<h4>Cena: ".$row['cena']."</h4>'";
+                echo "</section>";
             }
         }
         mysqli_close($con);
