@@ -69,3 +69,6 @@ input[type=submit]{
     max-height: 100px;
     overflow: auto;
 }
+.pierwszy_wiersz{
+    border-bottom: 1px solid var(--bialy);
+}
