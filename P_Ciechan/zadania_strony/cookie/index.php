@@ -8,15 +8,15 @@
 </head>
 <body>
     <main>
-        <h1>MOTYW</h1>
+        <h2>KOLOR</h2>
         <form action="index.php" method="POST">
             <label><input type="radio" name="wybor" value="#d90429">Czerwony</label>
             <label><input type="radio" name="wybor" value="#8ac926">Zielony</label>
-            <label><input type="radio" name="wybor" value="#2d3250">Niebieski</label>
+            <label><input type="radio" name="wybor" value="#f9b17a">Złoty</label>
             <button type="submit" name="submit">WYBIERZ</button>
         </form>
         <section>
-            <p>ŚWIEBODZIN</p>
+            <h1>ŚWIEBODZIN</h1>
         </section>
     </main>
     <?php 
@@ -28,7 +28,7 @@
             $wybor=$_COOKIE["wybor"];
         }
         if(isset($wybor)){
-            echo "<style> p{color:".$wybor.";}</style>";
+            echo "<style> h1{color:".$wybor.";}</style>";
         }
     }
     ?>
