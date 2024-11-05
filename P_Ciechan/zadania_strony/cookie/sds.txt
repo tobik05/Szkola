@@ -1,0 +1,33 @@
+if(isset($_POST["zmiana"])){
+        if(isset($_POST['motyw'])){
+        $motyw = $_POST['motyw'];
+        setcookie("motyw",$motyw,time()+30,"/","localhost",false);
+        }
+    } 
+    else if(isset($_COOKIE["motyw"])) {
+        $motyw = $_COOKIE["motyw"];
+    }
+    if(isset($motyw)){
+        switch($motyw){
+            case "1":
+                echo "<style>";
+                echo "section{background-color: red;}";
+                echo "p{color: white;}";
+                echo "</style>";
+                break;
+            case "2":
+                echo "<style>";
+                echo "section{background-color: green;}";
+                echo "p{color: orange;}";
+                echo "</style>";
+                break;
+            case "3":
+                echo "<style>";
+                echo "section{background-color: blue;}";
+                echo "p{color: yellow;}";
+                echo "</style>";
+                break;
+        }
+    }
+    
+?>
