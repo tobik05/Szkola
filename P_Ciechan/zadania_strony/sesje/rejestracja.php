@@ -13,11 +13,6 @@
     if(isset($_SESSION['error'])){
         echo $_SESSION['error'];
     }
-    if(isset($_SESSION['zalogowany'])){
-        echo "<h1 class='succes'>Jesteś zalogowany</h1>";
-    }else{
-        echo "<h1 class='error'>Nie jesteś zalogowany</h1>";
-    }
     ?>
     <form method="post" class="pion">
         <?php 

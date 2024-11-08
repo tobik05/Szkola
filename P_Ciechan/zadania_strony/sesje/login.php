@@ -13,11 +13,6 @@
     if(isset($_SESSION['error'])){
         echo $_SESSION['error'];
     }
-    if(isset($_SESSION['zalogowany'])){
-        echo "<h1 class='succes'>Jesteś zalogowany</h1>";
-    }else{
-        echo "<h1 class='error'>Nie jesteś zalogowany</h1>";
-    }
     ?>
     <form method="post" class="pion">
         <?php 
@@ -48,7 +43,7 @@
 
             if (password_verify($haslo, $row['haslo'])) {
                 $_SESSION['zalogowany'] = "tak";
-                $_SESSION['nick'] = $login;
+                $_SESSION['login'] = $login;
                 unset($_SESSION['error']);
                 exit( header("Location: index.php?debug=".session_id()));
             } else {
