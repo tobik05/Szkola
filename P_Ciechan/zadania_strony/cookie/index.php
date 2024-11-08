@@ -20,16 +20,15 @@
         </section>
     </main>
     <?php 
+    if(isset($_COOKIE["wybor"])) {
+        $wybor=$_COOKIE["wybor"];
+    }
     if(isset($_POST['submit'])){
-        if(isset($_POST['wybor'])){
-            $wybor=$_POST['wybor'];
-            setcookie("wybor",$wybor,time()+30,"/","localhost");
-        }else if(isset($_COOKIE["wybor"])) {
-            $wybor=$_COOKIE["wybor"];
-        }
-        if(isset($wybor)){
-            echo "<style> h1{color:".$wybor.";}</style>";
-        }
+        $wybor=$_POST['wybor'];
+        setcookie("wybor",$wybor,time()+30,"/","localhost");
+    }
+    if(isset($wybor)){
+        echo "<style> h1{color:".$wybor.";}</style>";
     }
     ?>
 </body>
