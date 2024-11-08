@@ -5,7 +5,7 @@
     --glowny: #f9b17a;
     --tlo: #2d3250;
     --drugi: #424769;
-    --trzeci: #578f9d;
+    --szary: #6c757d;
     --bialy: #EEEEEE;
     --czarny: #212121;
     --alfa: #0692e300;
@@ -66,7 +66,7 @@ footer{
 }
 .button{
     text-decoration: none;
-    border: none;
+    border: 1px solid var(--alfa);
     background-color: var(--glowny);
     color: var(--czarny);
     text-align: center;
@@ -89,6 +89,11 @@ footer{
 .small-button{
     padding: 6px 16px;
     font-size: 12px;
+}
+.block-button{
+    background-color: var(--alfa);
+    color: var(--szary);
+    border: 1px solid var(--szary);
 }
 input{
     border: 2px solid var(--glowny);
