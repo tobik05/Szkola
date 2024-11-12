@@ -26,15 +26,13 @@
     <footer class="footer_1"><a href="kw1.png">Pobierz obraz</a></footer>
     <footer class="footer_2">
         <?php
+        $licznik=1;
         if(!isset($_COOKIE["odwiedziny"])){
-            $licznik=1;
             setcookie("odwiedziny",$licznik,time()+3600,"/","localhost");
             echo "<p>Dzień dobry! Sprawdź regulamin naszej strony</p>";
-        }else{
-            $licznik=$_COOKIE["odwiedziny"];
+        }if(isset($_COOKIE["odwiedziny"])){
             $licznik++;
             echo "<p>Miło nam, że nas znowu odwiedziłeś</p>";
-            setcookie("odwiedziny",$licznik,time()+3600,"/","localhost");
         }
         ?>
     </footer class="footer_3">
