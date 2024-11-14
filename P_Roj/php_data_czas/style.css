@@ -124,8 +124,9 @@ input:focus{
 .succes{
     color: var(--zielony);
 }
-form{
+.sekcja{
+    width: 35vw;
     background-color: var(--drugi);
     border-radius: 25px;
-    padding: 5%;
+    padding: 3%;
 }
