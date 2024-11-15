@@ -29,10 +29,10 @@
         $licznik=1;
         if(!isset($_COOKIE["odwiedziny"])){
             setcookie("odwiedziny",$licznik,time()+3600,"/","localhost");
-            echo "<p>Dzień dobry! Sprawdź regulamin naszej strony</p>";
+            echo "<p><em>Dzień dobry! Sprawdź regulamin naszej strony</em></p>";
         }if(isset($_COOKIE["odwiedziny"])){
             $licznik++;
-            echo "<p>Miło nam, że nas znowu odwiedziłeś</p>";
+            echo "<p><strong>Miło nam, że nas znowu odwiedziłeś</strong></p>";
         }
         ?>
     </footer>
