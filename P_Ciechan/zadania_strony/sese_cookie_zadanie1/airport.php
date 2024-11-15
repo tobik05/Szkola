@@ -35,7 +35,7 @@
             echo "<p>Miło nam, że nas znowu odwiedziłeś</p>";
         }
         ?>
-    </footer class="footer_3">
-    <footer>Autor: Tobiasz Bielawski</footer>
+    </footer>
+    <footer class="footer_3">Autor: Tobiasz Bielawski</footer>
 </body>
 </html>

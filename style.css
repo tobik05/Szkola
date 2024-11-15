@@ -124,3 +124,17 @@ form{
     border-radius: 25px;
     padding: 5%;
 }
+::-webkit-scrollbar {
+    width: 7px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background: var(--czarny); 
+}
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--glowny); 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--drugi); 
+}
