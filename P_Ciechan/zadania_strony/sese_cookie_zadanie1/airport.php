@@ -23,7 +23,7 @@
             ?>
         </table>
     </main>
-    <footer class="footer_1"><a href="kw1.png">Pobierz obraz</a></footer>
+    <footer class="footer_1"><a href="kw1.png"  target="_blank">Pobierz obraz</a></footer>
     <footer class="footer_2">
         <?php
         $licznik=1;
