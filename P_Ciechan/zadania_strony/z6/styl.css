@@ -1,0 +1,52 @@
+*{
+    font-family: Roboto, Serif;
+}
+header{
+    background-color: crimson;
+    color: white;
+    text-align: center;
+    letter-spacing: 5px;
+    word-spacing: 30px;
+    padding: 10px;
+}
+.oferta_dnia{
+    background-color: mistyrose;
+    height: 300px;
+    padding: 10px;
+    margin: 10px 50px;
+    border: 1px solid crimson;
+    clear: both;
+}
+.oferta_dnia img{
+    height: 100%;
+    word-wrap:break-word;
+    float: left;
+}
+.auta{
+    background-color: snow;
+    height: 450px;
+    width: 21%;
+    margin: 1%;
+    text-align: center;
+    border: 1px solid crimson;
+    float: left;
+}
+footer{
+    background-color: crimson;
+    color: white;
+    clear: both;
+}
+img{
+    max-width: 100%;
+}
+h4{
+    font-size: 180%;
+    text-align: center;
+    color: crimson;
+}
+a{
+    color: white;
+}
+.wyroznione, .marki{
+    float: left;
+}

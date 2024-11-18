@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    --czerwony: #d90429;
+    --zielony: #8ac926;
+    --glowny: #f9b17a;
+    --tlo: #2d3250;
+    --drugi: #424769;
+    --trzeci: #578f9d;
+    --bialy: #EEEEEE;
+    --czarny: #212121;
+    --alfa: #0692e300;
+    color: var(--bialy);
+    font-family: 'Rethink Sans', sans-serif;
+    font-weight: 400;
+}
+body{
+    background-color: var(--tlo);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+main{
+    height: 76vh;
+}
+input[type=submit], button{
+    border: 2px solid var(--glowny);
+    border-radius: 2px;
+    padding: 6px;
+    color: var(--czarny);
+    outline: none;
+    background-color: var(--glowny);
+    margin: 10px;
+}
+h1{
+    font-size: 400%;
+}

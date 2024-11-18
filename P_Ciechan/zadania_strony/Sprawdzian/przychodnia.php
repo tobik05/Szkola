@@ -16,7 +16,7 @@
         <?php
         $con=mysqli_connect("localhost","root","","przychodnia");
         $zapytanie=mysqli_query($con,"SELECT Imie, Nazwisko, Pesel, Data_ur FROM pacjent");
-        echo "<table><tr><th>Imię</th><th>Nazwisko</th><th>PESEL</th><th>Data urodzenia</th></tr>";
+        echo "<table><tr clas='pierwszy_wiersz'><th>Imię</th><th>Nazwisko</th><th>PESEL</th><th>Data urodzenia</th></tr>";
         while($row=mysqli_fetch_array($zapytanie)){
             echo "<tr><td>".$row['Imie']."</td><td>".$row['Nazwisko']."</td><td>".$row['Pesel']."</td><td>".$row['Data_ur']."</td></tr>";
         }
