@@ -1,0 +1,18 @@
+Temat: transformacja i rotacja obiektów
+zadanie 1:
+	psd i png
+	Projekt 1: -2000x1000px dodge w liniach jak koperta
+	Projekt 2:
+zadanie 2:
+	psd i png
+	Projekt 1: -2000x1000px dodge jako talia kart
+zadanie 3:
+	psd i png
+	Projekt 1: -2000x1000px siatka 5x5 kazda linia 90 stopni w prawo lewo prawo lewo prawo
+zadanie 4:
+	psd i png
+	5 wierszy na 2 kolumny co kazdy nr, ma o 10 wieksza widocznosc
+zadanie 5:
+	psd i png
+	2000x1000px czcionka myriad pro
+	
