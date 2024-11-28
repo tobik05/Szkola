@@ -14,6 +14,7 @@
     <button class="button small-button" onclick="pokaz('#hamulce')">Hamulce</button>
     <button class="button small-button" onclick="pokaz('#nadwozie')">Nadwozie</button>
     <h2>Administrator</h2>
-    <button class='button small-button' onclick="pokaz('#uzytkwownicy')">Uzytkwownicy</button>
-    <button class='button small-button' onclick="pokaz('#produkty')">Produkty</button>
+    <button class='button small-button' href='uzytkownicy.php'>Uzytkwownicy</button>
+    <button class='button small-button' href='produkty.php'>Produkty</button>
+    <button class='button small-button' href='dodawanie_towaru.php'>Dodanie towaru</button>
 </aside>

@@ -23,7 +23,7 @@
             }
             ?>
             <section class="form">
-                <h2>Logowanie</h2>
+                <h2>Rejestracja</h2>
                 <form class="pion" method="post">
                     <input type="text" name="login" placeholder="Nick">
                     <input type="password" name="haslo" placeholder="Hasło">
