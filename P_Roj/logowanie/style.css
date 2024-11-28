@@ -45,10 +45,6 @@ nav{
     justify-content:flex-start;
     align-items: center;
 }
-i{
-    font-size: 150%;
-}
-
 main{
     margin-top: 100px;
     padding: 25px;
@@ -79,7 +75,6 @@ aside{
 }
 main section{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -93,6 +88,21 @@ main section section{
     flex-direction: row;
     flex-wrap: wrap;
 }
+i{
+    font-size: 150%;
+}
+.pion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.poziom{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
 #logo{
     height: 95%;
     margin-right: 15px;
@@ -105,13 +115,7 @@ main section section{
 .menu-buttons{
     display: flex;
     flex-direction: column;
-    height: 30%;
-}
-.menu-buttons a{
-    width: 100%;
-    text-decoration: none;
-    padding: 5px;
-    border-bottom: 1px solid var(--bialy);
+    min-height: 30%;
 }
 .menu-buttons h2{
     text-align: center;
@@ -153,16 +157,31 @@ main section section{
 }
 .button{
     text-decoration: none;
-    padding: 5px;
     border: none;
     background-color: var(--glowny);
     color: var(--czarny);
-    border-radius: 2px;
-    min-width: 40px;
     text-align: center;
     margin: 5px;
+    border-radius: 6px;
+    padding: 8px 24px;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.input{
+.large-button{
+    padding: 8px 24px;
+    font-size: 16px;
+}
+.medium-button{
+    padding: 8px 16px;
+    font-size: 14px;
+}
+.small-button{
+    padding: 6px 16px;
+    font-size: 12px;
+}
+input{
     border: 2px solid var(--glowny);
     border-radius: 10px;
     padding: 6px;
@@ -171,25 +190,10 @@ main section section{
     background-color: var(--alfa);
     margin: 10px;
 }
-input[type=submit]{
-    border: 2px solid var(--glowny);
-    border-radius: 2px;
-    padding: 6px;
+input:focus::placeholder{
     color: var(--czarny);
-    outline: none;
-    background-color: var(--glowny);
-    margin: 10px;
 }
-input[type=text], input[type=password]{
-    border: 2px solid var(--bialy);
-    border-radius: 2px;
-    padding: 6px;
-    color: var(--bialy);
-    outline: none;
-    background-color: var(--tlo);
-    margin: 10px;
-}
-input[type=text]::placeholder, input[type=password]::placeholder{
+input::placeholder{
     color: var(--bialy);
 }
 ::placeholder{
@@ -200,16 +204,23 @@ input:focus{
     color: var(--czarny);
     outline: none;
 }
-input[type=text]:focus, input[type=password]:focus{
-    color: var(--czarny);
-    border: 2px solid var(--glowny);
+.error{
+    color: var(--czerwony);
 }
-input[type=text]:focus::placeholder, input[type=password]:focus::placeholder{
-    color: var(--czarny);
+.succes{
+    color: var(--zielony);
+}
+form{
+    background-color: var(--drugi);
+    border-radius: 25px;
+    padding: 5%;
 }
 option{
     color: var(--czarny);
 }
 #koszyk{
     margin: 0px 50px 0px 0px;
+}
+.form{
+    height: 100%;
 }

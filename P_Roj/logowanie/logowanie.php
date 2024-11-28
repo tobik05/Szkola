@@ -8,7 +8,11 @@
     <main>
         <section>
             <?php
-            $poziom=$_SESSION["poziom"];
+            if(isset($_SESSION['poziom'])){
+                $poziom=$_SESSION['poziom'];
+            }else{
+                $poziom=0;
+            }
             if($poziom==100){
                 include("partials/admin_side_menu.php");
             }else if($poziom==50){
@@ -18,19 +22,19 @@
                 include("partials/user_side_menu.php");
             }
             ?>
-            <section>
+            <section class="form">
                 <h2>Logowanie</h2>
-                <form action="" method="post">
+                <form class="pion" method="post">
                     <input type="text" name="login" placeholder="Nick">
                     <input type="password" name="haslo" placeholder="Hasło">
                     <input type="submit" name="loguj" value="Zaloguj" class='button'>
+                    <a class="button small-button" href="dodawanie.php">Utwórz użytkownika</a>
                 </form>
                 <?php
-                if (isset($_POST['loguj'])) { // Zmiana na 'loguj'
+                if (isset($_POST['loguj'])) {
                     $login = $_POST['login'];
                     $haslo = $_POST['haslo'];
 
-                    // Przygotowanie zapytania
                     $stmt = $con->prepare("SELECT * FROM users WHERE login = ?");
                     $stmt->bind_param("s", $login);
                     $stmt->execute();
@@ -38,11 +42,10 @@
 
                     if ($result->num_rows > 0) {
                         $row = $result->fetch_assoc();
-                        // Weryfikacja hasła
                         if (password_verify($haslo, $row['haslo'])) {
                             $_SESSION['login'] = $row['login'];
                             $_SESSION['poziom'] = $row['poziom'];
-                            exit( header("Location: index.php?debug=".session_id()));
+                            exit( header("Location: index.php"));
                         } else {
                             echo "Niepoprawne hasło";
                         }
