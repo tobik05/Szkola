@@ -17,6 +17,23 @@
             document.getElementById("obraz_pszczola").style.filter="invert(1)";
         }
     }
+    function zmiana_obrazu_pomarancza(efekt){
+        if(efekt=="kolorowy"){
+            document.getElementById("obraz_pomarancza").style.filter="grayscale(0)";
+        }else if(efekt=="czarno-bialy"){
+            document.getElementById("obraz_pomarancza").style.filter="grayscale(1)";
+        }
+    }
+    function zmiana_obrazu_owoce(){
+        var wartosc=(document.getElementById("wybor_owoce").value)/100;
+        document.getElementById("obraz_owoce").style.opacity=wartosc;
+        console.log(wartosc);
+    }
+    function zmiana_oobrazu_zolw(){
+        var wartosc=(document.getElementById("wybor_owoce").value)/100;
+        document.getElementById("obraz_owoce").style.opacity=wartosc;
+        console.log(wartosc);
+    }
 </script>
 <body>
     <header>
@@ -35,12 +52,12 @@
         <button id="wybor_pomarancza" onclick="zmiana_obrazu_pomarancza('czarno-bialy')">Czarno-biały</button>
     </section>
     <section class="blok_3">
-        <img src="owoce.jpg" alt="Kosz pełen owoców">
+        <img src="owoce.jpg" alt="Kosz pełen owoców" id="obraz_owoce">
         <input type="range" id="wybor_owoce" min="0" max="100" value="100">
         <button onclick="zmiana_obrazu_owoce()">Zastosuj</button>
     </section>
     <section class="blok_4">
-        <img src="zolw.jpg" alt="Żółw w wodzie">
+        <img src="zolw.jpg" alt="Żółw w wodzie" id="obraz_zolw">
         <input type="range" id="wybor_zolw" min="0" max="250">
         <button onclick="zmiana_oobrazu_zolw()">Zastosuj</button>
     </section>
