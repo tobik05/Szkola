@@ -29,8 +29,8 @@
         document.getElementById("obraz_owoce").style.opacity=wartosc;
     }
     function zmiana_oobrazu_zolw(){
-        var wartosc=(document.getElementById("wybor_zolw").value)/100;
-        document.getElementById("obraz_owoce").style.filter=wartosc;
+        var wartosc=(document.getElementById("wybor_zolw").value);
+        document.getElementById("obraz_zolw").style.filter='brightness('+wartosc+')';
     }
 </script>
 <body>
