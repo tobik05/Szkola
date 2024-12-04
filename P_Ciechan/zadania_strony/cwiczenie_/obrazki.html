@@ -27,12 +27,10 @@
     function zmiana_obrazu_owoce(){
         var wartosc=(document.getElementById("wybor_owoce").value)/100;
         document.getElementById("obraz_owoce").style.opacity=wartosc;
-        console.log(wartosc);
     }
     function zmiana_oobrazu_zolw(){
-        var wartosc=(document.getElementById("wybor_owoce").value)/100;
-        document.getElementById("obraz_owoce").style.opacity=wartosc;
-        console.log(wartosc);
+        var wartosc=(document.getElementById("wybor_zolw").value)/100;
+        document.getElementById("obraz_owoce").style.filter=wartosc;
     }
 </script>
 <body>
