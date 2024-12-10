@@ -1,0 +1,44 @@
+*{
+    font-family: Helvetica;
+}
+header, footer{
+    background-color: #B3BC6D;
+    color: white;
+    text-align: center;
+    padding: 5px;
+}
+.blok_dane{
+    background-color: #FFFFCE;
+    color: Olive;
+    padding: 10px 150px;
+}
+.blok_lewy, .blok_prawy{
+    background-color: #E6EE9C;
+    width: 25%;
+    height: 450px;
+    text-align: center;
+}
+.blok_srodkowy{
+    background-color: #FFFFCE;
+    width:50%;
+    height: 450px;
+}
+table{
+    border: 1px solid olive;
+    margin: auto;
+    width: 70%;
+}
+h2{
+    text-align: center;
+}
+h2::first-letter{
+    font-size: 150%;
+    color: olive;
+}
+img{
+    height: 100px;
+    padding: 7px;
+}
+img:hover{
+    background-color: #B3BC6D;
+}
