@@ -1,0 +1,5 @@
+1. select * from pokoje;
+2. SELECT id_pok, sezon from rezerwacje where liczba_dn >7;
+3. SELECT sum(liczba_dn) from rezerwacje where sezon = "zima";
+4. update rezerwacje set liczba_dn = 4 where liczba_dn < 4;
+5. create user najemca@localhost IDENTIFIED BY 'n@JEM1@!';
