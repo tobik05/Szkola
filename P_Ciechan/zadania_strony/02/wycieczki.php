@@ -14,7 +14,7 @@
         $con=mysqli_connect("localhost",'root','','biuro');
         $zapytanie=mysqli_query($con,"");
         while($row=mysqli_fetch_array($zapytanie)){
-            echo;
+            echo "";
         }
         ?>
         </ul>
