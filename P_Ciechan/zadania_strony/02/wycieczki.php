@@ -12,9 +12,9 @@
         <ul>
         <?php 
         $con=mysqli_connect("localhost",'root','','biuro');
-        $zapytanie=mysqli_query($con,"");
+        $zapytanie=mysqli_query($con,"SELECT id, dataWyjazdu, cel, cena from wycieczki WHERE dostepna=1;");
         while($row=mysqli_fetch_array($zapytanie)){
-            echo "";
+            echo "<li>".$row['id'].". dnia ".$row['dataWyjazdu']." jedziemy do ".$row['cel'].", cena: ".$row['cena']."</li>";
         }
         ?>
         </ul>
@@ -30,8 +30,11 @@
     <section class="blok_srodkowy">
         <h2>Nasze zdjęcia</h2>
         <?php 
-        $zapytanie=mysqli_query($con,"");
+        $zapytanie=mysqli_query($con,"SELECT nazwaPliku, podpis FROM zdjecia ORDER by podpis DESC;");
+        while($row=mysqli_fetch_array($zapytanie)){
+            echo "<img src='$row[0]' alt='$row[1]'>";
 
+        }
         ?>
     </section>
     <section class="blok_prawy">

@@ -42,3 +42,6 @@ img{
 img:hover{
     background-color: #B3BC6D;
 }
+.blok_lewy, .blok_srodkowy, .blok_prawy{
+    float: left;
+}
