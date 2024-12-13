@@ -1,0 +1,4 @@
+1. SELECT cena, pojemnosc from farby WHERE kolor="czerwony";
+2. SELECT kolor, (cena/pojemnosc) as 'cena jednostkowa' FROM farby;
+3. SELECT kolor, malowanie.liczba_puszek FROM farby INNER JOIN malowanie on farby.id_farby=malowanie.id_farby WHERE id_pomieszczenia=3;
+4. 
