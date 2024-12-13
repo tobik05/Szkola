@@ -5,13 +5,18 @@
     <title>Pomocnik CSS</title>
     <link rel="stylesheet" href="styl2.css">
 </head>
+<script>
+    function generuj_palete(){
+        var wartosc=document.getElementById("input_number").value;
+        document.getElementById("wiersz_glowny").style.backgroundColor="HSL("+wartosc+", 100%, 50%)";
+        document.getElementById("wiersz_1").style.backgroundColor="HSL("+wartosc+", 80%, 50%)";
+        document.getElementById("wiersz_2").style.backgroundColor="HSL("+wartosc+", 60%, 50%)";
+        document.getElementById("wiersz_3").style.backgroundColor="HSL("+wartosc+", 40%, 50%)";
+        document.getElementById("wiersz_4").style.backgroundColor="HSL("+wartosc+", 20%, 50%)";
+        
+    }
+</script>
 <body>
-    <script>
-        function generuj_palete(){
-            var wartosc=document.getElementById("input_number").value;
-
-        }
-    </script>
     <header>
         <h1>Pomocnik CSS</h1>
     </header>
@@ -31,7 +36,7 @@
         <input type="number" id="input_number" min="0" max="360" placeholder="0 – 360">
         <button onclick="generuj_palete()">Generuj paletę</button>
         <table>
-            <tr><td colspan=4>Kolor główny</td></tr>
+            <tr><td colspan=4 id="wiersz_glowny">Kolor główny</td></tr>
             <tr>
                 <td id="wiersz_1">Kolor 2</td>
                 <td id="wiersz_2">Kolor 3</td>
