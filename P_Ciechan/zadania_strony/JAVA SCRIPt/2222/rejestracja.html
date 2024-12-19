@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="pl" id="html">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,10 +7,40 @@
         <link rel="stylesheet" href="styl.css">
     </head>
     <script>
-        document.getElementById("wartosc_postepu").style.width="4%";
+        var szerokosc=4;
         function postep(){
-            //document.getElementById("wartosc_postepu").style.width=document.getElementById("wartosc_postepu").offsetWidth+"12%";
-            console.log(document.getElementById("wartosc_postepu").clientWidth);
+            var pasek=document.getElementById("wartosc_postepu");
+            if(szerokosc<100){
+                szerokosc+=12;
+                pasek.style.width=szerokosc+"%";
+                console.log(szerokosc);
+            }
+        }
+        function klient(){
+            document.getElementById("main1").style.display="block";
+            document.getElementById("main2").style.display="none";
+            document.getElementById("main3").style.display="none";
+        }
+        function adres(){
+            document.getElementById("main1").style.display="none";
+            document.getElementById("main2").style.display="block";
+            document.getElementById("main3").style.display="none";
+        }
+        function kontakt(){
+            document.getElementById("main1").style.display="none";
+            document.getElementById("main2").style.display="none";
+            document.getElementById("main3").style.display="block";
+        }
+        function zatwierdz(){
+            let imie = document.getElementById("imie").value;
+            let nazwisko = document.getElementById("nazwisko").value;
+            let data = document.getElementById("data").value;
+            let ulica = document.getElementById("ulica").value;
+            let numer = document.getElementById("numer").value;
+            let miasto = document.getElementById("miasto").value;
+            let tel = document.getElementById("tel").value;
+            let rodo=document.getElementById("rodo").value;
+            console.log(imie+", "+nazwisko+", "+data+", "+ulica+", "+numer+", "+miasto+", "+tel+", "+rodo);
         }
     </script>
     <body>
