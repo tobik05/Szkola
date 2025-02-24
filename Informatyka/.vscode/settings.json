@@ -60,6 +60,8 @@
     "*.embeddedhtml": "html",
     "fstream": "cpp",
     "iosfwd": "cpp",
-    "cmath": "cpp"
+    "cmath": "cpp",
+    "iostream": "cpp",
+    "ostream": "cpp"
   }
 }
