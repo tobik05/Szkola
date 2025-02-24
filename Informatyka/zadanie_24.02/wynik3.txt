@@ -1,0 +1,4 @@
+Zadanie 3.1{
+  [*] Pierwsza liczba: 4489
+  [*] Liczba liczb, ktore sa kwadratwami liczb calkowitych to: 20
+}

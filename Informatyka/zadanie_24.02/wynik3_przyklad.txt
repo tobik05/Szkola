@@ -1,0 +1,5 @@
+Zadanie 3.1{
+  [*] Pierwsza liczba: 9801
+  [*] Liczba liczb, ktore sa kwadratwami liczb calkowitych to: 2
+}Zadanie 3.2{
+}
