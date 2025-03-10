@@ -2,11 +2,7 @@
 #include <fstream>
 #include <string>
 using namespace std;
-bool czy_pierwsza(int x)
-{
-	if(x<2){
-        return false; 
-    }
+bool czy_pierwsza(int x){
 	for(int i=2;i*i<=x;i++){
         if(x%i==0){
             return false; 
@@ -26,16 +22,7 @@ int main() {
         }
         ++wiersz;
     }
-
     plik.close();
-
-    /*for (int i = 0; i < wiersz-1; ++i) {
-        for (int j = 0; j < 3; ++j) {
-            if(czy_pierwsza(liczba[i][j])){
-                licznik_czy_pierwsza++;
-            }
-        }
-    }*/
 
     //Zadanie 3.3
     int licznik_czy_pierwsza=0;
@@ -48,11 +35,17 @@ int main() {
     //Zadanie 3.4
     int licznik_czy_pierwsza_2=0;
     for (int i = 0; i < wiersz-1; ++i) {
-        for (int j = 0; j < 2; ++j) {
-            if(czy_pierwsza(liczba[i][j])){
-                licznik_czy_pierwsza_2++;
-            }
+        if (czy_pierwsza(liczba[i][0]) && czy_pierwsza(liczba[i][1])) {
+            licznik_czy_pierwsza_2++;
         }
+    }
+    // Zadanie 3.5
+    for (int i = 0; i < wiersz - 1; ++i) {
+        for (int j = 0; j < liczba[i][0]; j++)
+        {
+            cout<<j;
+        }
+        
     }
 
     plik2<<"3.3: "<<licznik_czy_pierwsza<<endl;
