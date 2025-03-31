@@ -3,17 +3,22 @@
 #include <cmath>
 
 using namespace std;
-
-int rysuj(x){
-    int N=0;
-    if(2*x<=N){
-        strzalka(x, 2*x);
-        rysuj(2*x);
+bool droga(long a, long b){
+    while (b>a){
+        b/=2;
     }
-    if(2*)
+    return a==b;
+    
 }
 
 int main() {
-    
+    long a, b;
+    ifstream plik("pary.txt");
+    while(!plik.eof()){
+        plik>>a>>b;
+        if(droga(a,b)){
+            cout<<a<<" "<<b<<endl;
+        }
+    }
 }
 
